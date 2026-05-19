@@ -1,0 +1,212 @@
+/* ============================================================
+ HTML টিউটোরিয়াল পাতা (html.html) স্টাইল
+============================================================ */
+
+/* Main Content Area */
+.content {
+  flex: 1;
+  padding: 30px 40px 60px;
+  min-width: 0;
+  background: #22242a;
+}
+
+/* Section heading */
+.content section {
+  margin-bottom: 60px;
+}
+
+.content h1.center {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.content p.center {
+  color: #ffffff;
+  ;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Section Divider */
+.section-divider {
+  border: none;
+  border-top: 5px dashed #c6c6c6;
+  margin: 28px 0;
+}
+
+/* Example Box */
+.example-box {
+  background: #f1f8ff;
+  border: 1px solid #2c2e35;
+  border-radius: 10px;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+}
+
+.example-box h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.example-box h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  margin: 16px 0 8px;
+}
+
+.example-box p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.example-box ol {
+  padding-left: 22px;
+  margin: 10px 0;
+}
+
+.example-box ol li {
+  font-size: 16px;
+  line-height: 2;
+  color: #374151;
+  list-style-type: decimal;
+}
+
+/* Inline code */
+code {
+  font-family: Consolas, Menlo, "Courier New", monospace;
+  background: #e9ecef;
+  color: #c7254e;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+/* Code Box (multi-line) */
+.code-box {
+  background: #2c2e35;
+  color: #81c995;
+  font-family: Consolas, Menlo, "Courier New", monospace;
+  font-size: 15px;
+  line-height: 1.9;
+  padding: 16px 20px;
+  border-radius: 8px;
+  border-left: 5px solid var(--accent);
+  overflow-x: auto;
+  white-space: pre;
+  margin: 10px 0 16px;
+}
+
+/* Warning Box */
+.warning-box {
+  background: rgba(245, 158, 11, .08);
+  border-left: 4px solid #f59e0b;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 0 8px 8px 0;
+  font-size: 16px;
+  color: var(--text);
+  border-bottom: 2px solid #000000;
+  border-right: 2px solid #000000;
+  box-shadow: 2px 4px 12px rgba(245, 158, 11, 0.15);
+}
+
+/* Tip Box */
+.tip-box {
+  background: rgba(34, 197, 94, .08);
+  border-left: 4px solid #22c55e;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 0 8px 8px 0;
+  font-size: 16px;
+  color: var(--text);
+  border-bottom: 2px solid #000000;
+  border-right: 2px solid #000000;
+  box-shadow: 2px 4px 12px rgba(245, 158, 11, 0.15);
+}
+
+/* Tag Badge */
+.tag-badge {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 100px;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+/* Size Chart Table */
+.size-chart {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.size-chart th {
+  background: var(--dark);
+  color: white;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.size-chart td {
+  padding: 9px 14px;
+  border-bottom: 1px solid #c7c7c7;
+  color: #000000;
+  vertical-align: middle;
+}
+
+.size-chart tr:nth-child(even) td {
+  background: #f9fafb;
+}
+
+.size-chart tr:hover td {
+  background: #04AA6D !important;
+}
+
+/* Heading demos inside example-box */
+.example-box h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.example-box h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 8px 0;
+  border: none;
+  padding: 0;
+}
+
+.example-box h3 {
+  font-size: 1.17em;
+}
+
+.example-box h4 {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.example-box h5 {
+  font-size: 0.83em;
+}
+
+.example-box h6 {
+  font-size: 0.67em;
+}

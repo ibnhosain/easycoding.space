@@ -1,0 +1,489 @@
+/* ============================================================
+   min.css — WSC School BD | সব CSS এক ফাইলে
+   মূল পাতা (index.html) + HTML টিউটোরিয়াল (html.html)
+============================================================ */
+
+/* ==============================
+   CSS VARIABLES
+============================== */
+:root {
+  --accent:    #04aa6d;
+  --accent2:   #fff4a3;
+  --dark:      #282a35;
+  --border:    #ddd;
+  --muted:     #6b7280;
+  --light-bg:  #f9fafb;
+  --warn-bg:   #fff7ed;
+  --warn-border:#f97316;
+  --tip-bg:    #f0fdf4;
+  --tip-border:#04aa6d;
+}
+
+/* ==============================
+   RESET & BASE
+============================== */
+/* ===================
+fonts
+ =====================*/
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ font-family: "Tiro Bangla", sans-serif,'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #000000;
+  background: #fff;
+  overflow-x: hidden; 
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ==============================
+   HEADER
+============================== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 2px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+header img {
+  width: 70px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list li {
+  border-left: 1px solid #333;
+  padding: 0 0 0 20px;
+}
+
+.nav-list li.bor_none {
+  border: none;
+}
+
+.nav-list li a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  padding: 0 16px 0 0;
+  transition: color 0.2s;
+}
+
+.nav-list li a:hover {
+  color: var(--accent);
+}
+
+/* Layout */
+.wrapper {
+  padding-top: 90px;
+  min-height: 100vh;
+}
+
+.d_flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+
+/* Sidebar */
+aside {
+  width: 220px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 90px;
+  height: calc(100vh - 90px);
+  overflow-y: auto;
+  background: #f1f8ff;
+  padding: 20px 0;
+  scrollbar-width: thin;
+  scrollbar-color:var(--dark) #E7E9EB ;
+}
+
+aside::-webkit-scrollbar {
+  width: 5px;
+}
+
+aside::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+aside ul {
+  display: flex;
+  flex-direction: column;
+}
+
+aside ul li a {
+  display: block;
+  padding: 9px 20px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #000000;
+  border-left: 3px solid transparent;
+  transition: all 0.2s;
+}
+aside ul li  {
+  border: 0.5px solid rgba(193, 193, 193, 0.342);
+}
+
+aside ul li a:hover {
+      background-color: #04AA6D !important;
+}
+aside a.active {
+    background-color: #04AA6D!important;
+    color: #ffffff!important;
+}
+/* ==============================
+   FOOTER
+============================== */
+footer {
+  width: 100%;
+  background-color: #111;
+}
+
+.footer-top {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 24px 20px;
+}
+
+.footer-logo img {
+  width: 70px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-nav li a {
+  color: var(--accent2);
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footer-nav li a:hover {
+  color: var(--accent);
+}
+
+.copyright {
+  text-align: center;
+  color: #aaa;
+  font-size: 14px;
+  padding: 12px 20px 20px;
+  border-top: 1px solid #333;
+}
+
+/* ============================================================
+   ১. মূল পাতা (index.html) স্টাইল
+============================================================ */
+
+/* Hero Section */
+.hero-section {
+  padding: 130px 20px 90px;
+  text-align: center;
+}
+
+.ws-black {
+  background-color: var(--dark) !important;
+  color: white !important;
+}
+
+.ws-light-green {
+  background-color: #d9eee1 !important;
+  color: black !important;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-h1 {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  color: var(--accent2);
+  font-weight: 600;
+  font-size: 22px;
+  margin-top: 24px;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+/* Topic Sections */
+.topic-section {
+  padding: 50px 0;
+}
+
+.topic-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.topic-text {
+  flex: 1;
+}
+
+.topic-text.center {
+  text-align: center;
+}
+
+.topic-title {
+  font-size: 90px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.topic-desc {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.topic-code {
+  flex: 1;
+}
+
+/* Buttons */
+.tut-button {
+  display: block;
+  width: 240px;
+  margin: 8px auto;
+  padding: 10px 16px;
+  border-radius: 25px;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.tut-button:hover {
+  opacity: 0.85;
+}
+
+.btn-green  { background-color: var(--accent); color: white; }
+.btn-yellow { background-color: var(--accent2); color: #000; }
+.btn-dark   { background-color: var(--dark); color: white; }
+.btn-light  { background-color: #f7f7f7; color: #000; }
+
+/* Code Cards (index.html) */
+.code-card {
+  background-color: #e7e9eb;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.code-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.code-block {
+  background-color: #fff;
+  border-left: 4px solid var(--accent);
+  padding: 12px 16px;
+  border-radius: 0 4px 4px 0;
+  overflow-x: auto;
+}
+
+.code-block pre {
+  font-family: Consolas, Menlo, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: left;
+  white-space: pre;
+  color: #333;
+}
+
+/* Syntax highlight colors */
+.c-gray     { color: slategray; }
+.c-tag      { color: #905; }
+.c-attr     { color: green; }
+.c-val      { color: #005cc5; }
+.c-str      { color: green; }
+.c-kw       { color: #005cc5; }
+.c-fn       { color: black; }
+.c-selector { color: #905; }
+.c-prop     { color: #d73a49; }
+.c-brace    { color: #999; }
+
+/* Section backgrounds */
+.css-section {
+  background-color: #f0d9b5;
+  color: black;
+  margin: 50px 0;
+  padding: 10px 0;
+}
+
+.js-section {
+  background-color: var(--dark) !important;
+  color: white !important;
+  margin-bottom: 50px;
+  padding: 10px 0;
+}
+
+.js-section .code-card h3 {
+  color: var(--dark);
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 900px) {
+  .d_flex {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+    position: static;
+    height: auto;
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+  }
+
+  aside ul {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 4px;
+    padding: 0 12px;
+  }
+
+  aside ul li a {
+    white-space: nowrap;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    padding: 6px 14px;
+  }
+
+  aside ul li a:hover,
+  aside ul li a.active {
+    border-left-color: transparent;
+    border-bottom-color: var(--accent);
+  }
+
+  .content {
+    padding: 20px 16px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .topic-inner {
+    flex-direction: column;
+  }
+
+  .topic-title {
+    font-size: 60px;
+  }
+
+  .hero-h1 {
+    font-size: 46px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .nav-list li {
+    border: none;
+    padding: 0;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .example-box {
+    padding: 16px;
+  }
+
+  .code-box {
+    font-size: 12px;
+  }
+}
