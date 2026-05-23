@@ -426,38 +426,6 @@ body{
     overflow-x:hidden;
 }
 
-/* Tablet */
-@media (max-width:992px){
-
-.topic-inner{
-    display:flex;
-    flex-direction:column;
-    gap:30px;
-}
-
-.topic-text,
-.topic-code{
-    width:100%;
-}
-
-.code-card{
-    width:100%;
-}
-
-.d_flex{
-    flex-direction:column;
-}
-
-aside{
-    width:100%;
-}
-
-.content{
-    width:100%;
-}
-
-}
-
 /* Mobile */
 @media (max-width:768px){
 
