@@ -412,3 +412,144 @@ footer { width: 100%; background: #111; }
   .wrapper { padding-top: 0; }
   .d_flex  { display: block; }
 }
+/* =========================
+ONLY RESPONSIVE FIX
+Nothing else changed
+========================= */
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+/* Tablet */
+@media (max-width:992px){
+
+.topic-inner{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.topic-text,
+.topic-code{
+    width:100%;
+}
+
+.code-card{
+    width:100%;
+}
+
+.d_flex{
+    flex-direction:column;
+}
+
+aside{
+    width:100%;
+}
+
+.content{
+    width:100%;
+}
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+/* navbar */
+.nav-list{
+    display:none;
+}
+
+.hamburger{
+    display:flex;
+}
+
+/* hero */
+.hero-content{
+    padding:50px 15px;
+}
+
+.hero-h1{
+    font-size:42px;
+}
+
+.hero-subtitle{
+    font-size:18px;
+}
+
+/* sections */
+.topic-inner{
+    flex-direction:column;
+}
+
+.topic-title{
+    font-size:34px;
+}
+
+.topic-desc{
+    font-size:16px;
+}
+
+.tut-button{
+    display:block;
+    width:100%;
+    margin:10px 0;
+    text-align:center;
+}
+
+/* sidebar */
+aside{
+    position:fixed;
+    left:-100%;
+}
+
+aside.sidebar-open{
+    left:0;
+}
+
+/* tables */
+table{
+    display:block;
+    overflow-x:auto;
+}
+
+/* code */
+pre{
+    overflow:auto;
+}
+
+/* footer */
+.footer-top{
+    flex-direction:column;
+    text-align:center;
+    gap:20px;
+}
+
+}
+
+/* Small mobile */
+@media (max-width:480px){
+
+.hero-h1{
+    font-size:30px;
+}
+
+.topic-title{
+    font-size:28px;
+}
+
+h1{
+    font-size:26px;
+}
+
+h2{
+    font-size:22px;
+}
+
+}
