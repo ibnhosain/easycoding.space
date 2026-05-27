@@ -1,0 +1,291 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 600" width="1400" height="600" role="img">
+  <title>Programming concepts hero background</title>
+  <desc>Dark navy background with HTML, CSS, JavaScript code snippets, circuit lines, and a code editor window representing web development concepts.</desc>
+
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0A1520"/>
+      <stop offset="45%"  stop-color="#1D2B3A"/>
+      <stop offset="100%" stop-color="#0C1C2C"/>
+    </linearGradient>
+
+    <!-- Left fade for text readability -->
+    <linearGradient id="left-fade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#0A1520" stop-opacity="0.95"/>
+      <stop offset="40%"  stop-color="#0A1520" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0A1520" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Code window clip -->
+    <clipPath id="win-clip">
+      <rect x="760" y="60" width="600" height="490" rx="12"/>
+    </clipPath>
+
+    <!-- Dot grid pattern -->
+    <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1.2" fill="#04aa6d" opacity="0.12"/>
+    </pattern>
+
+    <!-- Fine grid -->
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+  </defs>
+
+  <!-- === BACKGROUND === -->
+  <rect width="1400" height="600" fill="url(#bg-grad)"/>
+  <rect width="1400" height="600" fill="url(#grid)"/>
+  <rect width="1400" height="600" fill="url(#dots)"/>
+
+  <!-- === CIRCUIT TRACES — Left & Center === -->
+  <!-- Horizontal traces -->
+  <path d="M 0 140 L 180 140 L 220 180 L 380 180" fill="none" stroke="#04aa6d" stroke-width="1.2" opacity="0.22"/>
+  <path d="M 0 300 L 100 300 L 140 260 L 360 260" fill="none" stroke="#04aa6d" stroke-width="1" opacity="0.18"/>
+  <path d="M 0 420 L 200 420 L 240 380 L 420 380" fill="none" stroke="#3A78C9" stroke-width="1" opacity="0.2"/>
+  <path d="M 40 520 L 280 520 L 320 480 L 500 480" fill="none" stroke="#04aa6d" stroke-width="0.8" opacity="0.15"/>
+  <path d="M 0 80  L 120 80  L 160 120 L 300 120" fill="none" stroke="#3A78C9" stroke-width="0.8" opacity="0.16"/>
+  <path d="M 60 540 L 360 540 L 400 500" fill="none" stroke="#FFD060" stroke-width="0.8" opacity="0.14"/>
+  <path d="M 500 200 L 620 200 L 660 240 L 740 240" fill="none" stroke="#04aa6d" stroke-width="1" opacity="0.18"/>
+  <path d="M 460 340 L 600 340 L 640 300 L 740 300" fill="none" stroke="#3A78C9" stroke-width="0.8" opacity="0.16"/>
+  <path d="M 480 440 L 650 440 L 690 400 L 750 400" fill="none" stroke="#FFD060" stroke-width="0.8" opacity="0.14"/>
+
+  <!-- Vertical traces -->
+  <path d="M 180 0 L 180 140" fill="none" stroke="#04aa6d" stroke-width="1" opacity="0.2"/>
+  <path d="M 360 180 L 360 340" fill="none" stroke="#04aa6d" stroke-width="1" opacity="0.16"/>
+  <path d="M 500 280 L 500 480" fill="none" stroke="#3A78C9" stroke-width="0.8" opacity="0.16"/>
+  <path d="M 300 120 L 300 260" fill="none" stroke="#3A78C9" stroke-width="0.8" opacity="0.14"/>
+  <path d="M 420 380 L 420 540" fill="none" stroke="#04aa6d" stroke-width="0.8" opacity="0.13"/>
+
+  <!-- Junction dots -->
+  <circle cx="180" cy="140" r="3.5" fill="#04aa6d" opacity="0.5"/>
+  <circle cx="360" cy="180" r="3"   fill="#04aa6d" opacity="0.45"/>
+  <circle cx="300" cy="120" r="3"   fill="#3A78C9" opacity="0.45"/>
+  <circle cx="500" cy="280" r="3"   fill="#3A78C9" opacity="0.4"/>
+  <circle cx="420" cy="380" r="3"   fill="#04aa6d" opacity="0.4"/>
+  <circle cx="660" cy="240" r="3"   fill="#04aa6d" opacity="0.35"/>
+  <circle cx="640" cy="300" r="3"   fill="#3A78C9" opacity="0.35"/>
+  <circle cx="690" cy="400" r="3"   fill="#FFD060" opacity="0.35"/>
+  <circle cx="360" cy="340" r="2.5" fill="#04aa6d" opacity="0.35"/>
+  <circle cx="100" cy="300" r="2.5" fill="#04aa6d" opacity="0.3"/>
+  <circle cx="200" cy="420" r="2.5" fill="#3A78C9" opacity="0.3"/>
+
+  <!-- === FLOATING CODE KEYWORDS — scattered === -->
+
+  <!-- HTML tags — blue -->
+  <text x="42"  y="160" font-family="Consolas,monospace" font-size="15" fill="#7DBEFF" opacity="0.25">&lt;html&gt;</text>
+  <text x="80"  y="350" font-family="Consolas,monospace" font-size="13" fill="#7DBEFF" opacity="0.2">&lt;div&gt;</text>
+  <text x="310" y="100" font-family="Consolas,monospace" font-size="12" fill="#7DBEFF" opacity="0.18">&lt;section&gt;</text>
+  <text x="50"  y="470" font-family="Consolas,monospace" font-size="14" fill="#7DBEFF" opacity="0.2">&lt;/body&gt;</text>
+  <text x="390" y="310" font-family="Consolas,monospace" font-size="12" fill="#7DBEFF" opacity="0.18">&lt;nav&gt;</text>
+  <text x="155" y="540" font-family="Consolas,monospace" font-size="11" fill="#7DBEFF" opacity="0.15">&lt;footer&gt;</text>
+  <text x="530" y="190" font-family="Consolas,monospace" font-size="12" fill="#7DBEFF" opacity="0.17">&lt;main&gt;</text>
+  <text x="500" y="450" font-family="Consolas,monospace" font-size="11" fill="#7DBEFF" opacity="0.15">&lt;input /&gt;</text>
+
+  <!-- CSS properties — pink/red -->
+  <text x="60"  y="240" font-family="Consolas,monospace" font-size="13" fill="#F47067" opacity="0.22">display: flex;</text>
+  <text x="330" y="420" font-family="Consolas,monospace" font-size="12" fill="#F47067" opacity="0.18">color: #fff;</text>
+  <text x="130" y="400" font-family="Consolas,monospace" font-size="12" fill="#F47067" opacity="0.18">margin: 0 auto;</text>
+  <text x="460" y="380" font-family="Consolas,monospace" font-size="11" fill="#F47067" opacity="0.16">border-radius: 8px;</text>
+  <text x="550" y="310" font-family="Consolas,monospace" font-size="11" fill="#F47067" opacity="0.15">padding: 16px;</text>
+  <text x="210" y="120" font-family="Consolas,monospace" font-size="11" fill="#F47067" opacity="0.17">font-weight: 700;</text>
+  <text x="420" y="500" font-family="Consolas,monospace" font-size="11" fill="#F47067" opacity="0.14">grid-template-columns:</text>
+
+  <!-- JS keywords — yellow/green -->
+  <text x="50"  y="310" font-family="Consolas,monospace" font-size="14" fill="#FFD060" opacity="0.22">const</text>
+  <text x="100" y="200" font-family="Consolas,monospace" font-size="13" fill="#FFD060" opacity="0.2">function</text>
+  <text x="260" y="480" font-family="Consolas,monospace" font-size="13" fill="#FFD060" opacity="0.18">return</text>
+  <text x="380" y="200" font-family="Consolas,monospace" font-size="12" fill="#FFD060" opacity="0.18">async / await</text>
+  <text x="470" y="260" font-family="Consolas,monospace" font-size="12" fill="#FFD060" opacity="0.16">() =&gt;</text>
+  <text x="590" y="440" font-family="Consolas,monospace" font-size="11" fill="#FFD060" opacity="0.15">forEach()</text>
+  <text x="130" y="510" font-family="Consolas,monospace" font-size="12" fill="#04aa6d" opacity="0.2">console.log()</text>
+  <text x="330" y="540" font-family="Consolas,monospace" font-size="11" fill="#04aa6d" opacity="0.15">querySelector()</text>
+  <text x="560" y="170" font-family="Consolas,monospace" font-size="11" fill="#04aa6d" opacity="0.15">addEventListener()</text>
+  <text x="455" y="130" font-family="Consolas,monospace" font-size="12" fill="#FFD060" opacity="0.17">let x = 0;</text>
+
+  <!-- Binary hints -->
+  <text x="42"  y="560" font-family="Consolas,monospace" font-size="10" fill="#04aa6d" opacity="0.1">01001000 01010100 01001101 01001100</text>
+  <text x="200" y="60"  font-family="Consolas,monospace" font-size="10" fill="#3A78C9" opacity="0.1">00110000 00110001 00110010 01110011</text>
+
+  <!-- Comment lines -->
+  <text x="60"  y="86"  font-family="Consolas,monospace" font-size="12" fill="#5A8F6A" opacity="0.22">/* Web Development */</text>
+  <text x="380" y="570" font-family="Consolas,monospace" font-size="11" fill="#5A8F6A" opacity="0.18">// শেখো, বানাও, এগিয়ে যাও</text>
+  <text x="520" y="70"  font-family="Consolas,monospace" font-size="11" fill="#5A8F6A" opacity="0.18">// HTML · CSS · JavaScript</text>
+
+  <!-- Braces / symbols -->
+  <text x="340" y="460" font-family="Consolas,monospace" font-size="30" fill="#7DBEFF" opacity="0.12">{}</text>
+  <text x="600" y="510" font-family="Consolas,monospace" font-size="24" fill="#FFD060" opacity="0.12">;</text>
+  <text x="210" y="290" font-family="Consolas,monospace" font-size="26" fill="#04aa6d" opacity="0.12">&lt;/&gt;</text>
+  <text x="490" y="90"  font-family="Consolas,monospace" font-size="28" fill="#F47067" opacity="0.1">( )</text>
+
+  <!-- === CODE EDITOR WINDOW === -->
+  <!-- Window shadow -->
+  <rect x="764" y="66" width="600" height="490" rx="13" fill="#000000" opacity="0.35"/>
+
+  <!-- Window body -->
+  <rect x="760" y="60" width="600" height="490" rx="12" fill="#111C28" stroke="#2A3D52" stroke-width="1"/>
+
+  <!-- Title bar -->
+  <rect x="760" y="60" width="600" height="38" rx="12" fill="#1A2B3C"/>
+  <rect x="760" y="80"  width="600" height="18" fill="#1A2B3C"/>
+
+  <!-- Traffic light dots -->
+  <circle cx="790" cy="79" r="6" fill="#FF5F57"/>
+  <circle cx="810" cy="79" r="6" fill="#FEBC2E"/>
+  <circle cx="830" cy="79" r="6" fill="#28C840"/>
+
+  <!-- Tab labels in title bar -->
+  <rect x="860" y="66" width="76" height="32" rx="4" fill="#111C28"/>
+  <text x="898" y="87" font-family="Consolas,monospace" font-size="12" fill="#9AAFC2" text-anchor="middle">index.html</text>
+  <text x="972" y="87" font-family="Consolas,monospace" font-size="12" fill="#4A6070">style.css</text>
+  <text x="1045" y="87" font-family="Consolas,monospace" font-size="12" fill="#4A6070">app.js</text>
+
+  <!-- Line numbers column -->
+  <rect x="760" y="98" width="44" height="452" fill="#0E1820"/>
+
+  <!-- Code content area -->
+  <rect x="804" y="98" width="556" height="452" fill="#111C28" clip-path="url(#win-clip)"/>
+
+  <!-- Cursor line highlight -->
+  <rect x="804" y="224" width="556" height="18" fill="#1E3045" opacity="0.7"/>
+
+  <!-- === CODE LINES === -->
+  <!-- Line 1 -->
+  <text x="776" y="116" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">1</text>
+  <text x="814" y="116" font-family="Consolas,monospace" font-size="13" fill="#5A8F6A">&lt;!DOCTYPE html&gt;</text>
+
+  <!-- Line 2 -->
+  <text x="776" y="134" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">2</text>
+  <text x="814" y="134" font-family="Consolas,monospace" font-size="13" fill="#7DBEFF">&lt;html </text>
+  <text x="862" y="134" font-family="Consolas,monospace" font-size="13" fill="#92D19B">lang</text>
+  <text x="895" y="134" font-family="Consolas,monospace" font-size="13" fill="#9AAFC2">=</text>
+  <text x="904" y="134" font-family="Consolas,monospace" font-size="13" fill="#F1C48E">"bn"</text>
+  <text x="936" y="134" font-family="Consolas,monospace" font-size="13" fill="#7DBEFF">&gt;</text>
+
+  <!-- Line 3 -->
+  <text x="776" y="152" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">3</text>
+  <text x="828" y="152" font-family="Consolas,monospace" font-size="13" fill="#7DBEFF">&lt;head&gt;</text>
+
+  <!-- Line 4 -->
+  <text x="776" y="170" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">4</text>
+  <text x="842" y="170" font-family="Consolas,monospace" font-size="13" fill="#7DBEFF">&lt;title&gt;</text>
+  <text x="893" y="170" font-family="Consolas,monospace" font-size="13" fill="#E8F0F8">WSC School BD</text>
+  <text x="998" y="170" font-family="Consolas,monospace" font-size="13" fill="#7DBEFF">&lt;/title&gt;</text>
+
+  <!-- Line 5 -->
+  <text x="776" y="188" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">5</text>
+  <text x="828" y="188" font-family="Consolas,monospace" font-size="13" fill="#7DBEFF">&lt;/head&gt;</text>
+
+  <!-- Line 6 -->
+  <text x="776" y="206" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">6</text>
+  <text x="828" y="206" font-family="Consolas,monospace" font-size="13" fill="#7DBEFF">&lt;body&gt;</text>
+
+  <!-- Line 7 (highlighted — cursor line) -->
+  <text x="776" y="224" font-family="Consolas,monospace" font-size="11" fill="#5A8090" text-anchor="middle">7</text>
+  <text x="814" y="236" font-family="Consolas,monospace" font-size="13" fill="#5A8F6A">/* CSS */</text>
+
+  <!-- Line 8 -->
+  <text x="776" y="254" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">8</text>
+  <text x="814" y="254" font-family="Consolas,monospace" font-size="13" fill="#E46868">body</text>
+  <text x="845" y="254" font-family="Consolas,monospace" font-size="13" fill="#9AAFC2"> {</text>
+
+  <!-- Line 9 -->
+  <text x="776" y="272" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">9</text>
+  <text x="828" y="272" font-family="Consolas,monospace" font-size="13" fill="#E46868">background</text>
+  <text x="907" y="272" font-family="Consolas,monospace" font-size="13" fill="#9AAFC2">:</text>
+  <text x="916" y="272" font-family="Consolas,monospace" font-size="13" fill="#F1C48E"> #F5F1E8</text>
+  <text x="975" y="272" font-family="Consolas,monospace" font-size="13" fill="#9AAFC2">;</text>
+  <rect x="983" y="262" width="10" height="12" fill="#F1C48E" rx="2"/>
+
+  <!-- Line 10 -->
+  <text x="776" y="290" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">10</text>
+  <text x="828" y="290" font-family="Consolas,monospace" font-size="13" fill="#E46868">color</text>
+  <text x="865" y="290" font-family="Consolas,monospace" font-size="13" fill="#9AAFC2">:</text>
+  <text x="874" y="290" font-family="Consolas,monospace" font-size="13" fill="#F1C48E"> #1D2B3A</text>
+  <text x="933" y="290" font-family="Consolas,monospace" font-size="13" fill="#9AAFC2">;</text>
+
+  <!-- Line 11 -->
+  <text x="776" y="308" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">11</text>
+  <text x="814" y="308" font-family="Consolas,monospace" font-size="13" fill="#9AAFC2">}</text>
+
+  <!-- Divider -->
+  <line x1="804" y1="318" x2="1360" y2="318" stroke="#1E3045" stroke-width="1"/>
+
+  <!-- Line 12 — JS section -->
+  <text x="776" y="336" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">12</text>
+  <text x="814" y="336" font-family="Consolas,monospace" font-size="13" fill="#5A8F6A">// JavaScript</text>
+
+  <!-- Line 13 -->
+  <text x="776" y="354" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">13</text>
+  <text x="814" y="354" font-family="Consolas,monospace" font-size="13" fill="#C678DD">const</text>
+  <text x="850" y="354" font-family="Consolas,monospace" font-size="13" fill="#7DBEFF"> greet</text>
+  <text x="890" y="354" font-family="Consolas,monospace" font-size="13" fill="#9AAFC2"> = (</text>
+  <text x="912" y="354" font-family="Consolas,monospace" font-size="13" fill="#F1C48E">name</text>
+  <text x="941" y="354" font-family="Consolas,monospace" font-size="13" fill="#9AAFC2">) =&gt; {</text>
+
+  <!-- Line 14 -->
+  <text x="776" y="372" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">14</text>
+  <text x="828" y="372" font-family="Consolas,monospace" font-size="13" fill="#7DBEFF">console</text>
+  <text x="876" y="372" font-family="Consolas,monospace" font-size="13" fill="#9AAFC2">.</text>
+  <text x="882" y="372" font-family="Consolas,monospace" font-size="13" fill="#61AFEF">log</text>
+  <text x="903" y="372" font-family="Consolas,monospace" font-size="13" fill="#9AAFC2">(</text>
+  <text x="910" y="372" font-family="Consolas,monospace" font-size="13" fill="#85C99A">`হ্যালো, ${</text>
+  <text x="987" y="372" font-family="Consolas,monospace" font-size="13" fill="#F1C48E">name</text>
+  <text x="1016" y="372" font-family="Consolas,monospace" font-size="13" fill="#85C99A">}!`</text>
+  <text x="1035" y="372" font-family="Consolas,monospace" font-size="13" fill="#9AAFC2">);</text>
+
+  <!-- Line 15 -->
+  <text x="776" y="390" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">15</text>
+  <text x="814" y="390" font-family="Consolas,monospace" font-size="13" fill="#9AAFC2">};</text>
+
+  <!-- Line 16 — blank -->
+  <text x="776" y="408" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">16</text>
+
+  <!-- Line 17 — call -->
+  <text x="776" y="426" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">17</text>
+  <text x="814" y="426" font-family="Consolas,monospace" font-size="13" fill="#61AFEF">greet</text>
+  <text x="851" y="426" font-family="Consolas,monospace" font-size="13" fill="#9AAFC2">(</text>
+  <text x="858" y="426" font-family="Consolas,monospace" font-size="13" fill="#85C99A">"ওয়েব ডেভ"</text>
+  <text x="940" y="426" font-family="Consolas,monospace" font-size="13" fill="#9AAFC2">);</text>
+
+  <!-- Line 18 — blank -->
+  <text x="776" y="444" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">18</text>
+
+  <!-- Line 19 — closing tags -->
+  <text x="776" y="462" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">19</text>
+  <text x="828" y="462" font-family="Consolas,monospace" font-size="13" fill="#7DBEFF">&lt;/body&gt;</text>
+
+  <!-- Line 20 -->
+  <text x="776" y="480" font-family="Consolas,monospace" font-size="11" fill="#3A5A70" text-anchor="middle">20</text>
+  <text x="828" y="480" font-family="Consolas,monospace" font-size="13" fill="#7DBEFF">&lt;/html&gt;</text>
+
+  <!-- Status bar at bottom of window -->
+  <rect x="760" y="514" width="600" height="36" fill="#0E1820"/>
+  <text x="780" y="536" font-family="Consolas,monospace" font-size="11" fill="#3A5A70">HTML</text>
+  <text x="820" y="536" font-family="Consolas,monospace" font-size="11" fill="#2A4060"> | </text>
+  <text x="835" y="536" font-family="Consolas,monospace" font-size="11" fill="#3A5A70">UTF-8</text>
+  <text x="880" y="536" font-family="Consolas,monospace" font-size="11" fill="#2A4060"> | </text>
+  <text x="895" y="536" font-family="Consolas,monospace" font-size="11" fill="#3A5A70">Ln 17, Col 14</text>
+  <!-- Green "Saved" indicator -->
+  <circle cx="1310" cy="532" r="4" fill="#04aa6d"/>
+  <text x="1318" y="536" font-family="Consolas,monospace" font-size="11" fill="#04aa6d">Saved</text>
+
+  <!-- === LANGUAGE BADGES bottom of window === -->
+  <rect x="780" y="524" width="36" height="16" rx="3" fill="#1D4030"/>
+  <text x="798" y="536" font-family="Consolas,monospace" font-size="10" fill="#04aa6d" text-anchor="middle">HTML</text>
+
+  <rect x="820" y="524" width="30" height="16" rx="3" fill="#1A2D55"/>
+  <text x="835" y="536" font-family="Consolas,monospace" font-size="10" fill="#7DBEFF" text-anchor="middle">CSS</text>
+
+  <rect x="854" y="524" width="24" height="16" rx="3" fill="#3A3010"/>
+  <text x="866" y="536" font-family="Consolas,monospace" font-size="10" fill="#FFD060" text-anchor="middle">JS</text>
+
+  <!-- === DECORATIVE GLOWING CIRCLES (right side, outside window) === -->
+  <circle cx="1370" cy="80"  r="60" fill="#04aa6d" opacity="0.04"/>
+  <circle cx="1380" cy="540" r="80" fill="#3A78C9" opacity="0.05"/>
+  <circle cx="720"  cy="580" r="50" fill="#FFD060" opacity="0.04"/>
+
+  <!-- === LEFT OVERLAY for text readability === -->
+  <rect width="1400" height="600" fill="url(#left-fade)"/>
+
+</svg>
