@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- হোমপেজ -->
+  <url>
+    <loc>https://wscschoolbd.com/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://wscschoolbd.com/" />
+  </url>
+
+  <!-- HTML Tutorial -->
+  <url>
+    <loc>https://wscschoolbd.com/html.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://wscschoolbd.com/html.html" />
+  </url>
+
+  <!-- CSS Tutorial -->
+  <url>
+    <loc>https://wscschoolbd.com/css.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://wscschoolbd.com/css.html" />
+  </url>
+
+  <!-- JavaScript Tutorial -->
+  <url>
+    <loc>https://wscschoolbd.com/js.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://wscschoolbd.com/js.html" />
+  </url>
+
+</urlset>

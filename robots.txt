@@ -1,0 +1,13 @@
+# robots.txt — WSC School BD
+# https://wscschoolbd.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap-এর ঠিকানা Google-কে জানাও
+Sitemap: https://wscschoolbd.com/sitemap.xml
+
+# ক্রল না করার দরকার নেই এমন ফাইল
+Disallow: /js/
+Disallow: /css/
+Disallow: /images/

@@ -1,0 +1,580 @@
+/* ============================================================
+   style.css — DevShikhi | HTML Tutorial Content Styles
+   সম্পূর্ণ রেসপনসিভ ভার্সন
+============================================================ */
+
+:root {
+  --accent: #04aa6d;
+  --accent2: #fff4a3;
+  --dark: #282a35;
+  --border: #ddd;
+  --header-h: 70px;
+  --text-color: #000;
+  --bg-color: #fff;
+}
+
+/* ============================================================
+   CONTENT AREA
+============================================================ */
+.content {
+  flex: 1;
+  padding: 32px 40px 60px;
+  min-width: 0;
+  /* flex child overflow প্রতিরোধ */
+  background: var(--dark);
+  overflow-x: hidden;
+}
+
+.content section {
+  margin-bottom: 60px;
+}
+
+.content h1.center {
+  font-size: clamp(1.25rem, 4vw, 1.65rem);
+  font-weight: 700;
+  color: #fff !important;
+  margin-bottom: 8px;
+}
+
+.content p.center {
+  color: #ddd !important;
+  font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+  margin-bottom: 20px;
+  line-height: 1.75;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ── Divider ── */
+.section-divider {
+  border: none;
+  border-top: 4px dashed #c6c6c6;
+  margin: 28px 0;
+}
+
+/* ============================================================
+   EXAMPLE BOX
+============================================================ */
+.example-box {
+  color: var(--text-color) !important;
+  background: var(--bg-color) !important;
+  border: 1px solid #2c2e35;
+  border-radius: 10px;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  /* ভেতরের কনটেন্ট বাইরে যাবে না */
+}
+
+.example-box h2 {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.example-box h3 {
+  font-size: clamp(0.92rem, 2.5vw, 1.06rem);
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 16px 0 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 6px;
+  line-height: 1.45;
+}
+
+.example-box p {
+  font-size: clamp(0.88rem, 2vw, 1rem);
+  line-height: 1.85;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.example-box ol {
+  padding-left: 22px;
+  margin: 10px 0;
+}
+
+.example-box ol li {
+  font-size: clamp(0.88rem, 2vw, 1rem);
+  line-height: 2;
+  color: var(--text-color);
+  list-style-type: decimal;
+}
+
+/* heading demo sizes inside example-box */
+.example-box h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.example-box h4 {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.example-box h5 {
+  font-size: .83em;
+}
+
+.example-box h6 {
+  font-size: .67em;
+}
+
+/* ============================================================
+   INLINE CODE
+============================================================ */
+code {
+  font-family: Consolas, Menlo, "Courier New", monospace;
+  background: #e9ecef;
+  color: #c7254e;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.88em;
+  word-break: break-word;
+}
+
+kbd {
+  background: #f0ece4;
+  border: 1px solid #bbb;
+  border-bottom: 3px solid #aaa;
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 0.82em;
+  font-family: Consolas, monospace;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   CODE BOX
+============================================================ */
+.code-box {
+  background: #2c2e35;
+  color: #81c995;
+  font-family: Consolas, Menlo, monospace;
+  font-size: clamp(0.72rem, 1.7vw, 0.9375rem);
+  line-height: 1.9;
+  padding: 16px 20px;
+  border-radius: 8px;
+  border-left: 5px solid #04aa6d;
+  overflow-x: auto;
+  white-space: pre;
+  margin: 10px 0 16px;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #2c2e35;
+  touch-action: pan-x;
+}
+
+.code-box::-webkit-scrollbar {
+  height: 5px;
+}
+
+.code-box::-webkit-scrollbar-track {
+  background: #2c2e35;
+}
+
+.code-box::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
+}
+
+/* ============================================================
+   WARNING BOX
+============================================================ */
+.warning-box {
+  background: rgba(245, 158, 11, .08);
+  border-left: 4px solid #f59e0b;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 0 8px 8px 0;
+  font-size: clamp(0.83rem, 2vw, 1rem);
+  line-height: 1.7;
+  box-shadow: 2px 4px 12px rgba(245, 158, 11, .12);
+  word-break: break-word;
+}
+
+/* ============================================================
+   TIP BOX
+============================================================ */
+.tip-box {
+  background: rgba(34, 197, 94, .08);
+  border-left: 4px solid #22c55e;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 0 8px 8px 0;
+  font-size: clamp(0.83rem, 2vw, 1rem);
+  line-height: 1.7;
+  box-shadow: 2px 4px 12px rgba(34, 197, 94, .1);
+  word-break: break-word;
+}
+
+/* ============================================================
+   TAG BADGE
+============================================================ */
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: clamp(0.67rem, 1.4vw, 0.875rem);
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 100px;
+  vertical-align: middle;
+  margin-left: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   TABLE  — বিভ্রান্তিকর দ্বৈত নিয়ম সরিয়ে একটিতে আনা হয়েছে
+============================================================ */
+
+/* 
+   Scroll wrapper: example-box-এর ভেতরে table-কে
+   block-এ নামিয়ে overflow-x: auto দেওয়া হয়েছে।
+   table নিজেই display:table থাকে — শুধু wrapper scroll করে।
+*/
+.example-box {
+  /* table wrapper-এর ভূমিকায় কাজ করবে */
+}
+
+/* Table-এর চারপাশে scroll wrapper */
+.table-wrapper,
+.example-box>table,
+.example-box table.size-chart {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #aaa #f0ece4;
+  margin: 12px 0;
+}
+
+.example-box>table::-webkit-scrollbar,
+.example-box table.size-chart::-webkit-scrollbar {
+  height: 4px;
+}
+
+.example-box>table::-webkit-scrollbar-thumb,
+.example-box table.size-chart::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 2px;
+}
+
+/* size-chart — আসল table styles */
+.size-chart {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: clamp(0.78rem, 1.8vw, 1rem);
+  min-width: 480px;
+  /* এর চেয়ে ছোট হলে scroll শুরু হবে */
+  display: table;
+  /* display:block wrapper-এর ভেতরে table থাকবে */
+}
+
+.size-chart th {
+  background: #282a35;
+  color: #fff;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: clamp(0.75rem, 1.7vw, 0.9375rem);
+}
+
+.size-chart td {
+  padding: 9px 14px;
+  border-bottom: 1px solid #c7c7c7;
+  color: var(--text-color);
+  vertical-align: top;
+  line-height: 1.6;
+  font-size: clamp(0.78rem, 1.8vw, 1rem);
+}
+
+.size-chart tr:nth-child(even) td {
+  background: #f9fafb;
+}
+
+.size-chart tr:hover td {
+  background: #04AA6D !important;
+  color: #fff;
+  transition: background .15s;
+}
+
+/* td-র ভেতরে code */
+.size-chart td code,
+.size-chart th code {
+  background: rgba(255, 255, 255, .15);
+  color: inherit;
+  padding: 1px 5px;
+  font-size: 0.9em;
+  word-break: break-all;
+}
+
+.size-chart tr:nth-child(even) td code {
+  background: rgba(0, 0, 0, .06);
+}
+
+/* ============================================================
+   RESPONSIVE — Tablet  (≤ 1100px)
+============================================================ */
+@media (max-width: 1100px) {
+  .content {
+    padding: 24px 28px 50px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — Tablet  (≤ 900px)
+============================================================ */
+@media (max-width: 900px) {
+  .content {
+    padding: 20px 20px 50px;
+  }
+
+  .example-box {
+    padding: 18px 20px;
+  }
+
+  .code-box {
+    font-size: 0.8rem;
+    padding: 13px 15px;
+  }
+
+  .size-chart {
+    min-width: 440px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — Mobile  (≤ 768px)
+============================================================ */
+@media (max-width: 768px) {
+  .content {
+    padding: 14px 12px 88px;
+    /* নিচে FAB-এর জায়গা */
+    width: 100%;
+  }
+
+  .content h1.center {
+    font-size: clamp(1.1rem, 5.5vw, 1.4rem);
+  }
+
+  .content p.center {
+    font-size: clamp(0.82rem, 3.5vw, 0.92rem);
+  }
+
+  .content section {
+    margin-bottom: 36px;
+  }
+
+  /* Example box */
+  .example-box {
+    padding: 12px 13px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+  }
+
+  .example-box h2 {
+    font-size: clamp(0.95rem, 4.5vw, 1.15rem);
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+  }
+
+  .example-box h3 {
+    font-size: clamp(0.88rem, 4vw, 1rem);
+    margin: 12px 0 7px;
+    gap: 5px;
+  }
+
+  .example-box p,
+  .example-box ol li {
+    font-size: clamp(0.85rem, 3.5vw, 0.93rem);
+  }
+
+  /* Code box */
+  .code-box {
+    font-size: 0.74rem;
+    padding: 10px 12px;
+    border-radius: 6px;
+    line-height: 1.75;
+  }
+
+  /* Warning / Tip */
+  .warning-box,
+  .tip-box {
+    font-size: 0.83rem;
+    padding: 10px 12px;
+  }
+
+  /* Tag badge */
+  .tag-badge {
+    font-size: 0.67rem;
+    padding: 2px 7px;
+    margin-left: 4px;
+  }
+
+  /* Table */
+  .size-chart {
+    min-width: 420px;
+  }
+
+  .size-chart th,
+  .size-chart td {
+    padding: 7px 9px;
+  }
+
+  kbd {
+    font-size: 0.75em;
+  }
+
+  .section-divider {
+    margin: 20px 0;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — Small Mobile  (≤ 480px)
+============================================================ */
+@media (max-width: 480px) {
+  .content {
+    padding: 10px 10px 88px;
+  }
+
+  .example-box {
+    padding: 10px 11px;
+  }
+
+  .example-box h2 {
+    font-size: clamp(0.9rem, 5vw, 1.05rem);
+  }
+
+  .example-box h3 {
+    font-size: clamp(0.84rem, 4.5vw, 0.96rem);
+  }
+
+  .code-box {
+    font-size: 0.68rem;
+    padding: 8px 10px;
+    line-height: 1.65;
+  }
+
+  .size-chart {
+    min-width: 380px;
+    font-size: 0.73rem;
+  }
+
+  .size-chart th,
+  .size-chart td {
+    padding: 6px 7px;
+  }
+
+  .tag-badge {
+    font-size: 0.62rem;
+    padding: 2px 6px;
+  }
+
+  .warning-box,
+  .tip-box {
+    font-size: 0.8rem;
+    padding: 9px 11px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — Very Small  (≤ 360px)
+============================================================ */
+@media (max-width: 360px) {
+  .content {
+    padding: 8px 8px 88px;
+  }
+
+  .example-box {
+    padding: 8px 9px;
+  }
+
+  .code-box {
+    font-size: 0.64rem;
+    padding: 7px 9px;
+  }
+
+  .size-chart {
+    min-width: 340px;
+    font-size: 0.68rem;
+  }
+
+  .size-chart th,
+  .size-chart td {
+    padding: 5px 6px;
+  }
+}
+
+/* ============================================================
+   PRINT
+============================================================ */
+@media print {
+  .content {
+    background: #fff;
+    padding: 20px;
+    color: #000;
+  }
+
+  .content h1.center,
+  .content p.center {
+    color: #000 !important;
+  }
+
+  .example-box {
+    border: 1px solid #ccc;
+    break-inside: avoid;
+    padding: 14px;
+  }
+
+  .code-box {
+    background: #f5f5f5;
+    color: #000;
+    border: 1px solid #ccc;
+    border-left: 3px solid #04aa6d;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 9pt;
+    break-inside: avoid;
+  }
+
+  .warning-box {
+    background: #fff3cd !important;
+  }
+
+  .tip-box {
+    background: #d4edda !important;
+  }
+
+  .size-chart {
+    min-width: unset;
+    font-size: 9pt;
+  }
+
+  .size-chart th {
+    background: #eee !important;
+    color: #000 !important;
+  }
+
+  .tag-badge {
+    border: 1px solid currentColor;
+    print-color-adjust: exact;
+  }
+}

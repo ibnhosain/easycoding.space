@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <section id="github-hosting-full-guide">
+
+  <h1 class="center" id="deploy-guide">
+    🚀 GitHub Pages দিয়ে Full Website Launch Guide (Complete)
+  </h1>
+
+  <p class="center">
+    এই সেকশনে তুমি শিখবে—কোড আপলোড থেকে শুরু করে Domain, SEO, HTTPS, Google Search পর্যন্ত সবকিছু একসাথে।
+    এটা ফলো করলে আলাদা কিছু খুঁজতে হবে না।
+  </p>
+
+  <hr class="section-divider"/>
+
+
+  <!-- =======================================
+      START REQUIREMENTS
+  ======================================== -->
+
+  <div class="example-box">
+
+    <h2>🔷 শুরু করার আগে যা লাগবে</h2>
+
+    <ul>
+      <li>GitHub Account</li>
+      <li>VS Code বা যেকোনো Code Editor</li>
+      <li>Git Install (optional কিন্তু recommended)</li>
+      <li>HTML, CSS, JS ফাইল</li>
+      <li>Responsive Design</li>
+      <li>Domain (optional)</li>
+    </ul>
+
+    <div class="tip-box">
+      ✅ Git + GitHub জানা থাকলে ভবিষ্যতে সব ওয়েব প্রজেক্ট সহজ হয়ে যাবে।
+    </div>
+
+  </div>
+
+
+
+  <!-- =======================================
+      GITHUB SETUP
+  ======================================== -->
+
+  <div class="example-box">
+
+    <h2>🔷 GitHub Setup</h2>
+
+    <h3>Repository তৈরি করো</h3>
+
+    <div class="code-box">
+1. GitHub → New Repository  
+2. নাম দাও  
+3. Public রাখো  
+4. index.html আপলোড করো
+    </div>
+
+    <h3>Pages চালু করো</h3>
+
+    <div class="code-box">
+Settings → Pages  
+Branch: main  
+Save → Done
+    </div>
+
+  </div>
+
+
+
+  <!-- =======================================
+      DOMAIN SETUP
+  ======================================== -->
+
+  <div class="example-box">
+
+    <h2>🔷 Custom Domain সেটআপ (যদি থাকে)</h2>
+
+    <h3>GitHub Custom Domain</h3>
+
+    <div class="code-box">
+Settings → Pages  
+Custom domain → yourdomain.com  
+Save
+    </div>
+
+    <h3>DNS Records</h3>
+
+    <table class="size-chart">
+      <tr><th>Type</th><th>Host</th><th>Value</th></tr>
+      <tr><td>A</td><td>@</td><td>185.199.108.153</td></tr>
+      <tr><td>A</td><td>@</td><td>185.199.109.153</td></tr>
+      <tr><td>A</td><td>@</td><td>185.199.110.153</td></tr>
+      <tr><td>A</td><td>@</td><td>185.199.111.153</td></tr>
+    </table>
+
+    <div class="warning-box">
+      ⚠️ CNAME ভুল হলে ডোমেইন কাজ করবে না।
+    </div>
+
+  </div>
+
+
+
+  <!-- =======================================
+      HTTPS
+  ======================================== -->
+
+  <div class="example-box">
+
+    <h2>🔷 HTTPS চালু করা</h2>
+
+    <div class="code-box">
+Settings → Pages → Enforce HTTPS ✔
+    </div>
+
+    <div class="tip-box">
+      🔒 HTTPS চালু হলে সাইট Secure হয় এবং Google Ranking ভালো হয়।
+    </div>
+
+  </div>
+
+
+
+  <!-- =======================================
+      FILES REQUIRED
+  ======================================== -->
+
+  <div class="example-box">
+
+    <h2>🔷 গুরুত্বপূর্ণ ফাইল</h2>
+
+    <ul>
+      <li><code>index.html</code> (Main Page)</li>
+      <li><code>404.html</code> (Error Page)</li>
+      <li><code>favicon.ico</code> (Logo)</li>
+      <li><code>style.css</code> (Design)</li>
+      <li><code>script.js</code> (Function)</li>
+      <li><code>robots.txt</code> (SEO)</li>
+      <li><code>sitemap.xml</code> (Google Index)</li>
+    </ul>
+
+  </div>
+
+
+
+  <!-- =======================================
+      SEO SETUP
+  ======================================== -->
+
+  <div class="example-box">
+
+    <h2>🔷 SEO Setup (Google এ আনার জন্য)</h2>
+
+    <div class="code-box">
+<title>Website Title</title>
+<meta name="description">
+<meta name="keywords">
+<meta name="author">
+    </div>
+
+    <div class="code-box">
+robots.txt → Google Crawl Control  
+sitemap.xml → All Pages List
+    </div>
+
+  </div>
+
+
+
+  <!-- =======================================
+      GOOGLE SEARCH
+  ======================================== -->
+
+  <div class="example-box">
+
+    <h2>🔷 Google Search Console</h2>
+
+    <div class="code-box">
+1. Add Website  
+2. Verify Domain  
+3. Submit Sitemap  
+4. Wait for Index
+    </div>
+
+    <div class="tip-box">
+      🔍 Google এ আসতে ১ দিন থেকে ৭ দিন লাগতে পারে।
+    </div>
+
+  </div>
+
+
+
+  <!-- =======================================
+      PERFORMANCE
+  ======================================== -->
+
+  <div class="example-box">
+
+    <h2>🔷 Website Performance</h2>
+
+    <ul>
+      <li>Image Compress (WebP use করো)</li>
+      <li>Unused CSS Remove</li>
+      <li>JS Minify</li>
+      <li>Lazy Load Images</li>
+    </ul>
+
+  </div>
+
+
+
+  <!-- =======================================
+      MOBILE RESPONSIVE
+  ======================================== -->
+
+  <div class="example-box">
+
+    <h2>🔷 Mobile Friendly Check</h2>
+
+    <div class="tip-box">
+      📱 Chrome → Inspect → Device Mode
+    </div>
+
+    <div class="warning-box">
+      ⚠️ Mobile Responsive না হলে Google Ranking কমে যায়।
+    </div>
+
+  </div>
+
+
+
+  <!-- =======================================
+      FINAL CHECKLIST
+  ======================================== -->
+
+  <div class="example-box">
+
+    <h2>🔷 Final Checklist (Publish করার আগে)</h2>
+
+    <table class="size-chart">
+
+      <tr><td>GitHub Pages ON</td><td>✅</td></tr>
+      <tr><td>index.html আছে</td><td>✅</td></tr>
+      <tr><td>Domain Connected</td><td>✅</td></tr>
+      <tr><td>HTTPS ON</td><td>✅</td></tr>
+      <tr><td>SEO Added</td><td>✅</td></tr>
+      <tr><td>404 Page আছে</td><td>✅</td></tr>
+      <tr><td>Favicon আছে</td><td>✅</td></tr>
+      <tr><td>Responsive</td><td>✅</td></tr>
+      <tr><td>Sitemap Added</td><td>✅</td></tr>
+
+    </table>
+
+  </div>
+
+
+
+  <!-- =======================================
+      FINAL NOTE
+  ======================================== -->
+
+  <div class="example-box">
+
+    <h2>🎉 Final Result</h2>
+
+    <p>
+      সব ঠিক থাকলে তোমার ওয়েবসাইট চলবে:
+      <code>https://yourdomain.com</code>
+    </p>
+
+    <div class="tip-box">
+      🚀 এরপর GitHub এ শুধু Update Push করলেই সাইট অটো আপডেট হবে।
+    </div>
+
+  </div>
+
+
+  <hr class="section-divider"/>
+
+</section>
+</body>
+</html>
