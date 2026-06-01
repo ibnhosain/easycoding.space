@@ -1,5 +1,5 @@
-# robots.txt — WSC School BD
-# https://wscschoolbd.com/robots.txt
+# robots.txt — Easy Coding Space 
+# https://easycoding.space/robots.txt
 
 User-agent: *
 Allow: /
