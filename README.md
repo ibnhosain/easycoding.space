@@ -1,2 +1,2 @@
-#Easy Coding.spase
+#Easy Coding.space
 -বাংলায় কোডিং শেখার সচেয়ে পপুলার ওয়েব সাইট
