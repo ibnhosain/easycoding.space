@@ -46,6 +46,11 @@ ul {
 a {
   text-decoration: none;
 }
+.lik_text{
+  color: #fff !important;
+  font-weight: 500;
+  text-decoration: underline;
+}
 
 img{
   max-width: 100%;
