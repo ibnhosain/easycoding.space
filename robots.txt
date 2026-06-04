@@ -1,0 +1,13 @@
+# robots.txt — Easy Coding ‍Space
+# https://easycoding.space/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap-এর ঠিকানা Google-কে জানাও
+Sitemap: https://easycoding.space/sitemap.xml
+
+# ক্রল না করার দরকার নেই এমন ফাইল
+Disallow: /js/
+Disallow: /css/
+Disallow: /images/

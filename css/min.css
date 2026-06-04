@@ -1,0 +1,942 @@
+/* ============================================================
+   min.css — DevShikhi | সম্পূর্ণ রেসপনসিভ
+   index.html + html.html উভয় পেইজের জন্য
+============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap');
+
+/* ── Variables ── */
+:root {
+  --accent: #04aa6d;
+  --accent2: #fff4a3;
+  --dark: #282a35;
+  --border: #D5CFC6;
+  --header-h: 70px;
+  --sidebar-w: 230px;
+}
+
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Tiro Bangla", 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  color: #1E2B3C !important;
+  background: #F5F1E8 !important;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================================
+   HEADER
+============================================================ */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-h);
+  background: rgba(245, 241, 232, 0.97);
+  border-bottom: 2px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .06);
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  gap: 12px;
+}
+
+header svg {
+  width: 250px;
+  height: auto;
+}
+
+/* ── Desktop Nav ── */
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list li {
+  border-left: 1px solid #C8C2B8;
+  padding-left: 20px;
+}
+
+.nav-list li.bor_none {
+  border: none;
+}
+
+.nav-list li a {
+  font-size: 17px;
+  font-weight: 500;
+  color: #1E2B3C;
+  margin-right: 17px;
+  transition: color .2s;
+  white-space: nowrap;
+}
+
+.nav-list li a:hover {
+  color: var(--accent);
+}
+
+/* ── Hamburger ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1100;
+  flex-shrink: 0;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #1E2B3C;
+  border-radius: 2px;
+  transition: all .28s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+/* ── Mobile Nav Drawer ── */
+.nav-drawer {
+  display: none;
+  position: fixed;
+  top: var(--header-h);
+  left: 0;
+  width: 100%;
+  background: #F5F1E8;
+  border-bottom: 2px solid var(--border);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .10);
+  z-index: 999;
+  padding: 8px 0 16px;
+  transform: translateY(-110%);
+  transition: transform .3s ease;
+}
+
+.nav-drawer.open {
+  transform: translateY(0);
+}
+
+.nav-drawer ul li {
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-drawer ul li a {
+  display: block;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1E2B3C;
+  transition: background .2s, color .2s;
+}
+
+.nav-drawer ul li a:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ============================================================
+   TUTORIAL PAGE LAYOUT (.wrapper + aside + .content)
+============================================================ */
+.wrapper {
+  padding-top: var(--header-h);
+  min-height: 100vh;
+}
+
+.d_flex {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* ── Sidebar — Desktop ── */
+aside {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  position: sticky;
+  top: var(--header-h);
+  height: calc(100vh - var(--header-h));
+  overflow-y: auto;
+  background: #E8F1FA;
+  padding: 16px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #B0C8DE #E8F1FA;
+}
+
+aside::-webkit-scrollbar {
+  width: 4px;
+}
+
+aside::-webkit-scrollbar-thumb {
+  background: #B0C8DE;
+  border-radius: 4px;
+}
+
+aside ul {
+  flex-direction: column;
+}
+
+aside ul li {
+  border-bottom: 1px solid rgba(160, 190, 220, .3);
+}
+
+aside ul li a {
+  display: block;
+  padding: 10px 18px;
+  font-size: 14px;
+  color: #1E2B3C;
+  border-left: 3px solid transparent;
+  transition: background .2s, color .2s, border-color .2s;
+  line-height: 1.4;
+}
+
+aside ul li a:hover,
+aside a.active {
+  background: #04AA6D !important;
+  color: #fff !important;
+  border-left-color: #028a58 !important;
+  font-weight: 600 !important;
+}
+
+.sidebar-toggle {
+  display: none;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+/* ── Content Area ── */
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 24px 28px;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   INDEX PAGE — HERO SECTION
+============================================================ */
+.hero-section {
+  padding: calc(var(--header-h) + 50px) 20px 70px;
+  text-align: center;
+}
+
+.ws-black {
+  color: #fff !important;
+  background-image: url("../images/hero-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+  background-position: center;
+  background-color: #282a35;
+}
+
+.ws-light-green {
+  background-color: #E37933 !important;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.hero-h1 {
+  font-size: clamp(2rem, 8vw, 68px);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  color: var(--accent2);
+  font-weight: 600;
+  font-size: clamp(0.95rem, 3vw, 21px);
+  margin-top: 22px;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  color: #fff;
+  font-size: clamp(0.95rem, 3vw, 21px);
+  font-weight: 700;
+  margin-top: 18px;
+}
+
+/* ============================================================
+   INDEX PAGE — TOPIC SECTIONS
+============================================================ */
+.topic-section {
+  padding: 50px 0;
+}
+
+.topic-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.topic-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.topic-text.center {
+  text-align: center;
+}
+
+.topic-title {
+  font-size: clamp(2.5rem, 10vw, 88px);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.topic-desc {
+  font-size: clamp(0.9rem, 3vw, 18px);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.topic-code {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── Buttons ── */
+.tut-button {
+  display: block;
+  width: 240px;
+  margin: 8px auto;
+  padding: 10px 16px;
+  border-radius: 25px;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  transition: opacity .2s, transform .15s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .16), 0 2px 10px rgba(0, 0, 0, .12);
+  cursor: pointer;
+}
+
+.tut-button:hover {
+  opacity: .85;
+  transform: translateY(-1px);
+}
+
+.btn-green {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-yellow {
+  background: var(--accent2);
+  color: #1E2B3C;
+}
+
+.btn-dark {
+  background: var(--dark);
+  color: #fff;
+}
+
+.btn-light {
+  background: #EDEAE2;
+  color: #1E2B3C;
+}
+
+/* ── Code Card (index page) ── */
+.code-card {
+  background: #E0DBD2;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .16), 0 2px 10px rgba(0, 0, 0, .12);
+  overflow: hidden;
+}
+
+.code-card h3 {
+  font-size: clamp(0.95rem, 2.5vw, 18px);
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.code-block {
+  background: #1E1E1E;
+  border-left: 4px solid #007ACC;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #1E1E1E;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .04);
+}
+
+.code-block::-webkit-scrollbar {
+  height: 5px;
+}
+
+.code-block::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
+}
+
+.code-block pre {
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: clamp(0.72rem, 1.6vw, 14px);
+  line-height: 1.8;
+  white-space: pre;
+  color: #D4D4D4;
+  min-width: 0;
+}
+
+/* ── Syntax Colors ── */
+.c-gray {
+  color: #6A9955;
+}
+
+.c-tag {
+  color: #569CD6;
+}
+
+.c-attr {
+  color: #9CDCFE;
+}
+
+.c-val {
+  color: #CE9178;
+}
+
+.c-str {
+  color: #CE9178;
+}
+
+.c-kw {
+  color: #C586C0;
+}
+
+.c-fn {
+  color: #DCDCAA;
+}
+
+.c-selector {
+  color: #D7BA7D;
+}
+
+.c-prop {
+  color: #9CDCFE;
+}
+
+.c-brace {
+  color: #D4D4D4;
+}
+
+/* ── Section Colors ── */
+.css-section {
+  background-color: #42A5F5 !important;
+  padding: 50px 0;
+}
+
+.js-section {
+  background-color: #F7DF1E !important;
+  padding: 50px 0;
+}
+
+.js-section .code-card h3 {
+  color: var(--dark);
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+footer {
+  width: 100%;
+  background: #111B26;
+}
+
+.footer-top {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 24px 20px;
+  flex-wrap: wrap;
+}
+
+.footer-logo img {
+  width: 200px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-nav li a {
+  color: var(--accent2);
+  font-size: 16px;
+  font-weight: 500;
+  transition: color .2s;
+}
+
+.footer-nav li a:hover {
+  color: var(--accent);
+}
+
+.copyright {
+  text-align: center;
+  color: #8A9BB0;
+  font-size: 14px;
+  padding: 12px 20px 20px;
+  border-top: 1px solid #1E2E40;
+}
+
+/* ============================================================
+   RESPONSIVE — 1100px
+============================================================ */
+@media (max-width: 1100px) {
+  :root {
+    --sidebar-w: 200px;
+  }
+
+  .content {
+    padding: 20px 20px;
+  }
+
+  aside ul li a {
+    font-size: 13px;
+    padding: 9px 14px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — 900px
+============================================================ */
+@media (max-width: 900px) {
+  :root {
+    --sidebar-w: 180px;
+  }
+
+  .content {
+    padding: 16px 16px;
+  }
+
+  .topic-inner {
+    gap: 24px;
+    padding: 0 16px;
+  }
+
+  .tut-button {
+    width: 200px;
+    font-size: 15px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — 768px  (mobile breakpoint)
+============================================================ */
+@media (max-width: 768px) {
+  :root {
+    --header-h: 58px;
+  }
+
+  header img {
+    width: 48px;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-drawer {
+    display: block;
+  }
+
+  /* ── Sidebar drawer ── */
+  aside {
+    position: fixed;
+    top: 0;
+    left: -285px;
+    width: 280px;
+    height: 100vh;
+    padding-top: calc(var(--header-h) + 12px);
+    background: #1B2936;
+    z-index: 998;
+    transition: left .3s ease;
+    box-shadow: none;
+    overflow-y: auto;
+  }
+
+  aside.sidebar-open {
+    left: 0;
+    box-shadow: 6px 0 24px rgba(0, 0, 0, .35);
+  }
+
+  aside ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, .07);
+  }
+
+  aside ul li a {
+    color: #9AAFC2;
+    font-size: 15px;
+    padding: 13px 22px;
+  }
+
+  aside ul li a:hover,
+  aside a.active {
+    background: #04AA6D !important;
+    color: #fff !important;
+    border-left-color: #028a58 !important;
+    font-weight: 600 !important;
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 997;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+  }
+
+  .sidebar-overlay.active {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .sidebar-toggle {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    position: fixed;
+    bottom: 22px;
+    right: 18px;
+    background: var(--dark);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Tiro Bangla", sans-serif;
+    cursor: pointer;
+    z-index: 995;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .28);
+    transition: background .2s, transform .2s;
+  }
+
+  .sidebar-toggle:hover {
+    background: var(--accent);
+    transform: scale(1.04);
+  }
+
+  .sidebar-toggle svg {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+  }
+
+  /* ── Tutorial layout ── */
+  .d_flex {
+    flex-direction: column;
+  }
+
+  .content {
+    padding: 14px 14px 88px;
+    width: 100%;
+  }
+
+  /* ── Index: Hero ── */
+  .hero-section {
+    padding: calc(var(--header-h) + 30px) 16px 50px;
+  }
+
+  .hero-h1 {
+    font-size: clamp(1.8rem, 8vw, 2.8rem);
+  }
+
+  .hero-subtitle,
+  .hero-cta {
+    font-size: clamp(0.88rem, 3.5vw, 1rem);
+    margin-top: 14px;
+  }
+
+  /* ── Index: Topic sections ── */
+  .topic-section {
+    padding: 36px 0;
+  }
+
+  .topic-inner {
+    flex-direction: column;
+    /* ← text + code উপর-নিচে */
+    gap: 20px;
+    padding: 0 16px;
+  }
+
+  .topic-text,
+  .topic-code {
+    width: 100%;
+  }
+
+  .topic-title {
+    font-size: clamp(2.2rem, 12vw, 3.5rem);
+  }
+
+  .topic-desc {
+    font-size: clamp(0.88rem, 3.5vw, 1rem);
+    margin-bottom: 14px;
+  }
+
+  /* ── Buttons full-width ── */
+  .tut-button {
+    width: 100%;
+    max-width: 360px;
+    font-size: 15px;
+    margin: 6px auto;
+  }
+
+  /* ── Code card ── */
+  .code-card {
+    padding: 12px;
+  }
+
+  .code-block {
+    padding: 12px 14px;
+  }
+
+  .code-block pre {
+    font-size: 0.72rem;
+  }
+
+  /* ── Footer ── */
+  .footer-top {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 18px 16px;
+  }
+
+  .footer-nav {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .footer-nav li a {
+    font-size: 14px;
+  }
+
+  .copyright {
+    font-size: 13px;
+    padding: 10px 16px 16px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — 480px
+============================================================ */
+@media (max-width: 480px) {
+  .hero-h1 {
+    font-size: clamp(1.5rem, 9vw, 2.2rem);
+  }
+
+  .topic-title {
+    font-size: clamp(2rem, 13vw, 3rem);
+  }
+
+  .topic-inner {
+    padding: 0 12px;
+  }
+
+  .tut-button {
+    font-size: 14px;
+    padding: 9px 14px;
+  }
+
+  .code-block pre {
+    font-size: 0.68rem;
+  }
+
+  aside {
+    width: 260px;
+  }
+
+  .sidebar-toggle {
+    bottom: 16px;
+    right: 14px;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .content {
+    padding: 10px 10px 88px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — 360px
+============================================================ */
+@media (max-width: 360px) {
+  .hero-h1 {
+    font-size: clamp(1.3rem, 9vw, 1.8rem);
+  }
+
+  .topic-title {
+    font-size: clamp(1.8rem, 12vw, 2.5rem);
+  }
+
+  .topic-inner {
+    padding: 0 10px;
+    gap: 14px;
+  }
+
+  .tut-button {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .code-block pre {
+    font-size: 0.64rem;
+  }
+
+  .content {
+    padding: 8px 8px 88px;
+  }
+}
+
+
+/* ============================================================
+   HEADER NAV ACTIVE
+============================================================ */
+
+/* Header nav — active পেইজের link */
+.nav-list li a.nav-active {
+  color: var(--accent) !important;
+  font-weight: 700;
+  position: relative;
+}
+.nav-list li a.nav-active {
+  color: var(--accent) !important;
+  font-weight: 700;
+  position: relative;
+}
+
+/* নিচে সরু সবুজ আন্ডারলাইন */
+.nav-list li a.nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* Mobile drawer — active link */
+.nav-drawer ul li a.nav-active {
+  background: var(--accent) !important;
+  color: #fff !important;
+}
+
+/* ============================================================
+   PRINT
+============================================================ */
+@media print {
+
+  header,
+  aside,
+  .sidebar-toggle,
+  .sidebar-overlay,
+  .nav-drawer {
+    display: none !important;
+  }
+
+  .wrapper {
+    padding-top: 0;
+  }
+
+  .d_flex {
+    display: block;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .code-block {
+    background: #f5f5f5;
+    border-left: 3px solid #007ACC;
+  }
+
+  .code-block pre {
+    color: #000;
+    white-space: pre-wrap;
+    font-size: 9pt;
+  }
+}
