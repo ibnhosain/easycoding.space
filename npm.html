@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Package Managers টিউটোরিয়াল — npm, pnpm, Yarn, Bun – Easy Coding Space</title>
-  <meta name="description" content="সহজ বাংলায় npm, pnpm, Yarn ও Bun শিখুন। ইনস্টলেশন, package.json, dependency management, scripts, workspaces — সম্পূর্ণ গাইড।" />
-  <meta name="keywords" content="npm বাংলা, pnpm বাংলা, yarn বাংলা, bun বাংলা, package manager tutorial bangla, npm install bangla, easycoding.space" />
+  <meta name="description"
+    content="সহজ বাংলায় npm, pnpm, Yarn ও Bun শিখুন। ইনস্টলেশন, package.json, dependency management, scripts, workspaces — সম্পূর্ণ গাইড।" />
+  <meta name="keywords"
+    content="npm বাংলা, pnpm বাংলা, yarn বাংলা, bun বাংলা, package manager tutorial bangla, npm install bangla, easycoding.space" />
   <meta name="author" content="ফরীদুর রহমান — Easy Coding Space" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <link rel="canonical" href="https://easycoding.space/package-managers.html" />
@@ -42,6 +45,7 @@
   }
   </script>
 </head>
+
 <body>
 
   <!-- ===== HEADER ===== -->
@@ -50,12 +54,19 @@
       <div class="header-inner">
         <a href="./index.html">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 150" width="300" height="90">
-            <text x="5" y="78" font-family="'Courier New', monospace" font-size="105" font-weight="900" fill="#E8621A" dominant-baseline="middle">&lt;</text>
-            <text x="88" y="78" font-family="'Courier New', monospace" font-size="65" font-weight="900" fill="#111111" text-anchor="middle" dominant-baseline="middle">/</text>
-            <text x="115" y="78" font-family="'Courier New', monospace" font-size="105" font-weight="900" fill="#E8621A" dominant-baseline="middle">&gt;</text>
-            <text x="182" y="42" font-family="'Courier New', monospace" font-size="48" font-weight="900" fill="#E8621A" dominant-baseline="middle">Easy</text>
-            <text x="182" y="95" font-family="'Courier New', monospace" font-size="48" font-weight="900" fill="#111111" dominant-baseline="middle">Coding<tspan font-size="24" font-weight="900" fill="#E8621A">.space</tspan></text>
-            <text x="182" y="135" font-family="'Hind Siliguri', Arial, sans-serif" font-size="20" font-weight="700" fill="#222222" dominant-baseline="middle">বাংলায় কোডিং শেখায়</text>
+            <text x="5" y="78" font-family="'Courier New', monospace" font-size="105" font-weight="900" fill="#E8621A"
+              dominant-baseline="middle">&lt;</text>
+            <text x="88" y="78" font-family="'Courier New', monospace" font-size="65" font-weight="900" fill="#111111"
+              text-anchor="middle" dominant-baseline="middle">/</text>
+            <text x="115" y="78" font-family="'Courier New', monospace" font-size="105" font-weight="900" fill="#E8621A"
+              dominant-baseline="middle">&gt;</text>
+            <text x="182" y="42" font-family="'Courier New', monospace" font-size="48" font-weight="900" fill="#E8621A"
+              dominant-baseline="middle">Easy</text>
+            <text x="182" y="95" font-family="'Courier New', monospace" font-size="48" font-weight="900" fill="#111111"
+              dominant-baseline="middle">Coding<tspan font-size="24" font-weight="900" fill="#E8621A">.space</tspan>
+              </text>
+            <text x="182" y="135" font-family="'Hind Siliguri', Arial, sans-serif" font-size="20" font-weight="700"
+              fill="#222222" dominant-baseline="middle">বাংলায় কোডিং শেখায়</text>
           </svg>
         </a>
         <nav>
@@ -64,10 +75,11 @@
             <li><a href="./html.html">HTML</a></li>
             <li><a href="./css.html">CSS</a></li>
             <li><a href="./js.html">JavaScript</a></li>
-             <li><a href="./VCS.html">VCS/Git</a></li>
+            <li><a href="./VCS.html">VCS/Git</a></li>
             <li><a href="./npm.html">NPM</a></li>
             <li><a href="./tailwind.html">Tailwind</a></li>
-              <li><a href="./terminal.html">Terminal</a></li>
+            <li><a href="./terminal.html">Terminal</a></li>
+            <li><a href="./projects.html">Projects</a></li>
           </ul>
         </nav>
         <button class="hamburger" aria-label="মেনু খোলো" aria-expanded="false">
@@ -87,6 +99,7 @@
       <li><a href="./npm.html">NPM</a></li>
       <li><a href="./tailwind.html">Tailwind</a></li>
       <li><a href="./terminal.html">Terminal</a></li>
+      <li><a href="./projects.html">Projects</a></li>
     </ul>
   </nav>
 
@@ -155,36 +168,44 @@
           ================================================================ -->
           <section id="PM-Intro" class="ec-section">
             <h1 class="center" id="pm-intro-heading">📦 Package Managers — কী, কেন এবং কোনটা ব্যবহার করবে?</h1>
-            <p class="center">JavaScript/Node.js প্রজেক্টে বাইরের library ও tool ব্যবহার করতে Package Manager অপরিহার্য। এটি ছাড়া আধুনিক web development কল্পনাই করা যায় না।</p>
+            <p class="center">JavaScript/Node.js প্রজেক্টে বাইরের library ও tool ব্যবহার করতে Package Manager অপরিহার্য।
+              এটি ছাড়া আধুনিক web development কল্পনাই করা যায় না।</p>
             <hr class="section-divider" />
 
             <div class="example-box">
               <h2>🔷 Package Manager কী?</h2>
               <p>
-                <strong>Package Manager</strong> হলো এমন একটি টুল যা তোমার প্রজেক্টে বাইরের JavaScript library (package) ইনস্টল, আপডেট, মুছে ফেলা এবং সংস্করণ নিয়ন্ত্রণ করে।
+                <strong>Package Manager</strong> হলো এমন একটি টুল যা তোমার প্রজেক্টে বাইরের JavaScript library (package)
+                ইনস্টল, আপডেট, মুছে ফেলা এবং সংস্করণ নিয়ন্ত্রণ করে।
                 তুমি নিজে কোড লেখার পাশাপাশি অন্যদের তৈরি হাজার হাজার উপকারী library ব্যবহার করতে পারো —
                 যেমন React, Express, Lodash, Axios ইত্যাদি। Package Manager এই সব library একটি কমান্ডে নামিয়ে দেয়।
               </p>
 
               <p>
-                <strong>npmjs.com</strong> হলো JavaScript-এর সবচেয়ে বড় package registry — এখানে ২০ লক্ষেরও বেশি package আছে।
+                <strong>npmjs.com</strong> হলো JavaScript-এর সবচেয়ে বড় package registry — এখানে ২০ লক্ষেরও বেশি
+                package আছে।
                 npm, pnpm, Yarn, Bun — এই সব manager ওই একই registry থেকেই package নামায়।
               </p>
 
               <h3>Package Manager ছাড়া কী সমস্যা হত?</h3>
               <div class="code-box">Package Manager ছাড়া:
-  → প্রতিটি library-র ওয়েবসাইটে গিয়ে manually ডাউনলোড করতে হত
-  → প্রতিটি library-র dependencies-ও manually নামাতে হত
-  → version mismatch হলে বুঝতে পারতে না
-  → টিমের সবার কম্পিউটারে একই version রাখা কঠিন হত
-  → "আমার কম্পিউটারে চলে, তোমার চলছে না কেন?" — এই সমস্যা!
+                → প্রতিটি library-র ওয়েবসাইটে গিয়ে manually ডাউনলোড করতে হত
+                → প্রতিটি library-র dependencies-ও manually নামাতে হত
+                → version mismatch হলে বুঝতে পারতে না
+                → টিমের সবার কম্পিউটারে একই version রাখা কঠিন হত
+                → "আমার কম্পিউটারে চলে, তোমার চলছে না কেন?" — এই সমস্যা!
 
-Package Manager থাকলে:
-  npm install   ← একটি কমান্ডে সব হয়ে যায় ✅</div>
+                Package Manager থাকলে:
+                npm install ← একটি কমান্ডে সব হয়ে যায় ✅</div>
 
               <table class="size-chart">
                 <thead>
-                  <tr><th>Package Manager</th><th>তৈরি সাল</th><th>বিশেষত্ব</th><th>গতি</th></tr>
+                  <tr>
+                    <th>Package Manager</th>
+                    <th>তৈরি সাল</th>
+                    <th>বিশেষত্ব</th>
+                    <th>গতি</th>
+                  </tr>
                 </thead>
                 <tbody>
                   <tr>
@@ -200,7 +221,8 @@ Package Manager থাকলে:
                     <td>দ্রুত</td>
                   </tr>
                   <tr>
-                    <td><a href="https://classic.yarnpkg.com/en/docs/getting-started" target="_blank" rel="noopener"><strong>Yarn</strong></a></td>
+                    <td><a href="https://classic.yarnpkg.com/en/docs/getting-started" target="_blank"
+                        rel="noopener"><strong>Yarn</strong></a></td>
                     <td>২০১৬</td>
                     <td>Facebook তৈরি, reliable lockfile, workspaces</td>
                     <td>দ্রুত</td>
@@ -221,23 +243,23 @@ Package Manager থাকলে:
 
               <div class="code-box">তুমি লেখো: npm install express
 
-Package Manager কী করে:
-  ১. npmjs.com registry-তে "express" খোঁজে
-  ২. সর্বশেষ stable version খুঁজে বের করে
-  ③ express-এর সব dependencies-এর তালিকা নেয়
-  ④ সব package ডাউনলোড করে
-  ⑤ node_modules/ ফোল্ডারে রাখে
-  ⑥ package.json-এ dependency যোগ করে
-  ⑦ lockfile আপডেট করে (exact version record)
+                Package Manager কী করে:
+                ১. npmjs.com registry-তে "express" খোঁজে
+                ২. সর্বশেষ stable version খুঁজে বের করে
+                ③ express-এর সব dependencies-এর তালিকা নেয়
+                ④ সব package ডাউনলোড করে
+                ⑤ node_modules/ ফোল্ডারে রাখে
+                ⑥ package.json-এ dependency যোগ করে
+                ⑦ lockfile আপডেট করে (exact version record)
 
-ফলাফল:
-  node_modules/
-    express/
-    body-parser/    ← express-এর dependency
-    accepts/        ← আরো nested dependency
-    ...
-  package.json      ← "express": "^4.18.2"
-  package-lock.json ← exact version সংরক্ষিত</div>
+                ফলাফল:
+                node_modules/
+                express/
+                body-parser/ ← express-এর dependency
+                accepts/ ← আরো nested dependency
+                ...
+                package.json ← "express": "^4.18.2"
+                package-lock.json ← exact version সংরক্ষিত</div>
             </div>
           </section>
 
@@ -254,7 +276,13 @@ Package Manager কী করে:
 
               <table class="size-chart">
                 <thead>
-                  <tr><th>বিষয়</th><th>npm</th><th>pnpm</th><th>Yarn Classic</th><th>Bun</th></tr>
+                  <tr>
+                    <th>বিষয়</th>
+                    <th>npm</th>
+                    <th>pnpm</th>
+                    <th>Yarn Classic</th>
+                    <th>Bun</th>
+                  </tr>
                 </thead>
                 <tbody>
                   <tr>
@@ -326,30 +354,52 @@ Package Manager কী করে:
               <h3>কোনটা বেছে নেবে?</h3>
               <table class="size-chart">
                 <thead>
-                  <tr><th>তুমি যদি...</th><th>তাহলে ব্যবহার করো</th></tr>
+                  <tr>
+                    <th>তুমি যদি...</th>
+                    <th>তাহলে ব্যবহার করো</th>
+                  </tr>
                 </thead>
                 <tbody>
-                  <tr><td>এইমাত্র শুরু করছো</td><td><a href="https://www.npmjs.com/" target="_blank" rel="noopener"><strong>npm</strong></a> — Node.js-এর সাথেই আসে, কোনো install নেই</td></tr>
-                  <tr><td>দ্রুত install ও disk space বাঁচাতে চাও</td><td><a href="https://pnpm.io/" target="_blank" rel="noopener"><strong>pnpm</strong></a> — monorepo-তেও সেরা</td></tr>
-                  <tr><td>Facebook/Meta-এর ecosystem-এ কাজ করো</td><td><a href="https://classic.yarnpkg.com/en/docs/getting-started" target="_blank" rel="noopener"><strong>Yarn</strong></a> — বিশেষত workspaces-এর জন্য</td></tr>
-                  <tr><td>সর্বোচ্চ গতি চাও, TypeScript সরাসরি চালাতে চাও</td><td><a href="https://bun.com/docs" target="_blank" rel="noopener"><strong>Bun</strong></a> — সব-in-one toolkit</td></tr>
+                  <tr>
+                    <td>এইমাত্র শুরু করছো</td>
+                    <td><a href="https://www.npmjs.com/" target="_blank" rel="noopener"><strong>npm</strong></a> —
+                      Node.js-এর সাথেই আসে, কোনো install নেই</td>
+                  </tr>
+                  <tr>
+                    <td>দ্রুত install ও disk space বাঁচাতে চাও</td>
+                    <td><a href="https://pnpm.io/" target="_blank" rel="noopener"><strong>pnpm</strong></a> —
+                      monorepo-তেও সেরা</td>
+                  </tr>
+                  <tr>
+                    <td>Facebook/Meta-এর ecosystem-এ কাজ করো</td>
+                    <td><a href="https://classic.yarnpkg.com/en/docs/getting-started" target="_blank"
+                        rel="noopener"><strong>Yarn</strong></a> — বিশেষত workspaces-এর জন্য</td>
+                  </tr>
+                  <tr>
+                    <td>সর্বোচ্চ গতি চাও, TypeScript সরাসরি চালাতে চাও</td>
+                    <td><a href="https://bun.com/docs" target="_blank" rel="noopener"><strong>Bun</strong></a> —
+                      সব-in-one toolkit</td>
+                  </tr>
                 </tbody>
               </table>
 
               <div class="tip-box">
                 ✅ <strong>শেখার পরামর্শ:</strong> প্রথমে <strong>npm</strong> দিয়ে শুরু করো — এটা সব জায়গায় আছে।
-                npm ভালো বুঝলে বাকিগুলো অনেক সহজ মনে হবে। তারপর <strong>pnpm</strong> বা <strong>Bun</strong> ব্যবহার করতে পারো।
+                npm ভালো বুঝলে বাকিগুলো অনেক সহজ মনে হবে। তারপর <strong>pnpm</strong> বা <strong>Bun</strong> ব্যবহার
+                করতে পারো।
               </div>
             </div>
           </section>
 
 
-                    <!-- ================================================================
+          <!-- ================================================================
                ████  npm  ████
           ================================================================ -->
           <section id="NPM-Intro" class="ec-section">
-            <h1 class="center">🟥 <a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a> — Node Package Manager সম্পূর্ণ গাইড</h1>
-            <p class="center">npm হলো JavaScript-এর সবচেয়ে পুরনো ও জনপ্রিয় package manager। Node.js ইনস্টল করলেই npm আসে। ২০ লক্ষেরও বেশি package নিয়ে বিশ্বের বৃহত্তম software registry।</p>
+            <h1 class="center">🟥 <a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a> — Node Package
+              Manager সম্পূর্ণ গাইড</h1>
+            <p class="center">npm হলো JavaScript-এর সবচেয়ে পুরনো ও জনপ্রিয় package manager। Node.js ইনস্টল করলেই npm
+              আসে। ২০ লক্ষেরও বেশি package নিয়ে বিশ্বের বৃহত্তম software registry।</p>
             <hr class="section-divider" />
 
             <div class="example-box">
@@ -361,20 +411,46 @@ Package Manager কী করে:
 
               <div class="code-box">npm তিনটি জিনিস এক নামে:
 
-  ১. Command-line tool    → terminal-এ "npm install" টাইপ করো
-  ২. Registry             → npmjs.com-এ ২০ লক্ষ+ package জমা আছে
-  ③. Website              → npmjs.com-এ package খোঁজো, documentation পড়ো</div>
+                ১. Command-line tool → terminal-এ "npm install" টাইপ করো
+                ২. Registry → npmjs.com-এ ২০ লক্ষ+ package জমা আছে
+                ③. Website → npmjs.com-এ package খোঁজো, documentation পড়ো</div>
 
               <table class="size-chart">
-                <thead><tr><th>সাল</th><th>ঘটনা</th></tr></thead>
+                <thead>
+                  <tr>
+                    <th>সাল</th>
+                    <th>ঘটনা</th>
+                  </tr>
+                </thead>
                 <tbody>
-                  <tr><td><strong>২০১০</strong></td><td>npm v1 — Node.js-এর সাথে প্রথম release।</td></tr>
-                  <tr><td><strong>২০১৪</strong></td><td>npm v2 — nested node_modules, সমস্যা শুরু।</td></tr>
-                  <tr><td><strong>২০১৬</strong></td><td>npm v3 — flat node_modules structure, Yarn-এর competition শুরু।</td></tr>
-                  <tr><td><strong>২০১৭</strong></td><td>npm v5 — package-lock.json যোগ (Yarn-এর জবাব)।</td></tr>
-                  <tr><td><strong>২০২০</strong></td><td>GitHub/Microsoft npm কিনে নেয় $7.5 billion-এ।</td></tr>
-                  <tr><td><strong>২০২১</strong></td><td>npm v7 — Workspaces, peer deps auto-install।</td></tr>
-                  <tr><td><strong>২০২৩+</strong></td><td>npm v10 — provenance statements, OIDC, আরো দ্রুত।</td></tr>
+                  <tr>
+                    <td><strong>২০১০</strong></td>
+                    <td>npm v1 — Node.js-এর সাথে প্রথম release।</td>
+                  </tr>
+                  <tr>
+                    <td><strong>২০১৪</strong></td>
+                    <td>npm v2 — nested node_modules, সমস্যা শুরু।</td>
+                  </tr>
+                  <tr>
+                    <td><strong>২০১৬</strong></td>
+                    <td>npm v3 — flat node_modules structure, Yarn-এর competition শুরু।</td>
+                  </tr>
+                  <tr>
+                    <td><strong>২০১৭</strong></td>
+                    <td>npm v5 — package-lock.json যোগ (Yarn-এর জবাব)।</td>
+                  </tr>
+                  <tr>
+                    <td><strong>২০২০</strong></td>
+                    <td>GitHub/Microsoft npm কিনে নেয় $7.5 billion-এ।</td>
+                  </tr>
+                  <tr>
+                    <td><strong>২০২১</strong></td>
+                    <td>npm v7 — Workspaces, peer deps auto-install।</td>
+                  </tr>
+                  <tr>
+                    <td><strong>২০২৩+</strong></td>
+                    <td>npm v10 — provenance statements, OIDC, আরো দ্রুত।</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -390,152 +466,179 @@ Package Manager কী করে:
 
               <h3><span class="tag-badge" style="background:#dbeafe;color:#1e40af;">সরাসরি ইনস্টল</span></h3>
               <div class="code-box"># nodejs.org থেকে LTS version ডাউনলোড করো
-# https://nodejs.org/en/download/
+                # https://nodejs.org/en/download/
 
-# ইনস্টল যাচাই করো
-node --version    # v20.15.0 বা তার বেশি
-npm --version     # 10.x.x বা তার বেশি</div>
+                # ইনস্টল যাচাই করো
+                node --version # v20.15.0 বা তার বেশি
+                npm --version # 10.x.x বা তার বেশি</div>
 
-              <h3><span class="tag-badge" style="background:#dcfce7;color:#166534;">nvm দিয়ে (Professional পদ্ধতি)</span></h3>
+              <h3><span class="tag-badge" style="background:#dcfce7;color:#166534;">nvm দিয়ে (Professional
+                  পদ্ধতি)</span></h3>
               <div class="code-box"># macOS / Linux
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+                curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 
-# Windows → https://github.com/coreybutler/nvm-windows
+                # Windows → https://github.com/coreybutler/nvm-windows
 
-# Node.js ইনস্টল ও ব্যবহার
-nvm install --lts        # সর্বশেষ LTS
-nvm install 20           # নির্দিষ্ট version
-nvm use 20               # এই version চালু করো
-nvm alias default 20     # default সেট করো
-nvm list                 # installed versions দেখো</div>
+                # Node.js ইনস্টল ও ব্যবহার
+                nvm install --lts # সর্বশেষ LTS
+                nvm install 20 # নির্দিষ্ট version
+                nvm use 20 # এই version চালু করো
+                nvm alias default 20 # default সেট করো
+                nvm list # installed versions দেখো</div>
 
               <div class="code-box"># npm নিজেকে update করো
-npm install -g npm@latest
+                npm install -g npm@latest
 
-# নির্দিষ্ট version
-npm install -g npm@10</div>
+                # নির্দিষ্ট version
+                npm install -g npm@10</div>
             </div>
 
             <div class="example-box">
               <h2>🔷 প্রজেক্ট শুরু — npm init</h2>
               <div class="code-box"># interactive — প্রশ্ন করবে
-npm init
+                npm init
 
-# সব default নাও (-y = yes to everything)
-npm init -y
+                # সব default নাও (-y = yes to everything)
+                npm init -y
 
-# scoped package init
-npm init --scope=@mycompany
+                # scoped package init
+                npm init --scope=@mycompany
 
-# package.json তৈরি হবে:
-{
-  "name": "my-website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": { "test": "echo \"Error: no test specified\"" },
-  "author": "",
-  "license": "ISC"
-}</div>
+                # package.json তৈরি হবে:
+                {
+                "name": "my-website",
+                "version": "1.0.0",
+                "description": "",
+                "main": "index.js",
+                "scripts": { "test": "echo \"Error: no test specified\"" },
+                "author": "",
+                "license": "ISC"
+                }</div>
             </div>
           </section>
 
           <section id="NPM-PackageJson" class="ec-section">
             <h1 class="center">📄 package.json — প্রজেক্টের পরিচয়পত্র</h1>
-            <p class="center">package.json হলো প্রজেক্টের সবচেয়ে গুরুত্বপূর্ণ ফাইল। সব metadata, dependencies ও scripts এখানে থাকে।</p>
+            <p class="center">package.json হলো প্রজেক্টের সবচেয়ে গুরুত্বপূর্ণ ফাইল। সব metadata, dependencies ও scripts
+              এখানে থাকে।</p>
             <hr class="section-divider" />
 
             <div class="example-box">
               <h2>🔷 package.json-এর সব ক্ষেত্র বিস্তারিত</h2>
               <div class="code-box">{
-  // ━━━━━━━━━━ পরিচয় ━━━━━━━━━━
-  "name": "my-website",           // lowercase, hyphen দিয়ে (space নয়)
-  "version": "1.0.0",             // SemVer: MAJOR.MINOR.PATCH
-  "description": "আমার ওয়েবসাইট",
-  "keywords": ["web", "nodejs"],  // npmjs.com search-এ সাহায্য করে
-  "homepage": "https://mysite.com",
-  "license": "MIT",
-  "private": true,                // true হলে accidental npm publish বন্ধ
+                // ━━━━━━━━━━ পরিচয় ━━━━━━━━━━
+                "name": "my-website", // lowercase, hyphen দিয়ে (space নয়)
+                "version": "1.0.0", // SemVer: MAJOR.MINOR.PATCH
+                "description": "আমার ওয়েবসাইট",
+                "keywords": ["web", "nodejs"], // npmjs.com search-এ সাহায্য করে
+                "homepage": "https://mysite.com",
+                "license": "MIT",
+                "private": true, // true হলে accidental npm publish বন্ধ
 
-  // ━━━━━━━━━━ লেখক ও অবদানকারী ━━━━━━━━━━
-  "author": {
-    "name": "Farid Rahman",
-    "email": "farid@example.com",
-    "url": "https://farid.dev"
-  },
-  "contributors": [
-    { "name": "Reza", "email": "reza@example.com" }
-  ],
+                // ━━━━━━━━━━ লেখক ও অবদানকারী ━━━━━━━━━━
+                "author": {
+                "name": "Farid Rahman",
+                "email": "farid@example.com",
+                "url": "https://farid.dev"
+                },
+                "contributors": [
+                { "name": "Reza", "email": "reza@example.com" }
+                ],
 
-  // ━━━━━━━━━━ ফাইল structure ━━━━━━━━━━
-  "main": "index.js",             // CommonJS entry (require করলে এটা লোড হয়)
-  "module": "dist/index.mjs",     // ES Module entry
-  "exports": {                    // modern: conditional exports
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
-    }
-  },
-  "files": ["dist/", "src/"],     // publish হলে কোন ফাইল যাবে
-  "bin": { "my-cli": "./bin/cli.js" }, // executable তৈরি
+                // ━━━━━━━━━━ ফাইল structure ━━━━━━━━━━
+                "main": "index.js", // CommonJS entry (require করলে এটা লোড হয়)
+                "module": "dist/index.mjs", // ES Module entry
+                "exports": { // modern: conditional exports
+                ".": {
+                "import": "./dist/index.mjs",
+                "require": "./dist/index.cjs"
+                }
+                },
+                "files": ["dist/", "src/"], // publish হলে কোন ফাইল যাবে
+                "bin": { "my-cli": "./bin/cli.js" }, // executable তৈরি
 
-  // ━━━━━━━━━━ scripts ━━━━━━━━━━
-  "scripts": {
-    "start":   "node index.js",
-    "dev":     "nodemon index.js",
-    "build":   "webpack --mode production",
-    "test":    "jest --coverage",
-    "lint":    "eslint src/",
-    "prepare": "npm run build"    // publish-এর আগে চলে
-  },
+                // ━━━━━━━━━━ scripts ━━━━━━━━━━
+                "scripts": {
+                "start": "node index.js",
+                "dev": "nodemon index.js",
+                "build": "webpack --mode production",
+                "test": "jest --coverage",
+                "lint": "eslint src/",
+                "prepare": "npm run build" // publish-এর আগে চলে
+                },
 
-  // ━━━━━━━━━━ dependencies ━━━━━━━━━━
-  "dependencies": {               // production-এ লাগবে
-    "express": "^4.18.2",
-    "axios": "^1.6.0"
-  },
-  "devDependencies": {            // development-এ লাগবে
-    "jest": "^29.0.0",
-    "nodemon": "^3.0.0",
-    "webpack": "^5.88.0"
-  },
-  "peerDependencies": {           // user-কে নিজে install করতে হবে
-    "react": ">=17.0.0"
-  },
-  "peerDependenciesMeta": {
-    "react": { "optional": true } // optional করা যায়
-  },
-  "optionalDependencies": {       // না থাকলেও চলে
-    "fsevents": "^2.3.0"
-  },
+                // ━━━━━━━━━━ dependencies ━━━━━━━━━━
+                "dependencies": { // production-এ লাগবে
+                "express": "^4.18.2",
+                "axios": "^1.6.0"
+                },
+                "devDependencies": { // development-এ লাগবে
+                "jest": "^29.0.0",
+                "nodemon": "^3.0.0",
+                "webpack": "^5.88.0"
+                },
+                "peerDependencies": { // user-কে নিজে install করতে হবে
+                "react": ">=17.0.0"
+                },
+                "peerDependenciesMeta": {
+                "react": { "optional": true } // optional করা যায়
+                },
+                "optionalDependencies": { // না থাকলেও চলে
+                "fsevents": "^2.3.0"
+                },
 
-  // ━━━━━━━━━━ engine requirements ━━━━━━━━━━
-  "engines": {
-    "node": ">=18.0.0",
-    "npm":  ">=9.0.0"
-  },
+                // ━━━━━━━━━━ engine requirements ━━━━━━━━━━
+                "engines": {
+                "node": ">=18.0.0",
+                "npm": ">=9.0.0"
+                },
 
-  // ━━━━━━━━━━ repository info ━━━━━━━━━━
-  "repository": {
-    "type": "git",
-    "url":  "https://github.com/farid/my-website.git"
-  },
-  "bugs": { "url": "https://github.com/farid/my-website/issues" },
+                // ━━━━━━━━━━ repository info ━━━━━━━━━━
+                "repository": {
+                "type": "git",
+                "url": "https://github.com/farid/my-website.git"
+                },
+                "bugs": { "url": "https://github.com/farid/my-website/issues" },
 
-  // ━━━━━━━━━━ type (ESM vs CJS) ━━━━━━━━━━
-  "type": "module"                // "module" = ESM (.js files), "commonjs" = CJS (default)
-}</div>
+                // ━━━━━━━━━━ type (ESM vs CJS) ━━━━━━━━━━
+                "type": "module" // "module" = ESM (.js files), "commonjs" = CJS (default)
+                }</div>
 
               <h3>dependencies-এর চার ধরন</h3>
               <table class="size-chart">
                 <thead>
-                  <tr><th>ধরন</th><th>উদ্দেশ্য</th><th>উদাহরণ</th><th>কখন install হয়?</th></tr>
+                  <tr>
+                    <th>ধরন</th>
+                    <th>উদ্দেশ্য</th>
+                    <th>উদাহরণ</th>
+                    <th>কখন install হয়?</th>
+                  </tr>
                 </thead>
                 <tbody>
-                  <tr><td><strong>dependencies</strong></td><td>Production-এ app চালাতে লাগে</td><td>express, react, axios</td><td>সবসময়</td></tr>
-                  <tr><td><strong>devDependencies</strong></td><td>শুধু development-এ লাগে</td><td>jest, webpack, eslint</td><td>--production ছাড়া</td></tr>
-                  <tr><td><strong>peerDependencies</strong></td><td>Plugin/lib-এর জন্য host-এ থাকা দরকার</td><td>react (plugin-এর জন্য)</td><td>npm v7+ auto-install</td></tr>
-                  <tr><td><strong>optionalDependencies</strong></td><td>না থাকলেও চলে</td><td>fsevents (macOS-specific)</td><td>চেষ্টা করে, fail হলে skip</td></tr>
+                  <tr>
+                    <td><strong>dependencies</strong></td>
+                    <td>Production-এ app চালাতে লাগে</td>
+                    <td>express, react, axios</td>
+                    <td>সবসময়</td>
+                  </tr>
+                  <tr>
+                    <td><strong>devDependencies</strong></td>
+                    <td>শুধু development-এ লাগে</td>
+                    <td>jest, webpack, eslint</td>
+                    <td>--production ছাড়া</td>
+                  </tr>
+                  <tr>
+                    <td><strong>peerDependencies</strong></td>
+                    <td>Plugin/lib-এর জন্য host-এ থাকা দরকার</td>
+                    <td>react (plugin-এর জন্য)</td>
+                    <td>npm v7+ auto-install</td>
+                  </tr>
+                  <tr>
+                    <td><strong>optionalDependencies</strong></td>
+                    <td>না থাকলেও চলে</td>
+                    <td>fsevents (macOS-specific)</td>
+                    <td>চেষ্টা করে, fail হলে skip</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -548,102 +651,102 @@ npm init --scope=@mycompany
             <div class="example-box">
               <h2>🔷 npm install — Package ইনস্টল করা</h2>
               <div class="code-box"># ━━━━━━ সব dependencies install ━━━━━━
-npm install
-npm i                      # shorthand
+                npm install
+                npm i # shorthand
 
-# ━━━━━━ নির্দিষ্ট package ━━━━━━
-npm install express
-npm install express axios lodash      # একসাথে একাধিক
-npm install -D jest                   # devDependency
-npm install --save-dev nodemon        # devDependency (same)
-npm install -g nodemon                # global
-npm install --global create-react-app # global (same)
+                # ━━━━━━ নির্দিষ্ট package ━━━━━━
+                npm install express
+                npm install express axios lodash # একসাথে একাধিক
+                npm install -D jest # devDependency
+                npm install --save-dev nodemon # devDependency (same)
+                npm install -g nodemon # global
+                npm install --global create-react-app # global (same)
 
-# ━━━━━━ নির্দিষ্ট version ━━━━━━
-npm install express@4.18.0     # exact version
-npm install express@latest     # সর্বশেষ
-npm install express@next       # beta/next tag
-npm install express@^4.0.0     # range
+                # ━━━━━━ নির্দিষ্ট version ━━━━━━
+                npm install express@4.18.0 # exact version
+                npm install express@latest # সর্বশেষ
+                npm install express@next # beta/next tag
+                npm install express@^4.0.0 # range
 
-# ━━━━━━ বিশেষ sources ━━━━━━
-npm install git+https://github.com/user/repo.git
-npm install git+ssh://github.com/user/repo.git#v1.0.0
-npm install github:user/repo   # shorthand
-npm install user/repo          # GitHub shorthand
-npm install ../my-local-pkg    # local path
-npm install ./pkg.tgz          # local tarball
+                # ━━━━━━ বিশেষ sources ━━━━━━
+                npm install git+https://github.com/user/repo.git
+                npm install git+ssh://github.com/user/repo.git#v1.0.0
+                npm install github:user/repo # shorthand
+                npm install user/repo # GitHub shorthand
+                npm install ../my-local-pkg # local path
+                npm install ./pkg.tgz # local tarball
 
-# ━━━━━━ production mode ━━━━━━
-npm install --production
-npm install --omit=dev         # same (newer syntax)</div>
+                # ━━━━━━ production mode ━━━━━━
+                npm install --production
+                npm install --omit=dev # same (newer syntax)</div>
 
               <h3>CI/CD-এর জন্য npm ci</h3>
               <div class="code-box"># npm ci = clean install (CI/CD-এর জন্য আদর্শ)
-npm ci
+                npm ci
 
-# npm install vs npm ci পার্থক্য:
-# npm install → package-lock.json আপডেট করতে পারে
-# npm ci      → হুবহু lockfile follow করে, কোনো update নেই
-#               node_modules মুছে fresh start করে
-#               lockfile না থাকলে error দেয়
+                # npm install vs npm ci পার্থক্য:
+                # npm install → package-lock.json আপডেট করতে পারে
+                # npm ci → হুবহু lockfile follow করে, কোনো update নেই
+                # node_modules মুছে fresh start করে
+                # lockfile না থাকলে error দেয়
 
-# GitHub Actions-এ:
-- run: npm ci                  # ← সবসময় এটাই ব্যবহার করো</div>
+                # GitHub Actions-এ:
+                - run: npm ci # ← সবসময় এটাই ব্যবহার করো</div>
             </div>
 
             <div class="example-box">
               <h2>🔷 Package আপডেট ও মুছা</h2>
               <div class="code-box"># ━━━━━━ আপডেট করা ━━━━━━
-npm update                     # সব (semver range-এর মধ্যে)
-npm update express             # নির্দিষ্ট package
-npm update --save              # package.json-ও update করো
+                npm update # সব (semver range-এর মধ্যে)
+                npm update express # নির্দিষ্ট package
+                npm update --save # package.json-ও update করো
 
-# Outdated দেখো
-npm outdated
-# Output:
-# Package   Current  Wanted  Latest  Location
-# express   4.17.0   4.18.2  4.18.2  node_modules/express
+                # Outdated দেখো
+                npm outdated
+                # Output:
+                # Package Current Wanted Latest Location
+                # express 4.17.0 4.18.2 4.18.2 node_modules/express
 
-# ━━━━━━ মুছে ফেলা ━━━━━━
-npm uninstall express          # local
-npm remove express             # same
-npm rm express                 # shorthand
-npm uninstall -g nodemon       # global
-npm uninstall --save-dev jest  # devDependency</div>
+                # ━━━━━━ মুছে ফেলা ━━━━━━
+                npm uninstall express # local
+                npm remove express # same
+                npm rm express # shorthand
+                npm uninstall -g nodemon # global
+                npm uninstall --save-dev jest # devDependency</div>
 
               <div class="code-box"># ━━━━━━ Package তথ্য দেখা ━━━━━━
-npm info express               # সব তথ্য
-npm view express               # same
-npm view express versions      # সব available versions
-npm view express version       # সর্বশেষ version
-npm view express dependencies  # direct dependencies
+                npm info express # সব তথ্য
+                npm view express # same
+                npm view express versions # সব available versions
+                npm view express version # সর্বশেষ version
+                npm view express dependencies # direct dependencies
 
-# ━━━━━━ Package খোঁজা ━━━━━━
-npm search express
-npm search "date formatting"
+                # ━━━━━━ Package খোঁজা ━━━━━━
+                npm search express
+                npm search "date formatting"
 
-# ━━━━━━ Installed list ━━━━━━
-npm list                       # সব (nested)
-npm ls                         # same
-npm list --depth=0             # শুধু top-level
-npm list -g --depth=0          # global packages
-npm list express               # নির্দিষ্ট package আছে কিনা
+                # ━━━━━━ Installed list ━━━━━━
+                npm list # সব (nested)
+                npm ls # same
+                npm list --depth=0 # শুধু top-level
+                npm list -g --depth=0 # global packages
+                npm list express # নির্দিষ্ট package আছে কিনা
 
-# ━━━━━━ Explain (why installed?) ━━━━━━
-npm explain lodash             # কেন lodash install হয়েছে?
-npm why lodash                 # same</div>
+                # ━━━━━━ Explain (why installed?) ━━━━━━
+                npm explain lodash # কেন lodash install হয়েছে?
+                npm why lodash # same</div>
 
               <div class="code-box"># ━━━━━━ দরকারি অন্য কমান্ড ━━━━━━
-# Package-এর docs/homepage browser-এ খোলো
-npm docs express
-npm home express               # same
+                # Package-এর docs/homepage browser-এ খোলো
+                npm docs express
+                npm home express # same
 
-# Bug tracker খোলো
-npm bugs express
-npm issues express             # same
+                # Bug tracker খোলো
+                npm bugs express
+                npm issues express # same
 
-# Package এর repository খোলো
-npm repo express</div>
+                # Package এর repository খোলো
+                npm repo express</div>
             </div>
 
             <div class="example-box">
@@ -653,25 +756,25 @@ npm repo express</div>
                 npm v5.2+ থেকে npx built-in।
               </p>
               <div class="code-box"># React app তৈরি (create-react-app install না করেই)
-npx create-react-app my-app
+                npx create-react-app my-app
 
-# Vite দিয়ে project তৈরি
-npx create-vite@latest my-project
+                # Vite দিয়ে project তৈরি
+                npx create-vite@latest my-project
 
-# নির্দিষ্ট version দিয়ে
-npx create-react-app@5.0.0 my-app
+                # নির্দিষ্ট version দিয়ে
+                npx create-react-app@5.0.0 my-app
 
-# Local binary চালাও (node_modules/.bin থেকে)
-npx jest
-npx eslint .
-npx webpack --config webpack.config.js
+                # Local binary চালাও (node_modules/.bin থেকে)
+                npx jest
+                npx eslint .
+                npx webpack --config webpack.config.js
 
-# যেকোনো npm package একবার চালাও
-npx cowsay "Hello!"
-npx serve dist                 # static file server
+                # যেকোনো npm package একবার চালাও
+                npx cowsay "Hello!"
+                npx serve dist # static file server
 
-# Specific registry থেকে
-npx --registry=https://my-registry.com my-pkg</div>
+                # Specific registry থেকে
+                npx --registry=https://my-registry.com my-pkg</div>
 
               <div class="tip-box">
                 ✅ <strong>npm exec vs npx:</strong><br />
@@ -683,76 +786,116 @@ npx --registry=https://my-registry.com my-pkg</div>
 
           <section id="NPM-Scripts" class="ec-section">
             <h1 class="center">⚡ npm scripts — Task Automation</h1>
-            <p class="center">npm scripts দিয়ে project-এর সব task একটি কমান্ডে করা যায়। build, test, lint — সব কিছু।</p>
+            <p class="center">npm scripts দিয়ে project-এর সব task একটি কমান্ডে করা যায়। build, test, lint — সব কিছু।
+            </p>
             <hr class="section-divider" />
 
             <div class="example-box">
               <h2>🔷 Scripts সেটআপ ও চালানো</h2>
               <div class="code-box">// package.json
-{
-  "scripts": {
-    // ━━━━━━ Built-in lifecycle (npm run ছাড়াই চলে) ━━━━━━
-    "start":   "node server.js",          // npm start
-    "test":    "jest --coverage",          // npm test
-    "restart": "npm stop && npm start",    // npm restart
+                {
+                "scripts": {
+                // ━━━━━━ Built-in lifecycle (npm run ছাড়াই চলে) ━━━━━━
+                "start": "node server.js", // npm start
+                "test": "jest --coverage", // npm test
+                "restart": "npm stop && npm start", // npm restart
 
-    // ━━━━━━ Custom scripts (npm run দিয়ে চালাতে হয়) ━━━━━━
-    "dev":     "nodemon server.js",
-    "build":   "webpack --mode production",
-    "lint":    "eslint src/ --fix",
-    "format":  "prettier --write src/",
-    "clean":   "rm -rf dist node_modules",
-    "serve":   "serve dist --port 3000",
+                // ━━━━━━ Custom scripts (npm run দিয়ে চালাতে হয়) ━━━━━━
+                "dev": "nodemon server.js",
+                "build": "webpack --mode production",
+                "lint": "eslint src/ --fix",
+                "format": "prettier --write src/",
+                "clean": "rm -rf dist node_modules",
+                "serve": "serve dist --port 3000",
 
-    // ━━━━━━ Pre/Post Hooks (স্বয়ংক্রিয়) ━━━━━━
-    "pretest":   "npm run lint",       // test-এর আগে
-    "posttest":  "npm run coverage",   // test-এর পরে
-    "prebuild":  "npm run clean",      // build-এর আগে
-    "postbuild": "npm run compress",   // build-এর পরে
+                // ━━━━━━ Pre/Post Hooks (স্বয়ংক্রিয়) ━━━━━━
+                "pretest": "npm run lint", // test-এর আগে
+                "posttest": "npm run coverage", // test-এর পরে
+                "prebuild": "npm run clean", // build-এর আগে
+                "postbuild": "npm run compress", // build-এর পরে
 
-    // ━━━━━━ Chaining ━━━━━━
-    "deploy":  "npm run build && npm test && node deploy.js",
-    "check":   "npm run lint && npm run test",
+                // ━━━━━━ Chaining ━━━━━━
+                "deploy": "npm run build && npm test && node deploy.js",
+                "check": "npm run lint && npm run test",
 
-    // ━━━━━━ Parallel ━━━━━━
-    "dev:all": "concurrently \"npm run dev:client\" \"npm run dev:server\""
-  }
-}</div>
+                // ━━━━━━ Parallel ━━━━━━
+                "dev:all": "concurrently \"npm run dev:client\" \"npm run dev:server\""
+                }
+                }</div>
 
               <div class="code-box"># Scripts চালানো
-npm start             # "start" script
-npm test              # "test" script
-npm run build         # custom script
-npm run dev
-npm run lint
+                npm start # "start" script
+                npm test # "test" script
+                npm run build # custom script
+                npm run dev
+                npm run lint
 
-# Arguments pass করো
-npm run build -- --watch    # -- এরপর args script-এ যায়
-npm test -- --verbose
+                # Arguments pass করো
+                npm run build -- --watch # -- এরপর args script-এ যায়
+                npm test -- --verbose
 
-# Environment variable সেট করে চালাও
-VARIABLE=value npm run script</div>
+                # Environment variable সেট করে চালাও
+                VARIABLE=value npm run script</div>
             </div>
 
             <div class="example-box">
               <h2>🔷 Lifecycle Scripts — সম্পূর্ণ তালিকা</h2>
               <table class="size-chart">
                 <thead>
-                  <tr><th>Script নাম</th><th>কখন চলে</th></tr>
+                  <tr>
+                    <th>Script নাম</th>
+                    <th>কখন চলে</th>
+                  </tr>
                 </thead>
                 <tbody>
-                  <tr><td><code>preinstall</code></td><td><code>npm install</code> শুরুর আগে</td></tr>
-                  <tr><td><code>install</code> / <code>postinstall</code></td><td>install সম্পন্নের পরে</td></tr>
-                  <tr><td><code>preuninstall</code> / <code>postuninstall</code></td><td>uninstall-এর আগে/পরে</td></tr>
-                  <tr><td><code>prestart</code> / <code>start</code> / <code>poststart</code></td><td><code>npm start</code>-এর আগে/সময়/পরে</td></tr>
-                  <tr><td><code>prerestart</code> / <code>restart</code> / <code>postrestart</code></td><td><code>npm restart</code>-এ</td></tr>
-                  <tr><td><code>prestop</code> / <code>stop</code> / <code>poststop</code></td><td><code>npm stop</code>-এ</td></tr>
-                  <tr><td><code>pretest</code> / <code>test</code> / <code>posttest</code></td><td><code>npm test</code>-এ</td></tr>
-                  <tr><td><code>prepublishOnly</code></td><td>শুধু <code>npm publish</code>-এর আগে</td></tr>
-                  <tr><td><code>prepare</code></td><td><code>npm install</code> এবং <code>npm publish</code>-এর আগে</td></tr>
-                  <tr><td><code>prepublish</code></td><td>⚠️ deprecated — prepare ব্যবহার করো</td></tr>
-                  <tr><td><code>prepack</code> / <code>postpack</code></td><td><code>npm pack</code> ও publish-এ</td></tr>
-                  <tr><td><code>preversion</code> / <code>version</code> / <code>postversion</code></td><td><code>npm version</code>-এ</td></tr>
+                  <tr>
+                    <td><code>preinstall</code></td>
+                    <td><code>npm install</code> শুরুর আগে</td>
+                  </tr>
+                  <tr>
+                    <td><code>install</code> / <code>postinstall</code></td>
+                    <td>install সম্পন্নের পরে</td>
+                  </tr>
+                  <tr>
+                    <td><code>preuninstall</code> / <code>postuninstall</code></td>
+                    <td>uninstall-এর আগে/পরে</td>
+                  </tr>
+                  <tr>
+                    <td><code>prestart</code> / <code>start</code> / <code>poststart</code></td>
+                    <td><code>npm start</code>-এর আগে/সময়/পরে</td>
+                  </tr>
+                  <tr>
+                    <td><code>prerestart</code> / <code>restart</code> / <code>postrestart</code></td>
+                    <td><code>npm restart</code>-এ</td>
+                  </tr>
+                  <tr>
+                    <td><code>prestop</code> / <code>stop</code> / <code>poststop</code></td>
+                    <td><code>npm stop</code>-এ</td>
+                  </tr>
+                  <tr>
+                    <td><code>pretest</code> / <code>test</code> / <code>posttest</code></td>
+                    <td><code>npm test</code>-এ</td>
+                  </tr>
+                  <tr>
+                    <td><code>prepublishOnly</code></td>
+                    <td>শুধু <code>npm publish</code>-এর আগে</td>
+                  </tr>
+                  <tr>
+                    <td><code>prepare</code></td>
+                    <td><code>npm install</code> এবং <code>npm publish</code>-এর আগে</td>
+                  </tr>
+                  <tr>
+                    <td><code>prepublish</code></td>
+                    <td>⚠️ deprecated — prepare ব্যবহার করো</td>
+                  </tr>
+                  <tr>
+                    <td><code>prepack</code> / <code>postpack</code></td>
+                    <td><code>npm pack</code> ও publish-এ</td>
+                  </tr>
+                  <tr>
+                    <td><code>preversion</code> / <code>version</code> / <code>postversion</code></td>
+                    <td><code>npm version</code>-এ</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -764,54 +907,98 @@ VARIABLE=value npm run script</div>
 
             <div class="example-box">
               <h2>🔷 SemVer — MAJOR.MINOR.PATCH বিস্তারিত</h2>
-              <div class="code-box">Format:  MAJOR . MINOR . PATCH
-উদাহরণ:  4    .  18   .  2
+              <div class="code-box">Format: MAJOR . MINOR . PATCH
+                উদাহরণ: 4 . 18 . 2
 
-MAJOR (4) → Incompatible API changes — পুরনো code ভাঙতে পারে
-MINOR (18) → New feature — backward compatible
-PATCH (2) → Bug fix — backward compatible
+                MAJOR (4) → Incompatible API changes — পুরনো code ভাঙতে পারে
+                MINOR (18) → New feature — backward compatible
+                PATCH (2) → Bug fix — backward compatible
 
-Pre-release versions:
-  1.0.0-alpha.1     → initial alpha
-  1.0.0-beta.3      → beta testing
-  1.0.0-rc.1        → release candidate
-  1.0.0             → stable!
+                Pre-release versions:
+                1.0.0-alpha.1 → initial alpha
+                1.0.0-beta.3 → beta testing
+                1.0.0-rc.1 → release candidate
+                1.0.0 → stable!
 
-Build metadata:
-  1.0.0+build.20240601</div>
+                Build metadata:
+                1.0.0+build.20240601</div>
 
               <h3>Version Range Notation বিস্তারিত</h3>
               <table class="size-chart">
                 <thead>
-                  <tr><th>Notation</th><th>অর্থ</th><th>উদাহরণ range</th></tr>
+                  <tr>
+                    <th>Notation</th>
+                    <th>অর্থ</th>
+                    <th>উদাহরণ range</th>
+                  </tr>
                 </thead>
                 <tbody>
-                  <tr><td><code>"4.18.2"</code></td><td>Exact version</td><td>শুধু 4.18.2</td></tr>
-                  <tr><td><code>"^4.18.2"</code></td><td>MAJOR lock — compatible</td><td>4.18.2 ≤ x &lt; 5.0.0</td></tr>
-                  <tr><td><code>"~4.18.2"</code></td><td>MINOR lock — approximately</td><td>4.18.2 ≤ x &lt; 4.19.0</td></tr>
-                  <tr><td><code>">=4.18.2"</code></td><td>Greater or equal</td><td>4.18.2 এবং তার বেশি সব</td></tr>
-                  <tr><td><code>">=4.18.2 &lt;5"</code></td><td>Range</td><td>4.18.2 থেকে 5 এর আগে</td></tr>
-                  <tr><td><code>"4.18.x"</code></td><td>Wildcard</td><td>4.18.0 থেকে 4.18.x</td></tr>
-                  <tr><td><code>"4.x"</code></td><td>Major wildcard</td><td>4.0.0 থেকে 4.x.x</td></tr>
-                  <tr><td><code>"*"</code></td><td>Any version</td><td>সর্বশেষ (বিপজ্জনক!)</td></tr>
-                  <tr><td><code>"latest"</code></td><td>Latest tag</td><td>সর্বশেষ stable</td></tr>
-                  <tr><td><code>"1.2.3 || 2.0.0"</code></td><td>OR condition</td><td>1.2.3 অথবা 2.0.0</td></tr>
+                  <tr>
+                    <td><code>"4.18.2"</code></td>
+                    <td>Exact version</td>
+                    <td>শুধু 4.18.2</td>
+                  </tr>
+                  <tr>
+                    <td><code>"^4.18.2"</code></td>
+                    <td>MAJOR lock — compatible</td>
+                    <td>4.18.2 ≤ x &lt; 5.0.0</td>
+                  </tr>
+                  <tr>
+                    <td><code>"~4.18.2"</code></td>
+                    <td>MINOR lock — approximately</td>
+                    <td>4.18.2 ≤ x &lt; 4.19.0</td>
+                  </tr>
+                  <tr>
+                    <td><code>">=4.18.2"</code></td>
+                    <td>Greater or equal</td>
+                    <td>4.18.2 এবং তার বেশি সব</td>
+                  </tr>
+                  <tr>
+                    <td><code>">=4.18.2 &lt;5"</code></td>
+                    <td>Range</td>
+                    <td>4.18.2 থেকে 5 এর আগে</td>
+                  </tr>
+                  <tr>
+                    <td><code>"4.18.x"</code></td>
+                    <td>Wildcard</td>
+                    <td>4.18.0 থেকে 4.18.x</td>
+                  </tr>
+                  <tr>
+                    <td><code>"4.x"</code></td>
+                    <td>Major wildcard</td>
+                    <td>4.0.0 থেকে 4.x.x</td>
+                  </tr>
+                  <tr>
+                    <td><code>"*"</code></td>
+                    <td>Any version</td>
+                    <td>সর্বশেষ (বিপজ্জনক!)</td>
+                  </tr>
+                  <tr>
+                    <td><code>"latest"</code></td>
+                    <td>Latest tag</td>
+                    <td>সর্বশেষ stable</td>
+                  </tr>
+                  <tr>
+                    <td><code>"1.2.3 || 2.0.0"</code></td>
+                    <td>OR condition</td>
+                    <td>1.2.3 অথবা 2.0.0</td>
+                  </tr>
                 </tbody>
               </table>
 
               <div class="code-box"># Version management কমান্ড
-npm version patch           # 1.0.0 → 1.0.1
-npm version minor           # 1.0.1 → 1.1.0
-npm version major           # 1.1.0 → 2.0.0
-npm version 2.5.0           # specific version
-npm version prerelease      # 1.0.0 → 1.0.1-0
-npm version prepatch        # 1.0.0 → 1.0.1-0
-npm version preminor        # 1.0.0 → 1.1.0-0
-npm version premajor        # 1.0.0 → 2.0.0-0
+                npm version patch # 1.0.0 → 1.0.1
+                npm version minor # 1.0.1 → 1.1.0
+                npm version major # 1.1.0 → 2.0.0
+                npm version 2.5.0 # specific version
+                npm version prerelease # 1.0.0 → 1.0.1-0
+                npm version prepatch # 1.0.0 → 1.0.1-0
+                npm version preminor # 1.0.0 → 1.1.0-0
+                npm version premajor # 1.0.0 → 2.0.0-0
 
-# এটি: package.json আপডেট করে + git tag তৈরি করে
-# git tag চান না?
-npm version patch --no-git-tag-version</div>
+                # এটি: package.json আপডেট করে + git tag তৈরি করে
+                # git tag চান না?
+                npm version patch --no-git-tag-version</div>
             </div>
           </section>
 
@@ -822,13 +1009,14 @@ npm version patch --no-git-tag-version</div>
             <div class="example-box">
               <h2>🔷 package-lock.json কেন দরকার?</h2>
               <p>
-                package.json-এ version range থাকে (<code>^4.18.2</code>), তাই আজ install করলে 4.18.2 আসতে পারে, কাল 4.19.0।
+                package.json-এ version range থাকে (<code>^4.18.2</code>), তাই আজ install করলে 4.18.2 আসতে পারে, কাল
+                4.19.0।
                 package-lock.json exact version lock করে — পুরো টিমের এবং CI/CD-এর install হুবহু একই হবে।
               </p>
-              <div class="code-box">package.json:         "express": "^4.18.2"   ← range (flexible)
-package-lock.json:    "version": "4.18.2",   ← exact lock!
-                      "integrity": "sha512-...", ← checksum verify
-                      "resolved": "https://..."  ← exact URL</div>
+              <div class="code-box">package.json: "express": "^4.18.2" ← range (flexible)
+                package-lock.json: "version": "4.18.2", ← exact lock!
+                "integrity": "sha512-...", ← checksum verify
+                "resolved": "https://..." ← exact URL</div>
 
               <div class="tip-box">
                 ✅ <strong>সোনালী নিয়ম:</strong><br />
@@ -840,39 +1028,65 @@ package-lock.json:    "version": "4.18.2",   ← exact lock!
 
           <section id="NPM-Scopes" class="ec-section">
             <h1 class="center">🏷️ Scopes ও Scoped Packages</h1>
-            <p class="center">Scoped package হলো @namespace/package-name format-এর package। Organization বা personal branding-এর জন্য।</p>
+            <p class="center">Scoped package হলো @namespace/package-name format-এর package। Organization বা personal
+              branding-এর জন্য।</p>
             <hr class="section-divider" />
 
             <div class="example-box">
               <h2>🔷 Scope কী এবং কীভাবে ব্যবহার করবে?</h2>
-              <div class="code-box">Unscoped package:  express, lodash, react
-Scoped package:    @angular/core, @types/react, @mycompany/utils
+              <div class="code-box">Unscoped package: express, lodash, react
+                Scoped package: @angular/core, @types/react, @mycompany/utils
 
-Format: @scope/package-name
-  → @scope = organization বা username
-  → package-name = আসল package নাম</div>
+                Format: @scope/package-name
+                → @scope = organization বা username
+                → package-name = আসল package নাম</div>
 
               <div class="code-box"># Scoped package install করো
-npm install @angular/core
-npm install @types/react
-npm install @mycompany/utils
+                npm install @angular/core
+                npm install @types/react
+                npm install @mycompany/utils
 
-# Private scoped package install
-npm install @mycompany/private-utils   # .npmrc-এ auth token দরকার
+                # Private scoped package install
+                npm install @mycompany/private-utils # .npmrc-এ auth token দরকার
 
-# Scoped package-এর registry আলাদা সেট করো
-npm config set @mycompany:registry https://npm.mycompany.com/</div>
+                # Scoped package-এর registry আলাদা সেট করো
+                npm config set @mycompany:registry https://npm.mycompany.com/</div>
 
               <h3>Public vs Private Package</h3>
               <table class="size-chart">
                 <thead>
-                  <tr><th>বিষয়</th><th>Public Unscoped</th><th>Public Scoped</th><th>Private Scoped</th></tr>
+                  <tr>
+                    <th>বিষয়</th>
+                    <th>Public Unscoped</th>
+                    <th>Public Scoped</th>
+                    <th>Private Scoped</th>
+                  </tr>
                 </thead>
                 <tbody>
-                  <tr><td>নাম format</td><td><code>my-pkg</code></td><td><code>@user/my-pkg</code></td><td><code>@org/my-pkg</code></td></tr>
-                  <tr><td>দেখতে পাবে</td><td>সবাই</td><td>সবাই</td><td>শুধু authorized</td></tr>
-                  <tr><td>Free?</td><td>✅ বিনামূল্যে</td><td>✅ বিনামূল্যে</td><td>💰 paid plan</td></tr>
-                  <tr><td>publish</td><td><code>npm publish</code></td><td><code>npm publish --access public</code></td><td><code>npm publish</code></td></tr>
+                  <tr>
+                    <td>নাম format</td>
+                    <td><code>my-pkg</code></td>
+                    <td><code>@user/my-pkg</code></td>
+                    <td><code>@org/my-pkg</code></td>
+                  </tr>
+                  <tr>
+                    <td>দেখতে পাবে</td>
+                    <td>সবাই</td>
+                    <td>সবাই</td>
+                    <td>শুধু authorized</td>
+                  </tr>
+                  <tr>
+                    <td>Free?</td>
+                    <td>✅ বিনামূল্যে</td>
+                    <td>✅ বিনামূল্যে</td>
+                    <td>💰 paid plan</td>
+                  </tr>
+                  <tr>
+                    <td>publish</td>
+                    <td><code>npm publish</code></td>
+                    <td><code>npm publish --access public</code></td>
+                    <td><code>npm publish</code></td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -885,51 +1099,51 @@ npm config set @mycompany:registry https://npm.mycompany.com/</div>
             <div class="example-box">
               <h2>🔷 Package Publish করা</h2>
               <div class="code-box"># ধাপ ১: npmjs.com-এ account তৈরি/login করো
-npm adduser              # নতুন account
-npm login                # login
-npm whoami               # login যাচাই
+                npm adduser # নতুন account
+                npm login # login
+                npm whoami # login যাচাই
 
-# ধাপ ২: package তৈরি করো
-mkdir my-package && cd my-package
-npm init
+                # ধাপ ২: package তৈরি করো
+                mkdir my-package && cd my-package
+                npm init
 
-# ধাপ ৩: publish করো
-npm publish
-npm publish --access public   # scoped package public করতে
-npm publish --tag beta        # beta tag দিয়ে publish
+                # ধাপ ৩: publish করো
+                npm publish
+                npm publish --access public # scoped package public করতে
+                npm publish --tag beta # beta tag দিয়ে publish
 
-# ধাপ ৪: version বাড়াও ও আবার publish
-npm version patch
-npm publish
+                # ধাপ ৪: version বাড়াও ও আবার publish
+                npm version patch
+                npm publish
 
-# ধাপ ৫: logout
-npm logout</div>
+                # ধাপ ৫: logout
+                npm logout</div>
 
               <div class="code-box"># ━━━━━━ Dist Tags ━━━━━━
-# Tag হলো version-এর alias (latest, beta, next ইত্যাদি)
+                # Tag হলো version-এর alias (latest, beta, next ইত্যাদি)
 
-npm dist-tag add my-pkg@2.0.0 beta        # tag যোগ করো
-npm dist-tag rm my-pkg beta               # tag মুছো
-npm dist-tag ls my-pkg                    # সব tag দেখো
+                npm dist-tag add my-pkg@2.0.0 beta # tag যোগ করো
+                npm dist-tag rm my-pkg beta # tag মুছো
+                npm dist-tag ls my-pkg # সব tag দেখো
 
-# User install করবে এভাবে:
-npm install my-pkg          # "latest" tag (default)
-npm install my-pkg@beta     # "beta" tag</div>
+                # User install করবে এভাবে:
+                npm install my-pkg # "latest" tag (default)
+                npm install my-pkg@beta # "beta" tag</div>
 
               <div class="code-box"># ━━━━━━ Deprecate / Unpublish ━━━━━━
-# Deprecate (সুপারিশ — package রেখে warning দাও)
-npm deprecate my-pkg@1.0.0 "এই version-এ bug আছে, v2 ব্যবহার করো"
-npm deprecate my-pkg "This package is no longer maintained"
+                # Deprecate (সুপারিশ — package রেখে warning দাও)
+                npm deprecate my-pkg@1.0.0 "এই version-এ bug আছে, v2 ব্যবহার করো"
+                npm deprecate my-pkg "This package is no longer maintained"
 
-# Unpublish (সীমাবদ্ধতা আছে!)
-npm unpublish my-pkg@1.0.0            # নির্দিষ্ট version
-npm unpublish my-pkg --force          # সব version (৭২ ঘন্টার মধ্যে)</div>
+                # Unpublish (সীমাবদ্ধতা আছে!)
+                npm unpublish my-pkg@1.0.0 # নির্দিষ্ট version
+                npm unpublish my-pkg --force # সব version (৭২ ঘন্টার মধ্যে)</div>
 
               <div class="code-box"># ━━━━━━ Package Access ━━━━━━
-npm access list packages @myorg  # org-এর packages দেখো
-npm access list collaborators my-pkg  # collaborators দেখো
-npm access grant read-only @myorg:developer my-pkg
-npm access revoke @myorg:developer my-pkg</div>
+                npm access list packages @myorg # org-এর packages দেখো
+                npm access list collaborators my-pkg # collaborators দেখো
+                npm access grant read-only @myorg:developer my-pkg
+                npm access revoke @myorg:developer my-pkg</div>
             </div>
 
             <div class="example-box">
@@ -939,23 +1153,23 @@ npm access revoke @myorg:developer my-pkg</div>
                 এটি একটি <code>.tgz</code> ফাইল তৈরি করে।
               </p>
               <div class="code-box"># Tarball তৈরি করো (publish না করেই দেখো)
-npm pack
-# Output: my-package-1.0.0.tgz
+                npm pack
+                # Output: my-package-1.0.0.tgz
 
-# কোন ফাইলগুলো package-এ যাবে দেখো
-npm pack --dry-run
+                # কোন ফাইলগুলো package-এ যাবে দেখো
+                npm pack --dry-run
 
-# অন্য project-এ local tarball install করো
-npm install ../path/to/my-package-1.0.0.tgz
+                # অন্য project-এ local tarball install করো
+                npm install ../path/to/my-package-1.0.0.tgz
 
-# Files field দিয়ে include/exclude করো:
-// package.json
-{
-  "files": ["dist/", "src/", "!src/**/*.test.js"]
-}
+                # Files field দিয়ে include/exclude করো:
+                // package.json
+                {
+                "files": ["dist/", "src/", "!src/**/*.test.js"]
+                }
 
-# .npmignore ফাইল (publish-এ বাদ দিতে)
-# .gitignore-এর মতো, কিন্তু publish-এর জন্য</div>
+                # .npmignore ফাইল (publish-এ বাদ দিতে)
+                # .gitignore-এর মতো, কিন্তু publish-এর জন্য</div>
             </div>
           </section>
 
@@ -965,57 +1179,59 @@ npm install ../path/to/my-package-1.0.0.tgz
 
             <div class="example-box">
               <h2>🔷 npm audit — Vulnerability Check</h2>
-              <p><code>npm audit</code> installed packages-এর known security vulnerabilities চেক করে npm registry-র security database-এর সাথে তুলনা করে।</p>
+              <p><code>npm audit</code> installed packages-এর known security vulnerabilities চেক করে npm registry-র
+                security database-এর সাথে তুলনা করে।</p>
               <div class="code-box"># Security audit করো
-npm audit
+                npm audit
 
-# আউটপুট উদাহরণ:
-# found 3 vulnerabilities (1 moderate, 2 high)
+                # আউটপুট উদাহরণ:
+                # found 3 vulnerabilities (1 moderate, 2 high)
 
-# Automatically fix করো
-npm audit fix
+                # Automatically fix করো
+                npm audit fix
 
-# Major version update করেও fix করো (⚠️ breaking changes হতে পারে)
-npm audit fix --force
+                # Major version update করেও fix করো (⚠️ breaking changes হতে পারে)
+                npm audit fix --force
 
-# Dry run — কী হবে দেখো, কিছু করো না
-npm audit fix --dry-run
+                # Dry run — কী হবে দেখো, কিছু করো না
+                npm audit fix --dry-run
 
-# JSON format-এ report
-npm audit --json
+                # JSON format-এ report
+                npm audit --json
 
-# Specific severity দেখো
-npm audit --audit-level=high      # শুধু high ও critical</div>
+                # Specific severity দেখো
+                npm audit --audit-level=high # শুধু high ও critical</div>
             </div>
 
             <div class="example-box">
               <h2>🔷 npm 2FA — Two-Factor Authentication</h2>
               <div class="code-box"># 2FA setup করো
-npm profile enable-2fa auth-and-writes  # publish-এও 2FA
-npm profile enable-2fa auth-only        # শুধু login-এ 2FA
+                npm profile enable-2fa auth-and-writes # publish-এও 2FA
+                npm profile enable-2fa auth-only # শুধু login-এ 2FA
 
-# 2FA status দেখো
-npm profile get
+                # 2FA status দেখো
+                npm profile get
 
-# OTP সহ publish করো
-npm publish --otp=123456
+                # OTP সহ publish করো
+                npm publish --otp=123456
 
-# 2FA disable করো
-npm profile disable-2fa</div>
+                # 2FA disable করো
+                npm profile disable-2fa</div>
             </div>
 
             <div class="example-box">
               <h2>🔷 Provenance ও ECDSA Signatures</h2>
-              <p>Provenance হলো package কোথা থেকে তৈরি হয়েছে তার cryptographic proof। GitHub Actions থেকে publish করলে automatically যোগ হয়।</p>
+              <p>Provenance হলো package কোথা থেকে তৈরি হয়েছে তার cryptographic proof। GitHub Actions থেকে publish করলে
+                automatically যোগ হয়।</p>
               <div class="code-box"># GitHub Actions থেকে provenance সহ publish:
-# (workflow file-এ)
-- name: Publish with provenance
-  run: npm publish --provenance --access public
-  env:
-    NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+                # (workflow file-এ)
+                - name: Publish with provenance
+                run: npm publish --provenance --access public
+                env:
+                NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-# Signature verify করো
-npm audit signatures</div>
+                # Signature verify করো
+                npm audit signatures</div>
             </div>
           </section>
 
@@ -1026,72 +1242,72 @@ npm audit signatures</div>
             <div class="example-box">
               <h2>🔷 npm config management</h2>
               <div class="code-box"># সব config দেখো
-npm config list
-npm config list --long        # সব default সহ
+                npm config list
+                npm config list --long # সব default সহ
 
-# নির্দিষ্ট config দেখো
-npm config get registry
-npm config get prefix
+                # নির্দিষ্ট config দেখো
+                npm config get registry
+                npm config get prefix
 
-# Config সেট করো
-npm config set registry https://registry.npmjs.org/
-npm config set save-exact true          # exact version save
-npm config set init-author-name "Farid"
-npm config set init-author-email "farid@example.com"
-npm config set init-license "MIT"
-npm config set progress false           # progress bar বন্ধ
+                # Config সেট করো
+                npm config set registry https://registry.npmjs.org/
+                npm config set save-exact true # exact version save
+                npm config set init-author-name "Farid"
+                npm config set init-author-email "farid@example.com"
+                npm config set init-license "MIT"
+                npm config set progress false # progress bar বন্ধ
 
-# Config মুছো
-npm config delete save-exact
+                # Config মুছো
+                npm config delete save-exact
 
-# Config file সরাসরি সম্পাদনা করো
-npm config edit</div>
+                # Config file সরাসরি সম্পাদনা করো
+                npm config edit</div>
 
               <div class="code-box"># .npmrc ফাইল — project root-এ
-# এটি project-specific config, সবার জন্য প্রযোজ্য
+                # এটি project-specific config, সবার জন্য প্রযোজ্য
 
-# বিষয়বস্তু উদাহরণ:
-registry=https://registry.npmjs.org/
-save-exact=true
-engine-strict=true
-fund=false
+                # বিষয়বস্তু উদাহরণ:
+                registry=https://registry.npmjs.org/
+                save-exact=true
+                engine-strict=true
+                fund=false
 
-# Private registry (scope-specific)
-@mycompany:registry=https://npm.mycompany.com/
-//npm.mycompany.com/:_authToken=${NPM_TOKEN}
+                # Private registry (scope-specific)
+                @mycompany:registry=https://npm.mycompany.com/
+                //npm.mycompany.com/:_authToken=${NPM_TOKEN}
 
-# Global .npmrc (~/.npmrc)
-# ব্যক্তিগত settings যেখানে API token থাকে
-# ⚠️ .gitignore-এ রাখো!</div>
+                # Global .npmrc (~/.npmrc)
+                # ব্যক্তিগত settings যেখানে API token থাকে
+                # ⚠️ .gitignore-এ রাখো!</div>
             </div>
 
             <div class="example-box">
               <h2>🔷 Access Tokens — CI/CD Integration</h2>
               <div class="code-box"># npmjs.com-এ token তৈরি করো:
-# Account → Access Tokens → Generate New Token
-# Type: Automation (CI/CD-এর জন্য)
+                # Account → Access Tokens → Generate New Token
+                # Type: Automation (CI/CD-এর জন্য)
 
-# GitHub Actions-এ ব্যবহার:
-# Secret নামে NPM_TOKEN যোগ করো
+                # GitHub Actions-এ ব্যবহার:
+                # Secret নামে NPM_TOKEN যোগ করো
 
-# .github/workflows/publish.yml:
-name: Publish
-on:
-  release:
-    types: [published]
-jobs:
-  publish:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          registry-url: 'https://registry.npmjs.org'
-      - run: npm ci
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}</div>
+                # .github/workflows/publish.yml:
+                name: Publish
+                on:
+                release:
+                types: [published]
+                jobs:
+                publish:
+                runs-on: ubuntu-latest
+                steps:
+                - uses: actions/checkout@v4
+                - uses: actions/setup-node@v4
+                with:
+                node-version: '20'
+                registry-url: 'https://registry.npmjs.org'
+                - run: npm ci
+                - run: npm publish
+                env:
+                NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}</div>
             </div>
           </section>
 
@@ -1102,51 +1318,51 @@ jobs:
             <div class="example-box">
               <h2>🔷 Workspaces Setup ও ব্যবহার</h2>
               <div class="code-box">// Root package.json
-{
-  "name": "my-monorepo",
-  "private": true,
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ]
-}
+                {
+                "name": "my-monorepo",
+                "private": true,
+                "workspaces": [
+                "packages/*",
+                "apps/*"
+                ]
+                }
 
-// Structure:
-my-monorepo/
-├── package.json           ← root
-├── packages/
-│   ├── utils/
-│   │   └── package.json  ← "@myapp/utils"
-│   └── ui/
-│       └── package.json  ← "@myapp/ui"
-└── apps/
-    └── web/
-        └── package.json  ← depends on @myapp/utils</div>
+                // Structure:
+                my-monorepo/
+                ├── package.json ← root
+                ├── packages/
+                │ ├── utils/
+                │ │ └── package.json ← "@myapp/utils"
+                │ └── ui/
+                │ └── package.json ← "@myapp/ui"
+                └── apps/
+                └── web/
+                └── package.json ← depends on @myapp/utils</div>
 
               <div class="code-box"># Root-এ npm install → সব workspace install
-npm install
+                npm install
 
-# Workspace-এ package যোগ করো
-npm install react -w apps/web
-npm install react --workspace=apps/web    # same
+                # Workspace-এ package যোগ করো
+                npm install react -w apps/web
+                npm install react --workspace=apps/web # same
 
-# সব workspace-এ script চালাও
-npm run build --workspaces
-npm run test -ws                          # shorthand
+                # সব workspace-এ script চালাও
+                npm run build --workspaces
+                npm run test -ws # shorthand
 
-# নির্দিষ্ট workspace-এ script চালাও
-npm run build --workspace=apps/web
+                # নির্দিষ্ট workspace-এ script চালাও
+                npm run build --workspace=apps/web
 
-# Workspace-এর মধ্যে dependency (local)
-# apps/web/package.json:
-{
-  "dependencies": {
-    "@myapp/utils": "*"   # workspace-এর utils ব্যবহার করো
-  }
-}
+                # Workspace-এর মধ্যে dependency (local)
+                # apps/web/package.json:
+                {
+                "dependencies": {
+                "@myapp/utils": "*" # workspace-এর utils ব্যবহার করো
+                }
+                }
 
-# Workspace list দেখো
-npm query .workspace</div>
+                # Workspace list দেখো
+                npm query .workspace</div>
             </div>
           </section>
 
@@ -1161,151 +1377,153 @@ npm query .workspace</div>
                 <code>npm link</code> দিয়ে publish না করেই local package ব্যবহার করা যায়।
               </p>
               <div class="code-box"># ধাপ ১: package-টি global-এ symlink করো
-cd my-local-package
-npm link
-# Output: /usr/local/lib/node_modules/my-pkg → /path/to/my-local-package
+                cd my-local-package
+                npm link
+                # Output: /usr/local/lib/node_modules/my-pkg → /path/to/my-local-package
 
-# ধাপ ২: অন্য project-এ সেই package ব্যবহার করো
-cd ../my-other-project
-npm link my-local-package
+                # ধাপ ২: অন্য project-এ সেই package ব্যবহার করো
+                cd ../my-other-project
+                npm link my-local-package
 
-# ধাপ ৩: কাজ শেষে unlink করো
-npm unlink my-local-package     # project থেকে
-cd ../my-local-package
-npm unlink                       # global থেকে
+                # ধাপ ৩: কাজ শেষে unlink করো
+                npm unlink my-local-package # project থেকে
+                cd ../my-local-package
+                npm unlink # global থেকে
 
-# Alternative: relative path দিয়ে install (সহজ পদ্ধতি)
-npm install ../my-local-package</div>
+                # Alternative: relative path দিয়ে install (সহজ পদ্ধতি)
+                npm install ../my-local-package</div>
             </div>
 
             <div class="example-box">
               <h2>🔷 npm dedupe ও npm prune</h2>
               <div class="code-box"># ━━━━━━ dedupe: duplicate packages সরাও ━━━━━━
-npm dedupe
-npm ddp                  # shorthand
+                npm dedupe
+                npm ddp # shorthand
 
-# node_modules-এ একাধিক version থাকলে,
-# compatible হলে একটাতে নামিয়ে আনো
+                # node_modules-এ একাধিক version থাকলে,
+                # compatible হলে একটাতে নামিয়ে আনো
 
-# ━━━━━━ prune: অপ্রয়োজনীয় packages সরাও ━━━━━━
-npm prune
-npm prune --production    # devDependencies মুছো (production-এর জন্য)
+                # ━━━━━━ prune: অপ্রয়োজনীয় packages সরাও ━━━━━━
+                npm prune
+                npm prune --production # devDependencies মুছো (production-এর জন্য)
 
-# package.json-এ নেই কিন্তু node_modules-এ আছে
-# সেগুলো মুছে দেয়</div>
+                # package.json-এ নেই কিন্তু node_modules-এ আছে
+                # সেগুলো মুছে দেয়</div>
             </div>
 
             <div class="example-box">
               <h2>🔷 npm diff — Package পার্থক্য দেখো</h2>
               <div class="code-box"># দুটো version-এর পার্থক্য দেখো
-npm diff express@4.17.0 express@4.18.0
+                npm diff express@4.17.0 express@4.18.0
 
-# Current installed vs latest
-npm diff express
+                # Current installed vs latest
+                npm diff express
 
-# Specific files-এর diff
-npm diff express --diff-name-only    # শুধু changed files</div>
+                # Specific files-এর diff
+                npm diff express --diff-name-only # শুধু changed files</div>
             </div>
 
             <div class="example-box">
               <h2>🔷 npm fund ও npm doctor</h2>
               <div class="code-box"># ━━━━━━ npm fund ━━━━━━
-# কোন installed packages funding চাইছে দেখো
-npm fund
-npm fund lodash         # নির্দিষ্ট package-এর funding info
+                # কোন installed packages funding চাইছে দেখো
+                npm fund
+                npm fund lodash # নির্দিষ্ট package-এর funding info
 
-# Funding info suppress করতে:
-npm config set fund false
+                # Funding info suppress করতে:
+                npm config set fund false
 
-# ━━━━━━ npm doctor ━━━━━━
-# npm environment health check করো
-npm doctor
+                # ━━━━━━ npm doctor ━━━━━━
+                # npm environment health check করো
+                npm doctor
 
-# Check করবে:
-# ✔ npm ping
-# ✔ npm -v (সর্বশেষ version?)
-# ✔ node -v (সঠিক version?)
-# ✔ npm config get registry
-# ✔ Git available?
-# ✔ node_modules writable?</div>
+                # Check করবে:
+                # ✔ npm ping
+                # ✔ npm -v (সর্বশেষ version?)
+                # ✔ node -v (সঠিক version?)
+                # ✔ npm config get registry
+                # ✔ Git available?
+                # ✔ node_modules writable?</div>
             </div>
 
             <div class="example-box">
               <h2>🔷 npm pkg — package.json সরাসরি Edit করো</h2>
               <div class="code-box"># package.json-এর field দেখো
-npm pkg get name
-npm pkg get version
-npm pkg get scripts.build
+                npm pkg get name
+                npm pkg get version
+                npm pkg get scripts.build
 
-# Field সেট করো
-npm pkg set name="new-name"
-npm pkg set version="2.0.0"
-npm pkg set scripts.dev="nodemon index.js"
-npm pkg set engines.node=">=18.0.0"
+                # Field সেট করো
+                npm pkg set name="new-name"
+                npm pkg set version="2.0.0"
+                npm pkg set scripts.dev="nodemon index.js"
+                npm pkg set engines.node=">=18.0.0"
 
-# Field মুছো
-npm pkg delete scripts.dev
+                # Field মুছো
+                npm pkg delete scripts.dev
 
-# Nested field
-npm pkg set scripts.dev="nodemon" --json    # JSON parsing</div>
+                # Nested field
+                npm pkg set scripts.dev="nodemon" --json # JSON parsing</div>
             </div>
 
             <div class="example-box">
               <h2>🔷 Organizations — Team Package Management</h2>
               <div class="code-box"># Organization তৈরি ও manage করো
-npm org create my-org        # npm website-এ করাই ভালো
+                npm org create my-org # npm website-এ করাই ভালো
 
-# Organization-এর package publish করো
-# package.json: "name": "@my-org/my-package"
-npm publish --access public   # public org package
-npm publish                   # private org package
+                # Organization-এর package publish করো
+                # package.json: "name": "@my-org/my-package"
+                npm publish --access public # public org package
+                npm publish # private org package
 
-# Members manage করো
-npm org set @my-org username developer    # role দাও
-npm org rm @my-org username               # member মুছো
-npm org ls @my-org                        # সব member দেখো
+                # Members manage করো
+                npm org set @my-org username developer # role দাও
+                npm org rm @my-org username # member মুছো
+                npm org ls @my-org # সব member দেখো
 
-# Team manage করো (website থেকে সহজ)
-# npmjs.com → @my-org → Teams</div>
+                # Team manage করো (website থেকে সহজ)
+                # npmjs.com → @my-org → Teams</div>
             </div>
 
             <div class="example-box">
               <h2>🔷 npm cache ম্যানেজমেন্ট</h2>
               <div class="code-box"># Cache কোথায় আছে?
-npm config get cache
-# ~/.npm  (default)
+                npm config get cache
+                # ~/.npm (default)
 
-# Cache status দেখো
-npm cache verify
+                # Cache status দেখো
+                npm cache verify
 
-# Cache সম্পূর্ণ মুছো
-npm cache clean --force
+                # Cache সম্পূর্ণ মুছো
+                npm cache clean --force
 
-# কী আছে cache-এ দেখো
-npm cache ls     # deprecated, এখন সরাসরি ফোল্ডার দেখো</div>
+                # কী আছে cache-এ দেখো
+                npm cache ls # deprecated, এখন সরাসরি ফোল্ডার দেখো</div>
             </div>
 
             <div class="example-box">
               <h2>🔷 npm profile — Account Settings CLI-তে</h2>
               <div class="code-box"># Profile দেখো
-npm profile get
+                npm profile get
 
-# Profile আপডেট করো
-npm profile set fullname "Farid Rahman"
-npm profile set email "farid@example.com"
-npm profile set twitter "fariddev"
+                # Profile আপডেট করো
+                npm profile set fullname "Farid Rahman"
+                npm profile set email "farid@example.com"
+                npm profile set twitter "fariddev"
 
-# Password পরিবর্তন করো
-npm profile set password</div>
+                # Password পরিবর্তন করো
+                npm profile set password</div>
             </div>
           </section>
 
-<!-- ================================================================
+          <!-- ================================================================
                ████  pnpm  ████
           ================================================================ -->
           <section id="PNPM-Intro" class="ec-section">
-            <h1 class="center">🟦 <a href="https://pnpm.io/" target="_blank" rel="noopener">pnpm</a> — Performant npm</h1>
-            <p class="center">pnpm হলো npm-এর দ্রুততম ও সবচেয়ে disk-efficient বিকল্প। Content-addressable store দিয়ে disk space বাঁচায়।</p>
+            <h1 class="center">🟦 <a href="https://pnpm.io/" target="_blank" rel="noopener">pnpm</a> — Performant npm
+            </h1>
+            <p class="center">pnpm হলো npm-এর দ্রুততম ও সবচেয়ে disk-efficient বিকল্প। Content-addressable store দিয়ে
+              disk space বাঁচায়।</p>
             <hr class="section-divider" />
 
             <div class="example-box">
@@ -1317,21 +1535,24 @@ npm profile set password</div>
               </p>
 
               <div class="code-box">npm-এর সমস্যা:
-  project-a/node_modules/lodash@4.17.21  (5 MB)
-  project-b/node_modules/lodash@4.17.21  (5 MB আরো!)
-  project-c/node_modules/lodash@4.17.21  (5 MB আরো!)
+                project-a/node_modules/lodash@4.17.21 (5 MB)
+                project-b/node_modules/lodash@4.17.21 (5 MB আরো!)
+                project-c/node_modules/lodash@4.17.21 (5 MB আরো!)
 
-pnpm-এর সমাধান:
-  ~/.pnpm-store/lodash@4.17.21  (5 MB — শুধু একবার!)
-  project-a/node_modules/lodash → hard link ← 0 MB
-  project-b/node_modules/lodash → hard link ← 0 MB
-  project-c/node_modules/lodash → hard link ← 0 MB
+                pnpm-এর সমাধান:
+                ~/.pnpm-store/lodash@4.17.21 (5 MB — শুধু একবার!)
+                project-a/node_modules/lodash → hard link ← 0 MB
+                project-b/node_modules/lodash → hard link ← 0 MB
+                project-c/node_modules/lodash → hard link ← 0 MB
 
-  ✅ disk space ৯০% পর্যন্ত বাঁচতে পারে!</div>
+                ✅ disk space ৯০% পর্যন্ত বাঁচতে পারে!</div>
 
               <table class="size-chart">
                 <thead>
-                  <tr><th>সুবিধা</th><th>বিবরণ</th></tr>
+                  <tr>
+                    <th>সুবিধা</th>
+                    <th>বিবরণ</th>
+                  </tr>
                 </thead>
                 <tbody>
                   <tr>
@@ -1375,28 +1596,28 @@ pnpm-এর সমাধান:
               <h2>🔷 pnpm Installation</h2>
 
               <div class="code-box"># পদ্ধতি ১: npm দিয়ে (সবচেয়ে সহজ)
-npm install -g pnpm
+                npm install -g pnpm
 
-# পদ্ধতি ২: Standalone script
-# macOS/Linux:
-curl -fsSL https://get.pnpm.io/install.sh | sh -
+                # পদ্ধতি ২: Standalone script
+                # macOS/Linux:
+                curl -fsSL https://get.pnpm.io/install.sh | sh -
 
-# Windows (PowerShell):
-iwr https://get.pnpm.io/install.ps1 -useb | iex
+                # Windows (PowerShell):
+                iwr https://get.pnpm.io/install.ps1 -useb | iex
 
-# পদ্ধতি ৩: Corepack (Node.js 16.13+ built-in)
-corepack enable
-corepack prepare pnpm@latest --activate
+                # পদ্ধতি ৩: Corepack (Node.js 16.13+ built-in)
+                corepack enable
+                corepack prepare pnpm@latest --activate
 
-# পদ্ধতি ৪: Homebrew (macOS)
-brew install pnpm
+                # পদ্ধতি ৪: Homebrew (macOS)
+                brew install pnpm
 
-# যাচাই করো
-pnpm --version    # 9.x.x বা তার বেশি</div>
+                # যাচাই করো
+                pnpm --version # 9.x.x বা তার বেশি</div>
 
               <div class="code-box"># pnpm নিজেকে আপডেট করো
-pnpm self-update
-pnpm self-update --version 9.0.0   ← নির্দিষ্ট version</div>
+                pnpm self-update
+                pnpm self-update --version 9.0.0 ← নির্দিষ্ট version</div>
 
               <div class="tip-box">
                 ✅ <strong>Corepack হলো সেরা পদ্ধতি।</strong> Node.js 16.13+-এ Corepack built-in।
@@ -1415,49 +1636,89 @@ pnpm self-update --version 9.0.0   ← নির্দিষ্ট version</div>
 
               <table class="size-chart">
                 <thead>
-                  <tr><th>npm</th><th>pnpm</th><th>কাজ</th></tr>
+                  <tr>
+                    <th>npm</th>
+                    <th>pnpm</th>
+                    <th>কাজ</th>
+                  </tr>
                 </thead>
                 <tbody>
-                  <tr><td><code>npm install</code></td><td><code>pnpm install</code></td><td>সব dependency install</td></tr>
-                  <tr><td><code>npm install express</code></td><td><code>pnpm add express</code></td><td>package যোগ করো</td></tr>
-                  <tr><td><code>npm install -D jest</code></td><td><code>pnpm add -D jest</code></td><td>devDependency যোগ</td></tr>
-                  <tr><td><code>npm install -g nodemon</code></td><td><code>pnpm add -g nodemon</code></td><td>global install</td></tr>
-                  <tr><td><code>npm uninstall express</code></td><td><code>pnpm remove express</code></td><td>package মুছো</td></tr>
-                  <tr><td><code>npm update</code></td><td><code>pnpm update</code></td><td>packages update</td></tr>
-                  <tr><td><code>npm run build</code></td><td><code>pnpm build</code></td><td>script চালাও</td></tr>
-                  <tr><td><code>npx create-vite</code></td><td><code>pnpm dlx create-vite</code></td><td>one-time execute</td></tr>
-                  <tr><td><code>npm ci</code></td><td><code>pnpm install --frozen-lockfile</code></td><td>exact lockfile install</td></tr>
+                  <tr>
+                    <td><code>npm install</code></td>
+                    <td><code>pnpm install</code></td>
+                    <td>সব dependency install</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm install express</code></td>
+                    <td><code>pnpm add express</code></td>
+                    <td>package যোগ করো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm install -D jest</code></td>
+                    <td><code>pnpm add -D jest</code></td>
+                    <td>devDependency যোগ</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm install -g nodemon</code></td>
+                    <td><code>pnpm add -g nodemon</code></td>
+                    <td>global install</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm uninstall express</code></td>
+                    <td><code>pnpm remove express</code></td>
+                    <td>package মুছো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm update</code></td>
+                    <td><code>pnpm update</code></td>
+                    <td>packages update</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm run build</code></td>
+                    <td><code>pnpm build</code></td>
+                    <td>script চালাও</td>
+                  </tr>
+                  <tr>
+                    <td><code>npx create-vite</code></td>
+                    <td><code>pnpm dlx create-vite</code></td>
+                    <td>one-time execute</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm ci</code></td>
+                    <td><code>pnpm install --frozen-lockfile</code></td>
+                    <td>exact lockfile install</td>
+                  </tr>
                 </tbody>
               </table>
 
               <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Package যোগ করা
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-pnpm add express                  # dependencies
-pnpm add -D jest eslint           # devDependencies
-pnpm add -O optional-pkg          # optionalDependency
-pnpm add -g nodemon               # global
-pnpm add express@4.18.0           # নির্দিষ্ট version
-pnpm add express@latest           # সর্বশেষ
+                # Package যোগ করা
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                pnpm add express # dependencies
+                pnpm add -D jest eslint # devDependencies
+                pnpm add -O optional-pkg # optionalDependency
+                pnpm add -g nodemon # global
+                pnpm add express@4.18.0 # নির্দিষ্ট version
+                pnpm add express@latest # সর্বশেষ
 
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Interactive update
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-pnpm update --interactive         # কোনটা update করবে বেছে নাও
-pnpm update --latest              # SemVer ignore করে latest নাও
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                # Interactive update
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                pnpm update --interactive # কোনটা update করবে বেছে নাও
+                pnpm update --latest # SemVer ignore করে latest নাও
 
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# অন্যান্য কমান্ড
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-pnpm list                         # installed packages
-pnpm outdated                     # outdated packages
-pnpm audit                        # security check
-pnpm store path                   # store-এর location
-pnpm store status                 # store-এর অবস্থা
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                # অন্যান্য কমান্ড
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                pnpm list # installed packages
+                pnpm outdated # outdated packages
+                pnpm audit # security check
+                pnpm store path # store-এর location
+                pnpm store status # store-এর অবস্থা
 
-# Short aliases (v11 থেকে)
-pn install                        # pnpm-এর alias
-pnx create-vite                   # pnpm dlx-এর alias</div>
+                # Short aliases (v11 থেকে)
+                pn install # pnpm-এর alias
+                pnx create-vite # pnpm dlx-এর alias</div>
             </div>
           </section>
 
@@ -1469,43 +1730,43 @@ pnx create-vite                   # pnpm dlx-এর alias</div>
               <h2>🔷 Store কীভাবে কাজ করে?</h2>
 
               <div class="code-box">পুরনো পদ্ধতি (npm):
-  ~/project-a/node_modules/react/  (কপি)
-  ~/project-b/node_modules/react/  (আরেকটি কপি)
-  ~/project-c/node_modules/react/  (আরেকটি কপি)
-  মোট: 3 কপি × 5MB = 15MB
+                ~/project-a/node_modules/react/ (কপি)
+                ~/project-b/node_modules/react/ (আরেকটি কপি)
+                ~/project-c/node_modules/react/ (আরেকটি কপি)
+                মোট: 3 কপি × 5MB = 15MB
 
-pnpm-এর পদ্ধতি:
-  ~/.local/share/pnpm/store/react@18.2.0/  (মূল ফাইল — একবারই!)
-  ~/project-a/node_modules/react  → hard link (0 bytes extra)
-  ~/project-b/node_modules/react  → hard link (0 bytes extra)
-  ~/project-c/node_modules/react  → hard link (0 bytes extra)
-  মোট: 1 কপি = 5MB  ✅</div>
+                pnpm-এর পদ্ধতি:
+                ~/.local/share/pnpm/store/react@18.2.0/ (মূল ফাইল — একবারই!)
+                ~/project-a/node_modules/react → hard link (0 bytes extra)
+                ~/project-b/node_modules/react → hard link (0 bytes extra)
+                ~/project-c/node_modules/react → hard link (0 bytes extra)
+                মোট: 1 কপি = 5MB ✅</div>
 
               <div class="code-box"># Store management কমান্ড
-pnpm store path          # Store কোথায় আছে?
-pnpm store status        # Integrity check
-pnpm store prune         # অব্যবহৃত packages মুছো
-pnpm store add express   # Package শুধু store-এ রাখো
+                pnpm store path # Store কোথায় আছে?
+                pnpm store status # Integrity check
+                pnpm store prune # অব্যবহৃত packages মুছো
+                pnpm store add express # Package শুধু store-এ রাখো
 
-# Default store location:
-# Linux:   ~/.local/share/pnpm/store
-# macOS:   ~/Library/pnpm/store
-# Windows: %LOCALAPPDATA%\pnpm\store</div>
+                # Default store location:
+                # Linux: ~/.local/share/pnpm/store
+                # macOS: ~/Library/pnpm/store
+                # Windows: %LOCALAPPDATA%\pnpm\store</div>
 
               <div class="code-box"># Virtual store structure (node_modules-এ)
-node_modules/
-├── .pnpm/                          ← virtual store
-│   ├── express@4.18.2/
-│   │   └── node_modules/
-│   │       ├── express → (store-এ hard link)
-│   │       └── (express-এর dependencies)
-│   └── react@18.2.0/
-│       └── node_modules/
-│           └── react → (store-এ hard link)
-├── express → .pnpm/express@4.18.2/node_modules/express
-└── react → .pnpm/react@18.2.0/node_modules/react
+                node_modules/
+                ├── .pnpm/ ← virtual store
+                │ ├── express@4.18.2/
+                │ │ └── node_modules/
+                │ │ ├── express → (store-এ hard link)
+                │ │ └── (express-এর dependencies)
+                │ └── react@18.2.0/
+                │ └── node_modules/
+                │ └── react → (store-এ hard link)
+                ├── express → .pnpm/express@4.18.2/node_modules/express
+                └── react → .pnpm/react@18.2.0/node_modules/react
 
-# এটাই "strict" — শুধু declared packages accessible</div>
+                # এটাই "strict" — শুধু declared packages accessible</div>
             </div>
           </section>
 
@@ -1517,30 +1778,30 @@ node_modules/
               <h2>🔷 pnpm Workspace Setup</h2>
 
               <div class="code-box"># pnpm-workspace.yaml তৈরি করো (root-এ)
-cat pnpm-workspace.yaml:
-  packages:
-    - 'packages/*'
-    - 'apps/*'
-    - '!**/test/**'   ← exclude করো</div>
+                cat pnpm-workspace.yaml:
+                packages:
+                - 'packages/*'
+                - 'apps/*'
+                - '!**/test/**' ← exclude করো</div>
 
               <div class="code-box"># Workspace commands
-pnpm install                              # সব workspace install
+                pnpm install # সব workspace install
 
-# নির্দিষ্ট workspace-এ package যোগ
-pnpm add react --filter @myapp/web
-pnpm add --filter "./packages/**" lodash  # pattern match
+                # নির্দিষ্ট workspace-এ package যোগ
+                pnpm add react --filter @myapp/web
+                pnpm add --filter "./packages/**" lodash # pattern match
 
-# Workspace-এর script চালাও
-pnpm run build --filter @myapp/web
-pnpm run test --filter "..."              # সব workspace
+                # Workspace-এর script চালাও
+                pnpm run build --filter @myapp/web
+                pnpm run test --filter "..." # সব workspace
 
-# --filter এর বিভিন্ন pattern
-pnpm --filter @myapp/api build            # নির্দিষ্ট package
-pnpm --filter "...{./packages/utils}"... build  # utils ও তার dependents
-pnpm --filter "[main]" test               # git-এ changed packages
+                # --filter এর বিভিন্ন pattern
+                pnpm --filter @myapp/api build # নির্দিষ্ট package
+                pnpm --filter "...{./packages/utils}"... build # utils ও তার dependents
+                pnpm --filter "[main]" test # git-এ changed packages
 
-# Workspace-এর মধ্যে dependency
-pnpm add @myapp/utils --filter @myapp/web --workspace</div>
+                # Workspace-এর মধ্যে dependency
+                pnpm add @myapp/utils --filter @myapp/web --workspace</div>
             </div>
           </section>
 
@@ -1553,28 +1814,28 @@ pnpm add @myapp/utils --filter @myapp/web --workspace</div>
 
               <div class="code-box"># .npmrc ফাইলে pnpm-specific settings
 
-# Hoisting এর level (strict = no hoisting)
-public-hoist-pattern[]=eslint*
-public-hoist-pattern[]=*prettier*
+                # Hoisting এর level (strict = no hoisting)
+                public-hoist-pattern[]=eslint*
+                public-hoist-pattern[]=*prettier*
 
-# Auto-install peers
-auto-install-peers=true
+                # Auto-install peers
+                auto-install-peers=true
 
-# Registry
-registry=https://registry.npmjs.org/
+                # Registry
+                registry=https://registry.npmjs.org/
 
-# Store location
-store-dir=~/.pnpm-store
+                # Store location
+                store-dir=~/.pnpm-store
 
-# Node linker (নতুন isolated mode)
-node-linker=hoisted       ← npm-style (compatibility)
-node-linker=isolated      ← pnpm-style (strict, default)
-node-linker=pnp           ← Plug'n'Play mode</div>
+                # Node linker (নতুন isolated mode)
+                node-linker=hoisted ← npm-style (compatibility)
+                node-linker=isolated ← pnpm-style (strict, default)
+                node-linker=pnp ← Plug'n'Play mode</div>
 
               <div class="code-box"># pnpm config management
-pnpm config set registry https://registry.npmjs.org/
-pnpm config get registry
-pnpm config list</div>
+                pnpm config set registry https://registry.npmjs.org/
+                pnpm config get registry
+                pnpm config list</div>
             </div>
           </section>
 
@@ -1583,8 +1844,10 @@ pnpm config list</div>
                ████  Yarn Classic  ████
           ================================================================ -->
           <section id="Yarn-Intro" class="ec-section">
-            <h1 class="center">🧶 <a href="https://classic.yarnpkg.com/en/docs/getting-started" target="_blank" rel="noopener">Yarn</a> — Fast, Reliable, Secure</h1>
-            <p class="center">Facebook (Meta) ২০১৬ সালে npm-এর সীমাবদ্ধতা দূর করতে Yarn তৈরি করেন। Workspaces, lockfile reliability এবং offline installation-এ পথিকৃৎ।</p>
+            <h1 class="center">🧶 <a href="https://classic.yarnpkg.com/en/docs/getting-started" target="_blank"
+                rel="noopener">Yarn</a> — Fast, Reliable, Secure</h1>
+            <p class="center">Facebook (Meta) ২০১৬ সালে npm-এর সীমাবদ্ধতা দূর করতে Yarn তৈরি করেন। Workspaces, lockfile
+              reliability এবং offline installation-এ পথিকৃৎ।</p>
             <hr class="section-divider" />
 
             <div class="example-box">
@@ -1602,7 +1865,10 @@ pnpm config list</div>
 
               <table class="size-chart">
                 <thead>
-                  <tr><th>সুবিধা</th><th>বিবরণ</th></tr>
+                  <tr>
+                    <th>সুবিধা</th>
+                    <th>বিবরণ</th>
+                  </tr>
                 </thead>
                 <tbody>
                   <tr>
@@ -1642,25 +1908,25 @@ pnpm config list</div>
               <h2>🔷 Yarn Installation (Classic v1)</h2>
 
               <div class="code-box"># পদ্ধতি ১: npm দিয়ে (সহজ)
-npm install -g yarn
+                npm install -g yarn
 
-# পদ্ধতি ২: Official installer
-# macOS/Linux:
-curl -o- -L https://yarnpkg.com/install.sh | bash
+                # পদ্ধতি ২: Official installer
+                # macOS/Linux:
+                curl -o- -L https://yarnpkg.com/install.sh | bash
 
-# পদ্ধতি ৩: Homebrew (macOS)
-brew install yarn
+                # পদ্ধতি ৩: Homebrew (macOS)
+                brew install yarn
 
-# পদ্ধতি ৪: Corepack (সেরা পদ্ধতি)
-corepack enable
-corepack prepare yarn@1.22.19 --activate
+                # পদ্ধতি ৪: Corepack (সেরা পদ্ধতি)
+                corepack enable
+                corepack prepare yarn@1.22.19 --activate
 
-# যাচাই
-yarn --version    # 1.22.x</div>
+                # যাচাই
+                yarn --version # 1.22.x</div>
 
               <div class="code-box"># Yarn আপডেট করো
-yarn set version classic   ← classic/stable version
-yarn set version 1.22.19   ← নির্দিষ্ট version</div>
+                yarn set version classic ← classic/stable version
+                yarn set version 1.22.19 ← নির্দিষ্ট version</div>
             </div>
           </section>
 
@@ -1672,107 +1938,143 @@ yarn set version 1.22.19   ← নির্দিষ্ট version</div>
               <h2>🔷 Yarn-এর প্রধান কমান্ড</h2>
 
               <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# প্রজেক্ট শুরু করা
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-yarn init             # package.json তৈরি (প্রশ্ন করবে)
-yarn init -y          # সব default নাও</div>
+                # প্রজেক্ট শুরু করা
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                yarn init # package.json তৈরি (প্রশ্ন করবে)
+                yarn init -y # সব default নাও</div>
 
               <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Package ইনস্টল
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-yarn                  # সব dependencies install (yarn install)
-yarn install          # একই কথা
+                # Package ইনস্টল
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                yarn # সব dependencies install (yarn install)
+                yarn install # একই কথা
 
-# Offline mode
-yarn install --offline     # শুধু cache থেকে
-yarn install --frozen-lockfile  # lockfile update করবে না (CI-এর জন্য)
-yarn install --production  # শুধু dependencies (devDependencies skip)</div>
-
-              <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Package যোগ করা — yarn add
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-yarn add express              # dependency
-yarn add -D jest              # devDependency
-yarn add --dev eslint         # devDependency (একই)
-yarn add -P react             # peerDependency
-yarn add -O fsevents          # optionalDependency
-yarn add -g nodemon           # global install
-
-# নির্দিষ্ট version
-yarn add express@4.18.0
-yarn add express@^4.0.0
-yarn add react@latest
-
-# Git URL থেকে
-yarn add git+https://github.com/user/repo.git
-
-# Tilde mode (~) — minor version lock
-yarn add express --tilde      # ^4.18.x পরিবর্তে ~4.18.x
-
-# Workspace root-এ
-yarn add lerna -W             # -W = workspace root ignore check</div>
+                # Offline mode
+                yarn install --offline # শুধু cache থেকে
+                yarn install --frozen-lockfile # lockfile update করবে না (CI-এর জন্য)
+                yarn install --production # শুধু dependencies (devDependencies skip)</div>
 
               <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Package মুছা ও আপডেট
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-yarn remove express           # package মুছো
+                # Package যোগ করা — yarn add
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                yarn add express # dependency
+                yarn add -D jest # devDependency
+                yarn add --dev eslint # devDependency (একই)
+                yarn add -P react # peerDependency
+                yarn add -O fsevents # optionalDependency
+                yarn add -g nodemon # global install
 
-yarn upgrade                  # সব packages update (semver range-এ)
-yarn upgrade express          # নির্দিষ্ট package update
-yarn upgrade express@4.18.0   # নির্দিষ্ট version-এ update
-yarn upgrade --latest         # সব packages latest version
+                # নির্দিষ্ট version
+                yarn add express@4.18.0
+                yarn add express@^4.0.0
+                yarn add react@latest
 
-# Interactive upgrade (টিক দিয়ে বেছে নাও)
-yarn upgrade-interactive
-yarn upgrade-interactive --latest</div>
+                # Git URL থেকে
+                yarn add git+https://github.com/user/repo.git
 
-              <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Script চালানো
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-yarn start           # npm run start-এর মতো
-yarn test            # npm run test-এর মতো
-yarn run build       # custom script
-yarn build           # shorthand (script name conflict না থাকলে)
+                # Tilde mode (~) — minor version lock
+                yarn add express --tilde # ^4.18.x পরিবর্তে ~4.18.x
 
-# Arguments pass করো
-yarn build --watch
-yarn test --verbose</div>
+                # Workspace root-এ
+                yarn add lerna -W # -W = workspace root ignore check</div>
 
               <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# অন্যান্য দরকারি কমান্ড
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-yarn list                    # installed packages
-yarn list --depth=0          # শুধু top-level
-yarn info express            # package-এর তথ্য
-yarn info express versions   # সব versions
+                # Package মুছা ও আপডেট
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                yarn remove express # package মুছো
 
-yarn cache list              # cache-এ কী আছে
-yarn cache dir               # cache location
-yarn cache clean             # cache মুছো
+                yarn upgrade # সব packages update (semver range-এ)
+                yarn upgrade express # নির্দিষ্ট package update
+                yarn upgrade express@4.18.0 # নির্দিষ্ট version-এ update
+                yarn upgrade --latest # সব packages latest version
 
-yarn check                   # package integrity check
-yarn why express             # কেন express install হয়েছে
+                # Interactive upgrade (টিক দিয়ে বেছে নাও)
+                yarn upgrade-interactive
+                yarn upgrade-interactive --latest</div>
 
-yarn link                    # local package link
-yarn unlink                  # link মুছো
+              <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                # Script চালানো
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                yarn start # npm run start-এর মতো
+                yarn test # npm run test-এর মতো
+                yarn run build # custom script
+                yarn build # shorthand (script name conflict না থাকলে)
 
-yarn login                   # npmjs.com login
-yarn logout                  # logout
-yarn publish                 # package publish</div>
+                # Arguments pass করো
+                yarn build --watch
+                yarn test --verbose</div>
+
+              <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                # অন্যান্য দরকারি কমান্ড
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                yarn list # installed packages
+                yarn list --depth=0 # শুধু top-level
+                yarn info express # package-এর তথ্য
+                yarn info express versions # সব versions
+
+                yarn cache list # cache-এ কী আছে
+                yarn cache dir # cache location
+                yarn cache clean # cache মুছো
+
+                yarn check # package integrity check
+                yarn why express # কেন express install হয়েছে
+
+                yarn link # local package link
+                yarn unlink # link মুছো
+
+                yarn login # npmjs.com login
+                yarn logout # logout
+                yarn publish # package publish</div>
 
               <table class="size-chart">
                 <thead>
-                  <tr><th>npm</th><th>Yarn</th><th>কাজ</th></tr>
+                  <tr>
+                    <th>npm</th>
+                    <th>Yarn</th>
+                    <th>কাজ</th>
+                  </tr>
                 </thead>
                 <tbody>
-                  <tr><td><code>npm install</code></td><td><code>yarn</code></td><td>সব install</td></tr>
-                  <tr><td><code>npm install express</code></td><td><code>yarn add express</code></td><td>package যোগ</td></tr>
-                  <tr><td><code>npm install -D jest</code></td><td><code>yarn add -D jest</code></td><td>devDep যোগ</td></tr>
-                  <tr><td><code>npm install -g</code></td><td><code>yarn global add</code></td><td>global install</td></tr>
-                  <tr><td><code>npm uninstall</code></td><td><code>yarn remove</code></td><td>মুছো</td></tr>
-                  <tr><td><code>npm update</code></td><td><code>yarn upgrade</code></td><td>update</td></tr>
-                  <tr><td><code>npm run build</code></td><td><code>yarn build</code></td><td>script চালাও</td></tr>
-                  <tr><td><code>npx</code></td><td><code>yarn dlx</code></td><td>one-time execute</td></tr>
+                  <tr>
+                    <td><code>npm install</code></td>
+                    <td><code>yarn</code></td>
+                    <td>সব install</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm install express</code></td>
+                    <td><code>yarn add express</code></td>
+                    <td>package যোগ</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm install -D jest</code></td>
+                    <td><code>yarn add -D jest</code></td>
+                    <td>devDep যোগ</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm install -g</code></td>
+                    <td><code>yarn global add</code></td>
+                    <td>global install</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm uninstall</code></td>
+                    <td><code>yarn remove</code></td>
+                    <td>মুছো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm update</code></td>
+                    <td><code>yarn upgrade</code></td>
+                    <td>update</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm run build</code></td>
+                    <td><code>yarn build</code></td>
+                    <td>script চালাও</td>
+                  </tr>
+                  <tr>
+                    <td><code>npx</code></td>
+                    <td><code>yarn dlx</code></td>
+                    <td>one-time execute</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -1780,22 +2082,22 @@ yarn publish                 # package publish</div>
             <div class="example-box">
               <h2>🔷 Global Package Management</h2>
               <div class="code-box"># Global packages (সব project-এ accessible)
-yarn global add nodemon
-yarn global add create-react-app
+                yarn global add nodemon
+                yarn global add create-react-app
 
-# Global packages দেখো
-yarn global list
+                # Global packages দেখো
+                yarn global list
 
-# Global package location
-yarn global bin        # executables কোথায়
-yarn global dir        # packages কোথায়
+                # Global package location
+                yarn global bin # executables কোথায়
+                yarn global dir # packages কোথায়
 
-# মুছো
-yarn global remove nodemon
+                # মুছো
+                yarn global remove nodemon
 
-# ⚠️ Note: Yarn-এ global command আলাদাভাবে আসে
-# "yarn global add" ঠিক, কিন্তু
-# "yarn add global package" ← ভুল! (global আলাদা package হিসেবে install হবে)</div>
+                # ⚠️ Note: Yarn-এ global command আলাদাভাবে আসে
+                # "yarn global add" ঠিক, কিন্তু
+                # "yarn add global package" ← ভুল! (global আলাদা package হিসেবে install হবে)</div>
             </div>
           </section>
 
@@ -1811,16 +2113,16 @@ yarn global remove nodemon
               </p>
 
               <div class="code-box"># yarn.lock ফাইলের উদাহরণ:
-express@^4.18.2:
-  version "4.18.2"
-  resolved "https://registry.yarnpkg.com/express/-/express-4.18.2.tgz#..."
-  integrity sha512-...
-  dependencies:
-    accepts "~1.3.8"
-    body-parser "1.20.1"
-    ...
+                express@^4.18.2:
+                version "4.18.2"
+                resolved "https://registry.yarnpkg.com/express/-/express-4.18.2.tgz#..."
+                integrity sha512-...
+                dependencies:
+                accepts "~1.3.8"
+                body-parser "1.20.1"
+                ...
 
-# → মানুষ পড়তে পারে, diff করতে পারে, review করতে পারে</div>
+                # → মানুষ পড়তে পারে, diff করতে পারে, review করতে পারে</div>
 
               <div class="tip-box">
                 ✅ <strong>yarn.lock সবসময় commit করো।</strong>
@@ -1838,42 +2140,42 @@ express@^4.18.2:
               <h2>🔷 Yarn Workspaces Setup</h2>
 
               <div class="code-box">// Root package.json
-{
-  "private": true,              // ← অবশ্যই private: true
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ]
-}</div>
+                {
+                "private": true, // ← অবশ্যই private: true
+                "workspaces": [
+                "packages/*",
+                "apps/*"
+                ]
+                }</div>
 
               <div class="code-box">my-monorepo/
-├── package.json               ← root
-├── packages/
-│   ├── utils/
-│   │   └── package.json      ← "name": "@myapp/utils"
-│   └── components/
-│       └── package.json      ← "name": "@myapp/components"
-└── apps/
-    └── web/
-        └── package.json      ← depends on @myapp/utils</div>
+                ├── package.json ← root
+                ├── packages/
+                │ ├── utils/
+                │ │ └── package.json ← "name": "@myapp/utils"
+                │ └── components/
+                │ └── package.json ← "name": "@myapp/components"
+                └── apps/
+                └── web/
+                └── package.json ← depends on @myapp/utils</div>
 
               <div class="code-box"># Workspace commands
-yarn install                       # সব workspace-এর dependencies install
+                yarn install # সব workspace-এর dependencies install
 
-# নির্দিষ্ট workspace-এ কাজ করো
-yarn workspace @myapp/web add react         # package যোগ
-yarn workspace @myapp/web build             # script চালাও
-yarn workspace @myapp/utils test
+                # নির্দিষ্ট workspace-এ কাজ করো
+                yarn workspace @myapp/web add react # package যোগ
+                yarn workspace @myapp/web build # script চালাও
+                yarn workspace @myapp/utils test
 
-# সব workspace-এ script চালাও
-yarn workspaces run build
-yarn workspaces run test
+                # সব workspace-এ script চালাও
+                yarn workspaces run build
+                yarn workspaces run test
 
-# Workspace info দেখো
-yarn workspaces info
+                # Workspace info দেখো
+                yarn workspaces info
 
-# Workspace-এর dependency tree
-yarn workspaces info --json</div>
+                # Workspace-এর dependency tree
+                yarn workspaces info --json</div>
             </div>
           </section>
 
@@ -1885,32 +2187,32 @@ yarn workspaces info --json</div>
               <h2>🔷 Yarn Configuration</h2>
 
               <div class="code-box"># Config management
-yarn config list              # সব config দেখো
-yarn config get registry      # নির্দিষ্ট config দেখো
-yarn config set registry https://registry.npmjs.org/
-yarn config set save-prefix "~"  # ^ পরিবর্তে ~ ব্যবহার
-yarn config delete save-prefix   # delete করো</div>
+                yarn config list # সব config দেখো
+                yarn config get registry # নির্দিষ্ট config দেখো
+                yarn config set registry https://registry.npmjs.org/
+                yarn config set save-prefix "~" # ^ পরিবর্তে ~ ব্যবহার
+                yarn config delete save-prefix # delete করো</div>
 
               <div class="code-box"># .yarnrc ফাইল (project root-এ)
-registry "https://registry.npmjs.org/"
-save-prefix "^"
-strict-ssl true
-yarn-offline-mirror "./offline-mirror"
+                registry "https://registry.npmjs.org/"
+                save-prefix "^"
+                strict-ssl true
+                yarn-offline-mirror "./offline-mirror"
 
-# Offline mirror
-# yarn install করলে packages একটি ফোল্ডারে সংরক্ষণ হবে
-# পরে internet ছাড়াও install করা যাবে</div>
+                # Offline mirror
+                # yarn install করলে packages একটি ফোল্ডারে সংরক্ষণ হবে
+                # পরে internet ছাড়াও install করা যাবে</div>
 
               <div class="code-box"># Offline installation
-# ধাপ ১: Mirror সেট করো
-yarn config set yarn-offline-mirror ./npm-packages-offline-cache
-yarn config set yarn-offline-mirror-pruning true
+                # ধাপ ১: Mirror সেট করো
+                yarn config set yarn-offline-mirror ./npm-packages-offline-cache
+                yarn config set yarn-offline-mirror-pruning true
 
-# ধাপ ২: Online-এ একবার install করো (mirror তৈরি হবে)
-yarn install
+                # ধাপ ২: Online-এ একবার install করো (mirror তৈরি হবে)
+                yarn install
 
-# ধাপ ৩: Offline-এ install করো
-yarn install --offline</div>
+                # ধাপ ৩: Offline-এ install করো
+                yarn install --offline</div>
             </div>
           </section>
 
@@ -1919,8 +2221,10 @@ yarn install --offline</div>
                ████  Bun  ████
           ================================================================ -->
           <section id="Bun-Intro" class="ec-section">
-            <h1 class="center">🥟 <a href="https://bun.com/docs" target="_blank" rel="noopener">Bun</a> — All-in-One JavaScript Toolkit</h1>
-            <p class="center">Bun হলো JavaScript ecosystem-এর সবচেয়ে নতুন ও দ্রুত টুল। Runtime, Package Manager, Test Runner ও Bundler — একটিতেই সব।</p>
+            <h1 class="center">🥟 <a href="https://bun.com/docs" target="_blank" rel="noopener">Bun</a> — All-in-One
+              JavaScript Toolkit</h1>
+            <p class="center">Bun হলো JavaScript ecosystem-এর সবচেয়ে নতুন ও দ্রুত টুল। Runtime, Package Manager, Test
+              Runner ও Bundler — একটিতেই সব।</p>
             <hr class="section-divider" />
 
             <div class="example-box">
@@ -1932,18 +2236,18 @@ yarn install --offline</div>
               </p>
 
               <div class="code-box">Node.js ecosystem:
-  Runtime:         Node.js
-  Package Manager: npm / pnpm / yarn
-  Test Runner:     Jest / Vitest
-  Bundler:         webpack / esbuild / rollup
-  TypeScript:      tsx / ts-node লাগে
+                Runtime: Node.js
+                Package Manager: npm / pnpm / yarn
+                Test Runner: Jest / Vitest
+                Bundler: webpack / esbuild / rollup
+                TypeScript: tsx / ts-node লাগে
 
-Bun ecosystem:
-  Runtime:         bun ← একটাই!
-  Package Manager: bun
-  Test Runner:     bun test
-  Bundler:         bun build
-  TypeScript:      সরাসরি চলে! কোনো setup নেই!</div>
+                Bun ecosystem:
+                Runtime: bun ← একটাই!
+                Package Manager: bun
+                Test Runner: bun test
+                Bundler: bun build
+                TypeScript: সরাসরি চলে! কোনো setup নেই!</div>
 
               <div class="tip-box">
                 ✅ <strong>Bun-এর গতির তুলনা:</strong><br />
@@ -1955,15 +2259,43 @@ Bun ecosystem:
 
               <table class="size-chart">
                 <thead>
-                  <tr><th>বৈশিষ্ট্য</th><th>Node.js + npm</th><th>Bun</th></tr>
+                  <tr>
+                    <th>বৈশিষ্ট্য</th>
+                    <th>Node.js + npm</th>
+                    <th>Bun</th>
+                  </tr>
                 </thead>
                 <tbody>
-                  <tr><td><strong>Runtime engine</strong></td><td>V8 (Google)</td><td>JavaScriptCore (Apple/Safari)</td></tr>
-                  <tr><td><strong>Written in</strong></td><td>C++</td><td>Zig + C++</td></tr>
-                  <tr><td><strong>TypeScript</strong></td><td>Compile করতে হয়</td><td>সরাসরি চলে</td></tr>
-                  <tr><td><strong>JSX</strong></td><td>Babel/esbuild লাগে</td><td>সরাসরি চলে</td></tr>
-                  <tr><td><strong>Node.js compat.</strong></td><td>100% (এটাই Node)</td><td>~95%+ (চলতে থাকছে)</td></tr>
-                  <tr><td><strong>Web APIs</strong></td><td>Partial</td><td>Fetch, WebSocket, ReadableStream built-in</td></tr>
+                  <tr>
+                    <td><strong>Runtime engine</strong></td>
+                    <td>V8 (Google)</td>
+                    <td>JavaScriptCore (Apple/Safari)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Written in</strong></td>
+                    <td>C++</td>
+                    <td>Zig + C++</td>
+                  </tr>
+                  <tr>
+                    <td><strong>TypeScript</strong></td>
+                    <td>Compile করতে হয়</td>
+                    <td>সরাসরি চলে</td>
+                  </tr>
+                  <tr>
+                    <td><strong>JSX</strong></td>
+                    <td>Babel/esbuild লাগে</td>
+                    <td>সরাসরি চলে</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Node.js compat.</strong></td>
+                    <td>100% (এটাই Node)</td>
+                    <td>~95%+ (চলতে থাকছে)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Web APIs</strong></td>
+                    <td>Partial</td>
+                    <td>Fetch, WebSocket, ReadableStream built-in</td>
+                  </tr>
                 </tbody>
               </table>
 
@@ -1985,52 +2317,52 @@ Bun ecosystem:
               <h2>🔷 Bun Installation</h2>
 
               <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# macOS ও Linux (সবচেয়ে সহজ)
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-curl -fsSL https://bun.com/install | bash
+                # macOS ও Linux (সবচেয়ে সহজ)
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                curl -fsSL https://bun.com/install | bash
 
-# বা npm দিয়ে
-npm install -g bun
+                # বা npm দিয়ে
+                npm install -g bun
 
-# Homebrew (macOS)
-brew tap oven-sh/bun
-brew install bun</div>
-
-              <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Windows
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# PowerShell দিয়ে:
-powershell -c "irm bun.sh/install.ps1 | iex"
-
-# npm দিয়ে:
-npm install -g bun</div>
+                # Homebrew (macOS)
+                brew tap oven-sh/bun
+                brew install bun</div>
 
               <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Docker
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-docker pull oven/bun
-docker run --rm --init oven/bun bun --version</div>
+                # Windows
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                # PowerShell দিয়ে:
+                powershell -c "irm bun.sh/install.ps1 | iex"
+
+                # npm দিয়ে:
+                npm install -g bun</div>
+
+              <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                # Docker
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                docker pull oven/bun
+                docker run --rm --init oven/bun bun --version</div>
 
               <div class="code-box"># যাচাই করো
-bun --version         # 1.x.x
+                bun --version # 1.x.x
 
-# Bun আপডেট করো
-bun upgrade
-bun upgrade --version 1.2.0  # নির্দিষ্ট version</div>
+                # Bun আপডেট করো
+                bun upgrade
+                bun upgrade --version 1.2.0 # নির্দিষ্ট version</div>
 
               <h3>প্রজেক্ট শুরু করা</h3>
               <div class="code-box"># নতুন প্রজেক্ট
-bun init                    # interactive setup
-bun init -y                 # সব default নাও
+                bun init # interactive setup
+                bun init -y # সব default নাও
 
-# Template দিয়ে তৈরি করো
-bun create react my-app     # React
-bun create next my-app      # Next.js
-bun create vite my-app      # Vite
-bun create hono my-app      # Hono (API framework)
+                # Template দিয়ে তৈরি করো
+                bun create react my-app # React
+                bun create next my-app # Next.js
+                bun create vite my-app # Vite
+                bun create hono my-app # Hono (API framework)
 
-# package.json দেখো
-cat package.json</div>
+                # package.json দেখো
+                cat package.json</div>
             </div>
           </section>
 
@@ -2043,73 +2375,105 @@ cat package.json</div>
               <h2>🔷 Package Management কমান্ড</h2>
 
               <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Install
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-bun install                # সব dependencies install
-bun i                      # shorthand
+                # Install
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                bun install # সব dependencies install
+                bun i # shorthand
 
-# Frozen lockfile (CI/CD-এর জন্য)
-bun install --frozen-lockfile
-bun ci                     # shorthand
+                # Frozen lockfile (CI/CD-এর জন্য)
+                bun install --frozen-lockfile
+                bun ci # shorthand
 
-# Production mode
-bun install --production
+                # Production mode
+                bun install --production
 
-# Verbose / Silent
-bun install --verbose
-bun install --silent</div>
-
-              <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Package যোগ করা
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-bun add express              # dependency
-bun add -D jest              # devDependency
-bun add -g nodemon           # global
-bun add express@4.18.0       # নির্দিষ্ট version
-bun add express@latest       # সর্বশেষ
-
-# Git থেকে
-bun add github:user/repo
-bun add git+https://github.com/user/repo.git
-
-# Text lockfile generate করো
-bun install --save-text-lockfile  ← human-readable bun.lock</div>
+                # Verbose / Silent
+                bun install --verbose
+                bun install --silent</div>
 
               <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Remove ও Update
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-bun remove express           # package মুছো
-bun remove -D jest           # devDependency মুছো
+                # Package যোগ করা
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                bun add express # dependency
+                bun add -D jest # devDependency
+                bun add -g nodemon # global
+                bun add express@4.18.0 # নির্দিষ্ট version
+                bun add express@latest # সর্বশেষ
 
-bun update                   # সব update
-bun update express           # নির্দিষ্ট package
+                # Git থেকে
+                bun add github:user/repo
+                bun add git+https://github.com/user/repo.git
 
-# Outdated packages দেখো
-bun outdated</div>
+                # Text lockfile generate করো
+                bun install --save-text-lockfile ← human-readable bun.lock</div>
 
               <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# bunx — npx-এর মতো
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-bunx create-react-app my-app  # install না করে চালাও
-bunx cowsay "Hello Bun!"
+                # Remove ও Update
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                bun remove express # package মুছো
+                bun remove -D jest # devDependency মুছো
 
-# bun pm — package manager utilities
-bun pm ls                    # installed packages
-bun pm cache rm              # cache মুছো</div>
+                bun update # সব update
+                bun update express # নির্দিষ্ট package
+
+                # Outdated packages দেখো
+                bun outdated</div>
+
+              <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                # bunx — npx-এর মতো
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                bunx create-react-app my-app # install না করে চালাও
+                bunx cowsay "Hello Bun!"
+
+                # bun pm — package manager utilities
+                bun pm ls # installed packages
+                bun pm cache rm # cache মুছো</div>
 
               <h3>npm-এর সাথে তুলনা</h3>
               <table class="size-chart">
                 <thead>
-                  <tr><th>npm</th><th>Bun</th><th>কাজ</th></tr>
+                  <tr>
+                    <th>npm</th>
+                    <th>Bun</th>
+                    <th>কাজ</th>
+                  </tr>
                 </thead>
                 <tbody>
-                  <tr><td><code>npm install</code></td><td><code>bun install</code></td><td>সব install</td></tr>
-                  <tr><td><code>npm install express</code></td><td><code>bun add express</code></td><td>package যোগ</td></tr>
-                  <tr><td><code>npm install -D jest</code></td><td><code>bun add -D jest</code></td><td>devDep যোগ</td></tr>
-                  <tr><td><code>npm install -g nodemon</code></td><td><code>bun add -g nodemon</code></td><td>global</td></tr>
-                  <tr><td><code>npm uninstall</code></td><td><code>bun remove</code></td><td>মুছো</td></tr>
-                  <tr><td><code>npm ci</code></td><td><code>bun ci</code></td><td>frozen install</td></tr>
-                  <tr><td><code>npx</code></td><td><code>bunx</code></td><td>one-time run</td></tr>
+                  <tr>
+                    <td><code>npm install</code></td>
+                    <td><code>bun install</code></td>
+                    <td>সব install</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm install express</code></td>
+                    <td><code>bun add express</code></td>
+                    <td>package যোগ</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm install -D jest</code></td>
+                    <td><code>bun add -D jest</code></td>
+                    <td>devDep যোগ</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm install -g nodemon</code></td>
+                    <td><code>bun add -g nodemon</code></td>
+                    <td>global</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm uninstall</code></td>
+                    <td><code>bun remove</code></td>
+                    <td>মুছো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm ci</code></td>
+                    <td><code>bun ci</code></td>
+                    <td>frozen install</td>
+                  </tr>
+                  <tr>
+                    <td><code>npx</code></td>
+                    <td><code>bunx</code></td>
+                    <td>one-time run</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -2121,100 +2485,101 @@ bun pm cache rm              # cache মুছো</div>
               </p>
 
               <div class="code-box"># Lockfile migration
-# npm থেকে Bun-এ:
-# package-lock.json আছে? Bun automatically read করবে
+                # npm থেকে Bun-এ:
+                # package-lock.json আছে? Bun automatically read করবে
 
-# pnpm থেকে:
-# pnpm-lock.yaml আছে? Bun automatically convert করবে
+                # pnpm থেকে:
+                # pnpm-lock.yaml আছে? Bun automatically convert করবে
 
-# Yarn থেকে:
-# yarn.lock আছে? Bun automatically convert করবে
+                # Yarn থেকে:
+                # yarn.lock আছে? Bun automatically convert করবে
 
-# Bun-এর নিজের lockfile:
-# Binary format: bun.lockb  (দ্রুত, default)
-# Text format:   bun.lock   (human-readable, Git-এ ভালো)
+                # Bun-এর নিজের lockfile:
+                # Binary format: bun.lockb (দ্রুত, default)
+                # Text format: bun.lock (human-readable, Git-এ ভালো)
 
-# Text lockfile তৈরি করো:
-bun install --save-text-lockfile</div>
+                # Text lockfile তৈরি করো:
+                bun install --save-text-lockfile</div>
             </div>
           </section>
 
           <section id="Bun-Runtime" class="ec-section">
             <h1 class="center">⚡ Bun Runtime ও Script Runner</h1>
-            <p class="center">Bun শুধু package manager নয় — এটি Node.js-compatible runtime। TypeScript ও JSX সরাসরি চালানো যায়।</p>
+            <p class="center">Bun শুধু package manager নয় — এটি Node.js-compatible runtime। TypeScript ও JSX সরাসরি
+              চালানো যায়।</p>
             <hr class="section-divider" />
 
             <div class="example-box">
               <h2>🔷 JavaScript ও TypeScript চালানো</h2>
 
               <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# File চালানো
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-bun run index.js          # JavaScript
-bun run index.ts          # TypeScript (সরাসরি! tsx লাগে না)
-bun run index.tsx         # React TSX
-bun run index.jsx         # React JSX
+                # File চালানো
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                bun run index.js # JavaScript
+                bun run index.ts # TypeScript (সরাসরি! tsx লাগে না)
+                bun run index.tsx # React TSX
+                bun run index.jsx # React JSX
 
-# Shorthand
-bun index.js
-bun index.ts</div>
-
-              <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# npm scripts চালানো
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-bun run start            # "start" script চালাও
-bun run dev              # "dev" script
-bun run build            # "build" script
-bun run test             # "test" script
-
-# Shorthand (script name collision নেই তো?)
-bun start
-bun dev
-bun build</div>
+                # Shorthand
+                bun index.js
+                bun index.ts</div>
 
               <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Watch mode — file change-এ auto restart
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-bun --watch run index.ts
-bun --hot  run index.ts   ← hot reload (state preserve)</div>
+                # npm scripts চালানো
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                bun run start # "start" script চালাও
+                bun run dev # "dev" script
+                bun run build # "build" script
+                bun run test # "test" script
+
+                # Shorthand (script name collision নেই তো?)
+                bun start
+                bun dev
+                bun build</div>
 
               <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Node.js API compatibility উদাহরণ
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-// server.ts — TypeScript, Node.js API ব্যবহার
-import { createServer } from "http";
-import { readFileSync } from "fs";
-import path from "path";
-
-const server = createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "text/plain" });
-  res.end("Hello from Bun!");
-});
-
-server.listen(3000, () => {
-  console.log("Server running on port 3000");
-});
-
-// চালানো:
-bun server.ts   // কোনো compile step নেই!</div>
+                # Watch mode — file change-এ auto restart
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                bun --watch run index.ts
+                bun --hot run index.ts ← hot reload (state preserve)</div>
 
               <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Bun.serve — Built-in HTTP server (দ্রুত)
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                # Node.js API compatibility উদাহরণ
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-// app.ts
-import { serve } from "bun";
+                // server.ts — TypeScript, Node.js API ব্যবহার
+                import { createServer } from "http";
+                import { readFileSync } from "fs";
+                import path from "path";
 
-const server = serve({
-  port: 3000,
-  routes: {
-    "/": new Response("Welcome!"),
-    "/api/hello": (req) => Response.json({ message: "Hello Bun!" }),
-  },
-});
+                const server = createServer((req, res) => {
+                res.writeHead(200, { "Content-Type": "text/plain" });
+                res.end("Hello from Bun!");
+                });
 
-console.log(`Server at http://localhost:${server.port}`);</div>
+                server.listen(3000, () => {
+                console.log("Server running on port 3000");
+                });
+
+                // চালানো:
+                bun server.ts // কোনো compile step নেই!</div>
+
+              <div class="code-box"># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                # Bun.serve — Built-in HTTP server (দ্রুত)
+                # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+                // app.ts
+                import { serve } from "bun";
+
+                const server = serve({
+                port: 3000,
+                routes: {
+                "/": new Response("Welcome!"),
+                "/api/hello": (req) => Response.json({ message: "Hello Bun!" }),
+                },
+                });
+
+                console.log(`Server at http://localhost:${server.port}`);</div>
             </div>
           </section>
 
@@ -2227,41 +2592,41 @@ console.log(`Server at http://localhost:${server.port}`);</div>
               <h2>🔷 bun test — Jest-compatible Testing</h2>
 
               <div class="code-box"># Test চালানো
-bun test                     # সব test ফাইল
-bun test src/utils.test.ts   # নির্দিষ্ট ফাইল
-bun test --watch             # watch mode
-bun test --coverage          # code coverage
+                bun test # সব test ফাইল
+                bun test src/utils.test.ts # নির্দিষ্ট ফাইল
+                bun test --watch # watch mode
+                bun test --coverage # code coverage
 
-# Pattern matching
-bun test --test-name-pattern "login"
+                # Pattern matching
+                bun test --test-name-pattern "login"
 
-# Parallel
-bun test --parallel</div>
+                # Parallel
+                bun test --parallel</div>
 
               <div class="code-box">// utils.test.ts — Jest-compatible syntax!
-import { describe, it, expect, beforeEach } from "bun:test";
-import { add, multiply } from "./utils";
+                import { describe, it, expect, beforeEach } from "bun:test";
+                import { add, multiply } from "./utils";
 
-describe("Math utils", () => {
-  it("should add two numbers", () => {
-    expect(add(2, 3)).toBe(5);
-  });
+                describe("Math utils", () => {
+                it("should add two numbers", () => {
+                expect(add(2, 3)).toBe(5);
+                });
 
-  it("should multiply two numbers", () => {
-    expect(multiply(3, 4)).toBe(12);
-  });
-});
+                it("should multiply two numbers", () => {
+                expect(multiply(3, 4)).toBe(12);
+                });
+                });
 
-describe("String utils", () => {
-  it("should handle async", async () => {
-    const result = await fetchData();
-    expect(result).toBeString();
-  });
-});
+                describe("String utils", () => {
+                it("should handle async", async () => {
+                const result = await fetchData();
+                expect(result).toBeString();
+                });
+                });
 
-// Mock করা
-import { mock, spyOn } from "bun:test";
-const mockFetch = mock(() => Promise.resolve("mocked"));</div>
+                // Mock করা
+                import { mock, spyOn } from "bun:test";
+                const mockFetch = mock(() => Promise.resolve("mocked"));</div>
 
               <div class="tip-box">
                 ✅ <strong>Jest → Bun migration:</strong> বেশিরভাগ ক্ষেত্রে শুধু import পরিবর্তন করলেই হয়:
@@ -2280,40 +2645,40 @@ const mockFetch = mock(() => Promise.resolve("mocked"));</div>
               <h2>🔷 bun build — Bundle করা</h2>
 
               <div class="code-box"># সাধারণ build
-bun build ./src/index.ts --outdir ./dist
+                bun build ./src/index.ts --outdir ./dist
 
-# Production build (minify)
-bun build ./src/index.ts --outdir ./dist --minify
+                # Production build (minify)
+                bun build ./src/index.ts --outdir ./dist --minify
 
-# Browser target
-bun build ./src/app.tsx --outdir ./dist --target browser
+                # Browser target
+                bun build ./src/app.tsx --outdir ./dist --target browser
 
-# Node.js target
-bun build ./src/server.ts --outdir ./dist --target node
+                # Node.js target
+                bun build ./src/server.ts --outdir ./dist --target node
 
-# Sourcemap
-bun build ./src/index.ts --outdir ./dist --sourcemap
+                # Sourcemap
+                bun build ./src/index.ts --outdir ./dist --sourcemap
 
-# Single file (self-contained executable!)
-bun build ./src/cli.ts --compile --outfile my-tool
+                # Single file (self-contained executable!)
+                bun build ./src/cli.ts --compile --outfile my-tool
 
-# CSS ও assets
-bun build ./src/styles.css --outdir ./dist</div>
+                # CSS ও assets
+                bun build ./src/styles.css --outdir ./dist</div>
 
               <div class="code-box"># Build API (code-এ ব্যবহার করা)
-const result = await Bun.build({
-  entrypoints: ["./src/index.tsx"],
-  outdir: "./dist",
-  minify: true,
-  target: "browser",
-  define: {
-    "process.env.NODE_ENV": JSON.stringify("production"),
-  },
-});
+                const result = await Bun.build({
+                entrypoints: ["./src/index.tsx"],
+                outdir: "./dist",
+                minify: true,
+                target: "browser",
+                define: {
+                "process.env.NODE_ENV": JSON.stringify("production"),
+                },
+                });
 
-if (!result.success) {
-  console.error("Build failed:", result.logs);
-}</div>
+                if (!result.success) {
+                console.error("Build failed:", result.logs);
+                }</div>
             </div>
           </section>
 
@@ -2325,44 +2690,53 @@ if (!result.success) {
               <h2>🔷 Bun Workspace Setup</h2>
 
               <div class="code-box">// Root package.json
-{
-  "name": "my-monorepo",
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ]
-}</div>
+                {
+                "name": "my-monorepo",
+                "workspaces": [
+                "packages/*",
+                "apps/*"
+                ]
+                }</div>
 
               <div class="code-box"># সব workspace install
-bun install
+                bun install
 
-# নির্দিষ্ট workspace-এ script চালাও
-bun run --filter @myapp/web build
-bun run --filter @myapp/api dev
+                # নির্দিষ্ট workspace-এ script চালাও
+                bun run --filter @myapp/web build
+                bun run --filter @myapp/api dev
 
-# Pattern matching
-bun run --filter 'pkg-*' build    # pkg- দিয়ে শুরু সব
-bun run --filter '*' test         # সব workspace
+                # Pattern matching
+                bun run --filter 'pkg-*' build # pkg- দিয়ে শুরু সব
+                bun run --filter '*' test # সব workspace
 
-# নির্দিষ্ট workspace-এ package যোগ করো
-bun add react --filter @myapp/web</div>
+                # নির্দিষ্ট workspace-এ package যোগ করো
+                bun add react --filter @myapp/web</div>
             </div>
           </section>
 
 
-                    <!-- ================================================================
+          <!-- ================================================================
                Reference Section
           ================================================================ -->
           <section id="PM-Reference" class="ec-section">
             <h1 class="center">📋 সম্পূর্ণ Command Reference — npm · pnpm · Yarn · Bun</h1>
-            <p class="center">চারটি package manager-এর প্রতিটি গুরুত্বপূর্ণ কমান্ড বিষয় অনুযায়ী ভাগ করে একসাথে দেওয়া হয়েছে — চট করে খুঁজে নাও।</p>
+            <p class="center">চারটি package manager-এর প্রতিটি গুরুত্বপূর্ণ কমান্ড বিষয় অনুযায়ী ভাগ করে একসাথে দেওয়া
+              হয়েছে — চট করে খুঁজে নাও।</p>
             <hr class="section-divider" />
 
             <!-- ১. Setup ও Init -->
             <div class="example-box">
               <h2>🔷 ১. ইনস্টল ও প্রজেক্ট শুরু</h2>
               <table class="size-chart">
-                <thead><tr><th>কাজ</th><th>npm</th><th>pnpm</th><th>Yarn</th><th>Bun</th></tr></thead>
+                <thead>
+                  <tr>
+                    <th>কাজ</th>
+                    <th>npm</th>
+                    <th>pnpm</th>
+                    <th>Yarn</th>
+                    <th>Bun</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
                     <td>Manager ইনস্টল</td>
@@ -2414,7 +2788,15 @@ bun add react --filter @myapp/web</div>
             <div class="example-box">
               <h2>🔷 ২. Dependencies ইনস্টল করা</h2>
               <table class="size-chart">
-                <thead><tr><th>কাজ</th><th>npm</th><th>pnpm</th><th>Yarn</th><th>Bun</th></tr></thead>
+                <thead>
+                  <tr>
+                    <th>কাজ</th>
+                    <th>npm</th>
+                    <th>pnpm</th>
+                    <th>Yarn</th>
+                    <th>Bun</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
                     <td>সব dependencies install</td>
@@ -2501,7 +2883,15 @@ bun add react --filter @myapp/web</div>
             <div class="example-box">
               <h2>🔷 ৩. Package মুছা ও আপডেট</h2>
               <table class="size-chart">
-                <thead><tr><th>কাজ</th><th>npm</th><th>pnpm</th><th>Yarn</th><th>Bun</th></tr></thead>
+                <thead>
+                  <tr>
+                    <th>কাজ</th>
+                    <th>npm</th>
+                    <th>pnpm</th>
+                    <th>Yarn</th>
+                    <th>Bun</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
                     <td>Package মুছো</td>
@@ -2553,7 +2943,15 @@ bun add react --filter @myapp/web</div>
             <div class="example-box">
               <h2>🔷 ৪. Package তথ্য ও তালিকা</h2>
               <table class="size-chart">
-                <thead><tr><th>কাজ</th><th>npm</th><th>pnpm</th><th>Yarn</th><th>Bun</th></tr></thead>
+                <thead>
+                  <tr>
+                    <th>কাজ</th>
+                    <th>npm</th>
+                    <th>pnpm</th>
+                    <th>Yarn</th>
+                    <th>Bun</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
                     <td>Installed list (top)</td>
@@ -2605,7 +3003,15 @@ bun add react --filter @myapp/web</div>
             <div class="example-box">
               <h2>🔷 ৫. Script ও Execute</h2>
               <table class="size-chart">
-                <thead><tr><th>কাজ</th><th>npm</th><th>pnpm</th><th>Yarn</th><th>Bun</th></tr></thead>
+                <thead>
+                  <tr>
+                    <th>কাজ</th>
+                    <th>npm</th>
+                    <th>pnpm</th>
+                    <th>Yarn</th>
+                    <th>Bun</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
                     <td>Custom script চালাও</td>
@@ -2664,7 +3070,15 @@ bun add react --filter @myapp/web</div>
             <div class="example-box">
               <h2>🔷 ৬. Version ও Publishing</h2>
               <table class="size-chart">
-                <thead><tr><th>কাজ</th><th>npm</th><th>pnpm</th><th>Yarn</th><th>Bun</th></tr></thead>
+                <thead>
+                  <tr>
+                    <th>কাজ</th>
+                    <th>npm</th>
+                    <th>pnpm</th>
+                    <th>Yarn</th>
+                    <th>Bun</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
                     <td>Version bump (patch)</td>
@@ -2758,7 +3172,15 @@ bun add react --filter @myapp/web</div>
             <div class="example-box">
               <h2>🔷 ৭. Security ও Audit</h2>
               <table class="size-chart">
-                <thead><tr><th>কাজ</th><th>npm</th><th>pnpm</th><th>Yarn</th><th>Bun</th></tr></thead>
+                <thead>
+                  <tr>
+                    <th>কাজ</th>
+                    <th>npm</th>
+                    <th>pnpm</th>
+                    <th>Yarn</th>
+                    <th>Bun</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
                     <td>Vulnerability check</td>
@@ -2817,7 +3239,15 @@ bun add react --filter @myapp/web</div>
             <div class="example-box">
               <h2>🔷 ৮. Lockfile, Config ও Cache</h2>
               <table class="size-chart">
-                <thead><tr><th>বিষয়</th><th>npm</th><th>pnpm</th><th>Yarn</th><th>Bun</th></tr></thead>
+                <thead>
+                  <tr>
+                    <th>বিষয়</th>
+                    <th>npm</th>
+                    <th>pnpm</th>
+                    <th>Yarn</th>
+                    <th>Bun</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
                     <td>Lockfile নাম</td>
@@ -2891,36 +3321,125 @@ bun add react --filter @myapp/web</div>
               <h2>🔷 ৯. npm-এর বিশেষ কমান্ড</h2>
               <p>এই কমান্ডগুলো শুধু npm-এ আছে অথবা npm-এ সবচেয়ে বেশি ব্যবহৃত:</p>
               <table class="size-chart">
-                <thead><tr><th>কমান্ড</th><th>কাজ</th></tr></thead>
+                <thead>
+                  <tr>
+                    <th>কমান্ড</th>
+                    <th>কাজ</th>
+                  </tr>
+                </thead>
                 <tbody>
-                  <tr><td><code>npm link</code></td><td>Local package globally symlink করো (development-এ test করতে)</td></tr>
-                  <tr><td><code>npm link &lt;pkg&gt;</code></td><td>Symlinked local package project-এ যোগ করো</td></tr>
-                  <tr><td><code>npm unlink &lt;pkg&gt;</code></td><td>Link মুছো</td></tr>
-                  <tr><td><code>npm pack</code></td><td>Package-এর .tgz tarball তৈরি করো</td></tr>
-                  <tr><td><code>npm pack --dry-run</code></td><td>কোন files publish হবে দেখো (publish না করে)</td></tr>
-                  <tr><td><code>npm dedupe</code></td><td>node_modules-এ duplicate packages কমাও</td></tr>
-                  <tr><td><code>npm prune</code></td><td>package.json-এ নেই এমন package মুছো</td></tr>
-                  <tr><td><code>npm prune --production</code></td><td>devDependencies মুছো (production deploy-এর আগে)</td></tr>
-                  <tr><td><code>npm diff &lt;pkg&gt;</code></td><td>Installed vs latest version-এর পার্থক্য দেখো</td></tr>
-                  <tr><td><code>npm diff &lt;v1&gt; &lt;v2&gt;</code></td><td>দুটো নির্দিষ্ট version-এর পার্থক্য</td></tr>
-                  <tr><td><code>npm fund</code></td><td>Installed packages-এর funding info দেখো</td></tr>
-                  <tr><td><code>npm fund &lt;pkg&gt;</code></td><td>নির্দিষ্ট package-এর funding</td></tr>
-                  <tr><td><code>npm doctor</code></td><td>npm environment health check</td></tr>
-                  <tr><td><code>npm pkg get &lt;field&gt;</code></td><td>package.json-এর field দেখো</td></tr>
-                  <tr><td><code>npm pkg set &lt;field&gt;=&lt;val&gt;</code></td><td>package.json-এর field সেট করো</td></tr>
-                  <tr><td><code>npm pkg delete &lt;field&gt;</code></td><td>package.json-এর field মুছো</td></tr>
-                  <tr><td><code>npm explain &lt;pkg&gt;</code></td><td>কেন এই package installed তা দেখাও</td></tr>
-                  <tr><td><code>npm query .workspace</code></td><td>সব workspace-এর list</td></tr>
-                  <tr><td><code>npm ping</code></td><td>Registry-র সাথে connection test</td></tr>
-                  <tr><td><code>npm prefix</code></td><td>npm prefix directory দেখো</td></tr>
-                  <tr><td><code>npm find-dupes</code></td><td>Duplicate packages খুঁজো</td></tr>
-                  <tr><td><code>npm profile get</code></td><td>npmjs.com account profile দেখো</td></tr>
-                  <tr><td><code>npm profile set &lt;k&gt; &lt;v&gt;</code></td><td>Profile field আপডেট করো</td></tr>
-                  <tr><td><code>npm org ls &lt;@org&gt;</code></td><td>Organization-এর সব member দেখো</td></tr>
-                  <tr><td><code>npm org set &lt;@org&gt; &lt;user&gt; &lt;role&gt;</code></td><td>Member-এর role সেট করো</td></tr>
-                  <tr><td><code>npm access list packages &lt;@org&gt;</code></td><td>Org-এর সব package দেখো</td></tr>
-                  <tr><td><code>npm dist-tag add &lt;pkg&gt;@ver tag</code></td><td>Dist tag যোগ করো</td></tr>
-                  <tr><td><code>npm dist-tag ls &lt;pkg&gt;</code></td><td>সব dist tag দেখো</td></tr>
+                  <tr>
+                    <td><code>npm link</code></td>
+                    <td>Local package globally symlink করো (development-এ test করতে)</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm link &lt;pkg&gt;</code></td>
+                    <td>Symlinked local package project-এ যোগ করো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm unlink &lt;pkg&gt;</code></td>
+                    <td>Link মুছো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm pack</code></td>
+                    <td>Package-এর .tgz tarball তৈরি করো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm pack --dry-run</code></td>
+                    <td>কোন files publish হবে দেখো (publish না করে)</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm dedupe</code></td>
+                    <td>node_modules-এ duplicate packages কমাও</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm prune</code></td>
+                    <td>package.json-এ নেই এমন package মুছো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm prune --production</code></td>
+                    <td>devDependencies মুছো (production deploy-এর আগে)</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm diff &lt;pkg&gt;</code></td>
+                    <td>Installed vs latest version-এর পার্থক্য দেখো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm diff &lt;v1&gt; &lt;v2&gt;</code></td>
+                    <td>দুটো নির্দিষ্ট version-এর পার্থক্য</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm fund</code></td>
+                    <td>Installed packages-এর funding info দেখো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm fund &lt;pkg&gt;</code></td>
+                    <td>নির্দিষ্ট package-এর funding</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm doctor</code></td>
+                    <td>npm environment health check</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm pkg get &lt;field&gt;</code></td>
+                    <td>package.json-এর field দেখো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm pkg set &lt;field&gt;=&lt;val&gt;</code></td>
+                    <td>package.json-এর field সেট করো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm pkg delete &lt;field&gt;</code></td>
+                    <td>package.json-এর field মুছো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm explain &lt;pkg&gt;</code></td>
+                    <td>কেন এই package installed তা দেখাও</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm query .workspace</code></td>
+                    <td>সব workspace-এর list</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm ping</code></td>
+                    <td>Registry-র সাথে connection test</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm prefix</code></td>
+                    <td>npm prefix directory দেখো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm find-dupes</code></td>
+                    <td>Duplicate packages খুঁজো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm profile get</code></td>
+                    <td>npmjs.com account profile দেখো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm profile set &lt;k&gt; &lt;v&gt;</code></td>
+                    <td>Profile field আপডেট করো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm org ls &lt;@org&gt;</code></td>
+                    <td>Organization-এর সব member দেখো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm org set &lt;@org&gt; &lt;user&gt; &lt;role&gt;</code></td>
+                    <td>Member-এর role সেট করো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm access list packages &lt;@org&gt;</code></td>
+                    <td>Org-এর সব package দেখো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm dist-tag add &lt;pkg&gt;@ver tag</code></td>
+                    <td>Dist tag যোগ করো</td>
+                  </tr>
+                  <tr>
+                    <td><code>npm dist-tag ls &lt;pkg&gt;</code></td>
+                    <td>সব dist tag দেখো</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -2929,7 +3448,15 @@ bun add react --filter @myapp/web</div>
             <div class="example-box">
               <h2>🔷 ১০. Workspaces — Monorepo কমান্ড</h2>
               <table class="size-chart">
-                <thead><tr><th>কাজ</th><th>npm</th><th>pnpm</th><th>Yarn</th><th>Bun</th></tr></thead>
+                <thead>
+                  <tr>
+                    <th>কাজ</th>
+                    <th>npm</th>
+                    <th>pnpm</th>
+                    <th>Yarn</th>
+                    <th>Bun</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
                     <td>সব workspace install</td>
@@ -2974,17 +3501,59 @@ bun add react --filter @myapp/web</div>
             <div class="example-box">
               <h2>🔷 ১১. SemVer Version Range — চটজলদি গাইড</h2>
               <table class="size-chart">
-                <thead><tr><th>package.json-এ</th><th>অর্থ</th><th>কোন version নেবে?</th></tr></thead>
+                <thead>
+                  <tr>
+                    <th>package.json-এ</th>
+                    <th>অর্থ</th>
+                    <th>কোন version নেবে?</th>
+                  </tr>
+                </thead>
                 <tbody>
-                  <tr><td><code>"4.18.2"</code></td><td>Exact</td><td>শুধু 4.18.2</td></tr>
-                  <tr><td><code>"^4.18.2"</code></td><td>MAJOR lock (default)</td><td>4.18.2 ≤ x &lt; 5.0.0</td></tr>
-                  <tr><td><code>"~4.18.2"</code></td><td>MINOR lock</td><td>4.18.2 ≤ x &lt; 4.19.0</td></tr>
-                  <tr><td><code>">=4.18.2"</code></td><td>Greater or equal</td><td>4.18.2 থেকে সর্বোচ্চ</td></tr>
-                  <tr><td><code>">=4.0.0 &lt;5.0.0"</code></td><td>Range</td><td>4.x.x মাত্র</td></tr>
-                  <tr><td><code>"4.x"</code></td><td>Major wildcard</td><td>4.0.0 থেকে 4.x.x</td></tr>
-                  <tr><td><code>"*"</code></td><td>Any ⚠️</td><td>সর্বশেষ (বিপজ্জনক)</td></tr>
-                  <tr><td><code>"latest"</code></td><td>Tag</td><td>সর্বশেষ stable</td></tr>
-                  <tr><td><code>"1.2.3 || 2.0.0"</code></td><td>OR</td><td>1.2.3 অথবা 2.0.0</td></tr>
+                  <tr>
+                    <td><code>"4.18.2"</code></td>
+                    <td>Exact</td>
+                    <td>শুধু 4.18.2</td>
+                  </tr>
+                  <tr>
+                    <td><code>"^4.18.2"</code></td>
+                    <td>MAJOR lock (default)</td>
+                    <td>4.18.2 ≤ x &lt; 5.0.0</td>
+                  </tr>
+                  <tr>
+                    <td><code>"~4.18.2"</code></td>
+                    <td>MINOR lock</td>
+                    <td>4.18.2 ≤ x &lt; 4.19.0</td>
+                  </tr>
+                  <tr>
+                    <td><code>">=4.18.2"</code></td>
+                    <td>Greater or equal</td>
+                    <td>4.18.2 থেকে সর্বোচ্চ</td>
+                  </tr>
+                  <tr>
+                    <td><code>">=4.0.0 &lt;5.0.0"</code></td>
+                    <td>Range</td>
+                    <td>4.x.x মাত্র</td>
+                  </tr>
+                  <tr>
+                    <td><code>"4.x"</code></td>
+                    <td>Major wildcard</td>
+                    <td>4.0.0 থেকে 4.x.x</td>
+                  </tr>
+                  <tr>
+                    <td><code>"*"</code></td>
+                    <td>Any ⚠️</td>
+                    <td>সর্বশেষ (বিপজ্জনক)</td>
+                  </tr>
+                  <tr>
+                    <td><code>"latest"</code></td>
+                    <td>Tag</td>
+                    <td>সর্বশেষ stable</td>
+                  </tr>
+                  <tr>
+                    <td><code>"1.2.3 || 2.0.0"</code></td>
+                    <td>OR</td>
+                    <td>1.2.3 অথবা 2.0.0</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -2993,26 +3562,104 @@ bun add react --filter @myapp/web</div>
             <div class="example-box">
               <h2>🔷 ১২. package.json — গুরুত্বপূর্ণ Field সমূহ</h2>
               <table class="size-chart">
-                <thead><tr><th>Field</th><th>কাজ</th><th>উদাহরণ</th></tr></thead>
+                <thead>
+                  <tr>
+                    <th>Field</th>
+                    <th>কাজ</th>
+                    <th>উদাহরণ</th>
+                  </tr>
+                </thead>
                 <tbody>
-                  <tr><td><code>name</code></td><td>Package-এর নাম</td><td><code>"my-app"</code></td></tr>
-                  <tr><td><code>version</code></td><td>Current version (SemVer)</td><td><code>"1.2.3"</code></td></tr>
-                  <tr><td><code>private</code></td><td>Accidental publish বন্ধ</td><td><code>true</code></td></tr>
-                  <tr><td><code>main</code></td><td>CJS entry point</td><td><code>"dist/index.js"</code></td></tr>
-                  <tr><td><code>module</code></td><td>ESM entry point</td><td><code>"dist/index.mjs"</code></td></tr>
-                  <tr><td><code>exports</code></td><td>Conditional exports (modern)</td><td><code>{".": {"import": ...}}</code></td></tr>
-                  <tr><td><code>type</code></td><td>ESM/CJS mode</td><td><code>"module"</code> বা <code>"commonjs"</code></td></tr>
-                  <tr><td><code>bin</code></td><td>CLI executable</td><td><code>{"my-cli": "./bin/cli.js"}</code></td></tr>
-                  <tr><td><code>files</code></td><td>Publish-এ কোন files যাবে</td><td><code>["dist/", "src/"]</code></td></tr>
-                  <tr><td><code>scripts</code></td><td>npm run দিয়ে চালানো task</td><td><code>{"build": "webpack"}</code></td></tr>
-                  <tr><td><code>dependencies</code></td><td>Production packages</td><td><code>{"express": "^4.18.2"}</code></td></tr>
-                  <tr><td><code>devDependencies</code></td><td>Dev-only packages</td><td><code>{"jest": "^29.0.0"}</code></td></tr>
-                  <tr><td><code>peerDependencies</code></td><td>Host-এ থাকা দরকার</td><td><code>{"react": ">=17"}</code></td></tr>
-                  <tr><td><code>engines</code></td><td>Node.js version requirement</td><td><code>{"node": ">=18.0.0"}</code></td></tr>
-                  <tr><td><code>workspaces</code></td><td>Monorepo workspace paths</td><td><code>["packages/*"]</code></td></tr>
-                  <tr><td><code>license</code></td><td>License type</td><td><code>"MIT"</code></td></tr>
-                  <tr><td><code>keywords</code></td><td>npmjs.com search-এ</td><td><code>["web", "nodejs"]</code></td></tr>
-                  <tr><td><code>repository</code></td><td>Source code URL</td><td><code>{"type": "git", "url": "..."}</code></td></tr>
+                  <tr>
+                    <td><code>name</code></td>
+                    <td>Package-এর নাম</td>
+                    <td><code>"my-app"</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>version</code></td>
+                    <td>Current version (SemVer)</td>
+                    <td><code>"1.2.3"</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>private</code></td>
+                    <td>Accidental publish বন্ধ</td>
+                    <td><code>true</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>main</code></td>
+                    <td>CJS entry point</td>
+                    <td><code>"dist/index.js"</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>module</code></td>
+                    <td>ESM entry point</td>
+                    <td><code>"dist/index.mjs"</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>exports</code></td>
+                    <td>Conditional exports (modern)</td>
+                    <td><code>{".": {"import": ...}}</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>type</code></td>
+                    <td>ESM/CJS mode</td>
+                    <td><code>"module"</code> বা <code>"commonjs"</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>bin</code></td>
+                    <td>CLI executable</td>
+                    <td><code>{"my-cli": "./bin/cli.js"}</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>files</code></td>
+                    <td>Publish-এ কোন files যাবে</td>
+                    <td><code>["dist/", "src/"]</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>scripts</code></td>
+                    <td>npm run দিয়ে চালানো task</td>
+                    <td><code>{"build": "webpack"}</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>dependencies</code></td>
+                    <td>Production packages</td>
+                    <td><code>{"express": "^4.18.2"}</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>devDependencies</code></td>
+                    <td>Dev-only packages</td>
+                    <td><code>{"jest": "^29.0.0"}</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>peerDependencies</code></td>
+                    <td>Host-এ থাকা দরকার</td>
+                    <td><code>{"react": ">=17"}</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>engines</code></td>
+                    <td>Node.js version requirement</td>
+                    <td><code>{"node": ">=18.0.0"}</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>workspaces</code></td>
+                    <td>Monorepo workspace paths</td>
+                    <td><code>["packages/*"]</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>license</code></td>
+                    <td>License type</td>
+                    <td><code>"MIT"</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>keywords</code></td>
+                    <td>npmjs.com search-এ</td>
+                    <td><code>["web", "nodejs"]</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>repository</code></td>
+                    <td>Source code URL</td>
+                    <td><code>{"type": "git", "url": "..."}</code></td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -3022,46 +3669,51 @@ bun add react --filter @myapp/web</div>
               <h2>🔷 সবচেয়ে বেশি ব্যবহৃত — Daily Cheatsheet</h2>
               <div class="code-box">প্রতিদিন এই কমান্ডগুলোই লাগে:
 
-━━━━━━━━━━ npm ━━━━━━━━━━
-npm install               # সব install
-npm install &lt;pkg&gt;         # package যোগ
-npm install -D &lt;pkg&gt;      # devDep যোগ
-npm uninstall &lt;pkg&gt;       # package মুছো
-npm run &lt;script&gt;          # script চালাও
-npm ci                    # CI-তে frozen install
-npm audit fix             # security fix
-npm outdated              # কোন update আছে?
-npm version patch         # version বাড়াও
-npm publish               # publish করো
+                ━━━━━━━━━━ npm ━━━━━━━━━━
+                npm install # সব install
+                npm install &lt;pkg&gt; # package যোগ
+                npm install -D &lt;pkg&gt; # devDep যোগ
+                npm uninstall &lt;pkg&gt; # package মুছো
+                npm run &lt;script&gt; # script চালাও
+                npm ci # CI-তে frozen install
+                npm audit fix # security fix
+                npm outdated # কোন update আছে?
+                npm version patch # version বাড়াও
+                npm publish # publish করো
 
-━━━━━━━━━━ pnpm ━━━━━━━━━━
-pnpm install              # সব install
-pnpm add &lt;pkg&gt;            # package যোগ
-pnpm add -D &lt;pkg&gt;         # devDep যোগ
-pnpm remove &lt;pkg&gt;         # package মুছো
-pnpm &lt;script&gt;             # script চালাও
+                ━━━━━━━━━━ pnpm ━━━━━━━━━━
+                pnpm install # সব install
+                pnpm add &lt;pkg&gt; # package যোগ
+                pnpm add -D &lt;pkg&gt; # devDep যোগ
+                pnpm remove &lt;pkg&gt; # package মুছো
+                pnpm &lt;script&gt; # script চালাও
 
-━━━━━━━━━━ Yarn ━━━━━━━━━━
-yarn                      # সব install
-yarn add &lt;pkg&gt;            # package যোগ
-yarn add -D &lt;pkg&gt;         # devDep যোগ
-yarn remove &lt;pkg&gt;         # package মুছো
-yarn &lt;script&gt;             # script চালাও
+                ━━━━━━━━━━ Yarn ━━━━━━━━━━
+                yarn # সব install
+                yarn add &lt;pkg&gt; # package যোগ
+                yarn add -D &lt;pkg&gt; # devDep যোগ
+                yarn remove &lt;pkg&gt; # package মুছো
+                yarn &lt;script&gt; # script চালাও
 
-━━━━━━━━━━ Bun ━━━━━━━━━━
-bun install               # সব install
-bun add &lt;pkg&gt;             # package যোগ
-bun add -D &lt;pkg&gt;          # devDep যোগ
-bun remove &lt;pkg&gt;          # package মুছো
-bun &lt;script&gt;              # script চালাও
-bun &lt;file.ts&gt;             # TypeScript সরাসরি!</div>
+                ━━━━━━━━━━ Bun ━━━━━━━━━━
+                bun install # সব install
+                bun add &lt;pkg&gt; # package যোগ
+                bun add -D &lt;pkg&gt; # devDep যোগ
+                bun remove &lt;pkg&gt; # package মুছো
+                bun &lt;script&gt; # script চালাও
+                bun &lt;file.ts&gt; # TypeScript সরাসরি!</div>
 
               <div class="tip-box">
                 ✅ <strong>কোনটা বেছে নেবে?</strong><br />
-                → <strong>শিখছো / শুরু করছো:</strong> <a href="https://www.npmjs.com/" target="_blank" rel="noopener"><strong>npm</strong></a> — কোনো extra install নেই, সব জায়গায় সাপোর্ট<br />
-                → <strong>গতি ও disk space:</strong> <a href="https://pnpm.io/" target="_blank" rel="noopener"><strong>pnpm</strong></a> — monorepo-তে সেরা, strict node_modules<br />
-                → <strong>Stable ও reliable:</strong> <a href="https://classic.yarnpkg.com/en/docs/getting-started" target="_blank" rel="noopener"><strong>Yarn</strong></a> — yarn.lock সবার আগে, workspaces pioneer<br />
-                → <strong>All-in-one toolkit:</strong> <a href="https://bun.com/docs" target="_blank" rel="noopener"><strong>Bun</strong></a> — TypeScript সরাসরি, test+bundle built-in, সবচেয়ে দ্রুত
+                → <strong>শিখছো / শুরু করছো:</strong> <a href="https://www.npmjs.com/" target="_blank"
+                  rel="noopener"><strong>npm</strong></a> — কোনো extra install নেই, সব জায়গায় সাপোর্ট<br />
+                → <strong>গতি ও disk space:</strong> <a href="https://pnpm.io/" target="_blank"
+                  rel="noopener"><strong>pnpm</strong></a> — monorepo-তে সেরা, strict node_modules<br />
+                → <strong>Stable ও reliable:</strong> <a href="https://classic.yarnpkg.com/en/docs/getting-started"
+                  target="_blank" rel="noopener"><strong>Yarn</strong></a> — yarn.lock সবার আগে, workspaces
+                pioneer<br />
+                → <strong>All-in-one toolkit:</strong> <a href="https://bun.com/docs" target="_blank"
+                  rel="noopener"><strong>Bun</strong></a> — TypeScript সরাসরি, test+bundle built-in, সবচেয়ে দ্রুত
               </div>
             </div>
 
@@ -3074,4 +3726,5 @@ bun &lt;file.ts&gt;             # TypeScript সরাসরি!</div>
 
   <script src="./js/script.js"></script>
 </body>
+
 </html>
