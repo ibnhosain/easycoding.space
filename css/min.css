@@ -66,6 +66,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+   padding: 20px 0;
   height: var(--header-h);
   background: rgba(245, 241, 232, 0.97);
   border-bottom: 2px solid var(--border);
@@ -90,8 +91,9 @@ header {
 }
 
 header svg {
-  width: 250px;
+  width: 240px;
   height: auto;
+  padding-top: 0.3em;
 }
 
 /* ── Desktop Nav ── */
