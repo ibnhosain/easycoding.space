@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Easy Coding Space — বাংলায় কোডিং শেখায়</title>
+    <link>https://easycoding.space</link>
+    <description>সহজ বাংলা ভাষায় HTML, CSS এবং JavaScript শিখুন একদম বিনামূল্যে।</description>
+    <language>bn</language>
+    <atom:link href="https://easycoding.space/rss.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Thu, 05 Jun 2026 20:00:00 +0600</lastBuildDate>
+
+    <item>
+      <title>JavaScript টিউটোরিয়াল — সম্পূর্ণ গাইড</title>
+      <link>https://easycoding.space/js.html</link>
+      <description>বাংলায় JavaScript শিখুন — Variables, Functions, DOM, Async সহ সম্পূর্ণ গাইড।</description>
+      <pubDate>Thu, 05 Jun 2026 18:00:00 +0600</pubDate>
+      <guid>https://easycoding.space/js.html</guid>
+    </item>
+
+    <item>
+      <title>CSS টিউটোরিয়াল — সম্পূর্ণ গাইড</title>
+      <link>https://easycoding.space/css.html</link>
+      <description>বাংলায় CSS শিখুন — Flexbox, Grid, Animation সহ সম্পূর্ণ গাইড।</description>
+      <pubDate>Wed, 04 Jun 2026 18:00:00 +0600</pubDate>
+      <guid>https://easycoding.space/css.html</guid>
+    </item>
+
+    <item>
+      <title>HTML টিউটোরিয়াল — সম্পূর্ণ গাইড</title>
+      <link>https://easycoding.space/html.html</link>
+      <description>বাংলায় HTML শিখুন — Tags, Forms, Semantic HTML সহ সম্পূর্ণ গাইড।</description>
+      <pubDate>Tue, 03 Jun 2026 18:00:00 +0600</pubDate>
+      <guid>https://easycoding.space/html.html</guid>
+    </item>
+
+    <item>
+      <title>Git ও GitHub টিউটোরিয়াল</title>
+      <link>https://easycoding.space/VCS.html</link>
+      <description>বাংলায় Git শিখুন — Version Control, GitHub, Branching সহ সম্পূর্ণ গাইড।</description>
+      <pubDate>Mon, 02 Jun 2026 18:00:00 +0600</pubDate>
+      <guid>https://easycoding.space/VCS.html</guid>
+    </item>
+
+    <item>
+      <title>Tailwind CSS টিউটোরিয়াল</title>
+      <link>https://easycoding.space/tailwind.html</link>
+      <description>বাংলায় Tailwind CSS শিখুন — Utility Classes, Responsive Design সহ সম্পূর্ণ গাইড।</description>
+      <pubDate>Sun, 01 Jun 2026 18:00:00 +0600</pubDate>
+      <guid>https://easycoding.space/tailwind.html</guid>
+    </item>
+
+  </channel>
+</rss>

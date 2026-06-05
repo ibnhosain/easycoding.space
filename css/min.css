@@ -1,11 +1,13 @@
 /* ============================================================
-   min.css — DevShikhi | সম্পূর্ণ রেসপনসিভ
-   index.html + html.html উভয় পেইজের জন্য
+   min.css — Easy Coding Space
+   index.html + tutorial pages উভয়ের জন্য
 ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap');
 
-/* ── Variables ── */
+/* ============================================================
+   VARIABLES
+============================================================ */
 :root {
   --accent: #04aa6d;
   --accent2: #fff4a3;
@@ -15,7 +17,9 @@
   --sidebar-w: 230px;
 }
 
-/* ── Reset ── */
+/* ============================================================
+   RESET
+============================================================ */
 *,
 *::before,
 *::after {
@@ -46,16 +50,17 @@ ul {
 a {
   text-decoration: none;
 }
-.lik_text{
-  color: #fff !important;
-  font-weight: 500;
-  text-decoration: underline;
-}
 
-img{
+img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+.lik_text {
+  color: #fff !important;
+  font-weight: 500;
+  text-decoration: underline;
 }
 
 /* ============================================================
@@ -66,8 +71,8 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-   padding: 20px 0;
   height: var(--header-h);
+  padding: 20px 0;
   background: rgba(245, 241, 232, 0.97);
   border-bottom: 2px solid var(--border);
   box-shadow: 0 4px 12px rgba(0, 0, 0, .06);
@@ -122,6 +127,29 @@ header svg {
 
 .nav-list li a:hover {
   color: var(--accent);
+}
+
+/* ── Nav Active ── */
+.nav-list li a.nav-active {
+  color: var(--accent) !important;
+  font-weight: 700;
+  position: relative;
+}
+
+.nav-list li a.nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.nav-drawer ul li a.nav-active {
+  background: var(--accent) !important;
+  color: #fff !important;
 }
 
 /* ── Hamburger ── */
@@ -199,7 +227,7 @@ header svg {
 }
 
 /* ============================================================
-   TUTORIAL PAGE LAYOUT (.wrapper + aside + .content)
+   TUTORIAL PAGE LAYOUT
 ============================================================ */
 .wrapper {
   padding-top: var(--header-h);
@@ -211,7 +239,7 @@ header svg {
   align-items: flex-start;
 }
 
-/* ── Sidebar — Desktop ── */
+/* ── Sidebar ── */
 aside {
   width: var(--sidebar-w);
   flex-shrink: 0;
@@ -277,7 +305,7 @@ aside a.active {
 }
 
 /* ============================================================
-   INDEX PAGE — HERO SECTION
+   INDEX PAGE — HERO
 ============================================================ */
 .hero-section {
   padding: calc(var(--header-h) + 50px) 20px 70px;
@@ -292,10 +320,6 @@ aside a.active {
   background-blend-mode: soft-light;
   background-position: center;
   background-color: #282a35;
-}
-
-.ws-light-green {
-  background-color: #E37933 !important;
 }
 
 .hero-content {
@@ -350,6 +374,11 @@ aside a.active {
   text-align: center;
 }
 
+.topic-code {
+  flex: 1;
+  min-width: 0;
+}
+
 .topic-title {
   font-size: clamp(2.5rem, 10vw, 88px);
   font-weight: 700;
@@ -361,11 +390,6 @@ aside a.active {
   font-size: clamp(0.9rem, 3vw, 18px);
   font-weight: 600;
   margin-bottom: 20px;
-}
-
-.topic-code {
-  flex: 1;
-  min-width: 0;
 }
 
 /* ── Buttons ── */
@@ -408,7 +432,7 @@ aside a.active {
   color: #1E2B3C;
 }
 
-/* ── Code Card (index page) ── */
+/* ── Code Card ── */
 .code-card {
   background: #E0DBD2;
   border-radius: 8px;
@@ -496,19 +520,161 @@ aside a.active {
   color: #D4D4D4;
 }
 
-/* ── Section Colors ── */
+/* ============================================================
+   INDEX PAGE — SECTION BRAND COLORS
+============================================================ */
+
+/* HTML5 */
+.ws-light-green {
+  background-color: #E44D26 !important;
+}
+
+.ws-light-green .topic-title,
+.ws-light-green .topic-desc {
+  color: #fff !important;
+}
+
+.ws-light-green .code-card h3 {
+  color: #1A1A2E;
+}
+
+/* CSS3 */
 .css-section {
-  background-color: #42A5F5 !important;
+  background-color: #264DE4 !important;
   padding: 50px 0;
 }
 
+.css-section .topic-title,
+.css-section .topic-desc {
+  color: #fff !important;
+}
+
+.css-section .code-card h3 {
+  color: #1A1A2E;
+}
+
+/* JavaScript */
 .js-section {
   background-color: #F7DF1E !important;
   padding: 50px 0;
 }
 
+.js-section .topic-title,
+.js-section .topic-desc {
+  color: #1A1A2E !important;
+}
+
 .js-section .code-card h3 {
   color: var(--dark);
+}
+
+/* Git */
+.vcs-section {
+  background-color: #F05033 !important;
+  background-image: linear-gradient(135deg, #F05033 0%, #DE4C2C 100%) !important;
+  padding: 50px 0;
+}
+
+.vcs-section .topic-title,
+.vcs-section .topic-desc {
+  color: #fff !important;
+}
+
+.vcs-section .code-card {
+  background: #2D1A17;
+}
+
+.vcs-section .code-card h3 {
+  color: #F05033;
+}
+
+/* NPM */
+.npm-section {
+  background-color: #CB3837 !important;
+  background-image: linear-gradient(135deg, #CB3837 0%, #A52C2C 100%) !important;
+  padding: 50px 0;
+}
+
+.npm-section .topic-title,
+.npm-section .topic-desc {
+  color: #fff !important;
+}
+
+.npm-section .code-card {
+  background: #2A1A1A;
+}
+
+.npm-section .code-card h3 {
+  color: #CB3837;
+}
+
+/* Tailwind */
+.tailwind-section {
+  background-color: #06B6D4 !important;
+  background-image: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%) !important;
+  padding: 50px 0;
+}
+
+.tailwind-section .topic-title,
+.tailwind-section .topic-desc {
+  color: #fff !important;
+}
+
+.tailwind-section .code-card {
+  background: #0A2A30;
+}
+
+.tailwind-section .code-card h3 {
+  color: #06B6D4;
+}
+
+/* Terminal */
+.terminal-section {
+  background-color: #0D1117 !important;
+  background-image: linear-gradient(135deg, #0D1117 0%, #161B22 100%) !important;
+  border-top: 3px solid #39D353;
+  padding: 50px 0;
+}
+
+.terminal-section .topic-title {
+  color: #39D353 !important;
+}
+
+.terminal-section .topic-desc {
+  color: #8B949E !important;
+}
+
+.terminal-section .code-card {
+  background: #161B22;
+  border: 1px solid #30363D;
+}
+
+.terminal-section .code-card h3 {
+  color: #39D353;
+}
+
+.terminal-section .tut-button.btn-light {
+  color: #1A1A2E;
+}
+
+/* Projects */
+.projects-section {
+  background-color: #E8621A !important;
+  background-image: linear-gradient(135deg, #E8621A 0%, #C9511A 100%) !important;
+  padding: 50px 0;
+}
+
+.projects-section .topic-title,
+.projects-section .topic-desc {
+  color: #fff !important;
+}
+
+.projects-section .code-card {
+  background: #2A1A0A;
+}
+
+.projects-section .code-card h3 {
+  color: #E8621A;
 }
 
 /* ============================================================
@@ -519,6 +685,7 @@ footer {
   background: #111B26;
 }
 
+/* ── Nav Links ── */
 .footer-top {
   max-width: 980px;
   margin: 0 auto;
@@ -526,7 +693,7 @@ footer {
   align-items: center;
   gap: 60px;
   padding: 24px 20px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .footer-logo img {
@@ -535,7 +702,7 @@ footer {
 
 .footer-nav {
   display: flex;
-  gap: 30px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
@@ -550,6 +717,174 @@ footer {
   color: var(--accent);
 }
 
+/* ── Social + Subscribe Row ── */
+.footer-bottom-row {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px;
+  border-top: 1px solid #1E2E40;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  flex-wrap: nowrap;
+}
+
+.footer-bottom-row .footer-social {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border-top: none;
+  flex: 0 0 auto;
+}
+
+.footer-bottom-row .footer-subscribe {
+  max-width: none;
+  margin: 0;
+  padding: 0 !important;
+  border-top: none !important;
+  flex: 1;
+  min-width: 260px;
+}
+
+/* ── Social Buttons ── */
+.footer-social-title {
+  color: #8A9BB0;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: opacity .2s, transform .15s;
+  text-decoration: none;
+}
+
+.social-btn:hover {
+  opacity: .85;
+  transform: translateY(-2px);
+}
+
+.social-btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.social-btn.facebook {
+  background: #1877F2;
+  color: #fff;
+}
+
+.social-btn.youtube {
+  background: #FF0000;
+  color: #fff;
+}
+
+.social-btn.github {
+  background: #24292F;
+  color: #fff;
+}
+
+.social-btn.email {
+  background: #EA4335;
+  color: #fff;
+}
+
+/* Gmail red */
+.social-btn.email svg {
+  stroke: #fff !important;
+}
+
+/* ── Subscribe Form ── */
+.subscribe-title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.subscribe-desc {
+  color: #8A9BB0;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.subscribe-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 480px;
+}
+
+.subscribe-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 11px 18px;
+  border-radius: 25px;
+  border: 2px solid #1E2E40;
+  background: #0D1520;
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Hind Siliguri', sans-serif;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.subscribe-input::placeholder {
+  color: #4A5568;
+}
+
+.subscribe-input:focus {
+  border-color: #E8621A;
+}
+
+.subscribe-btn {
+  padding: 11px 24px;
+  border-radius: 25px;
+  background: #E8621A;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Hind Siliguri', sans-serif;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity .2s, transform .15s;
+}
+
+.subscribe-btn:hover {
+  opacity: .88;
+  transform: translateY(-1px);
+}
+
+.subscribe-btn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.subscribe-msg {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 20px;
+}
+
+/* ── Copyright ── */
 .copyright {
   text-align: center;
   color: #8A9BB0;
@@ -567,7 +902,7 @@ footer {
   }
 
   .content {
-    padding: 20px 20px;
+    padding: 20px;
   }
 
   aside ul li a {
@@ -585,7 +920,7 @@ footer {
   }
 
   .content {
-    padding: 16px 16px;
+    padding: 16px;
   }
 
   .topic-inner {
@@ -600,7 +935,7 @@ footer {
 }
 
 /* ============================================================
-   RESPONSIVE — 768px  (mobile breakpoint)
+   RESPONSIVE — 768px
 ============================================================ */
 @media (max-width: 768px) {
   :root {
@@ -623,7 +958,7 @@ footer {
     display: block;
   }
 
-  /* ── Sidebar drawer ── */
+  /* Sidebar drawer */
   aside {
     position: fixed;
     top: 0;
@@ -709,7 +1044,7 @@ footer {
     flex-shrink: 0;
   }
 
-  /* ── Tutorial layout ── */
+  /* Layout */
   .d_flex {
     flex-direction: column;
   }
@@ -719,7 +1054,7 @@ footer {
     width: 100%;
   }
 
-  /* ── Index: Hero ── */
+  /* Hero */
   .hero-section {
     padding: calc(var(--header-h) + 30px) 16px 50px;
   }
@@ -734,14 +1069,21 @@ footer {
     margin-top: 14px;
   }
 
-  /* ── Index: Topic sections ── */
+  /* Topic sections */
   .topic-section {
+    padding: 36px 0;
+  }
+
+  .vcs-section,
+  .npm-section,
+  .tailwind-section,
+  .terminal-section,
+  .projects-section {
     padding: 36px 0;
   }
 
   .topic-inner {
     flex-direction: column;
-    /* ← text + code উপর-নিচে */
     gap: 20px;
     padding: 0 16px;
   }
@@ -760,7 +1102,6 @@ footer {
     margin-bottom: 14px;
   }
 
-  /* ── Buttons full-width ── */
   .tut-button {
     width: 100%;
     max-width: 360px;
@@ -768,7 +1109,6 @@ footer {
     margin: 6px auto;
   }
 
-  /* ── Code card ── */
   .code-card {
     padding: 12px;
   }
@@ -781,7 +1121,7 @@ footer {
     font-size: 0.72rem;
   }
 
-  /* ── Footer ── */
+  /* Footer */
   .footer-top {
     flex-direction: column;
     gap: 16px;
@@ -801,6 +1141,31 @@ footer {
   .copyright {
     font-size: 13px;
     padding: 10px 16px 16px;
+  }
+
+  .footer-bottom-row {
+    flex-direction: column;
+    gap: 28px;
+    padding: 20px 16px;
+  }
+
+  .footer-social {
+    padding: 16px 16px 8px;
+    text-align: center;
+  }
+
+  .footer-social-title {
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .social-btn {
+    padding: 7px 12px;
+    font-size: 13px;
   }
 }
 
@@ -843,6 +1208,30 @@ footer {
   .content {
     padding: 10px 10px 88px;
   }
+
+  .social-links {
+    gap: 6px;
+  }
+
+  .social-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .social-btn svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .subscribe-row {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .subscribe-input,
+  .subscribe-btn {
+    width: 100%;
+  }
 }
 
 /* ============================================================
@@ -874,41 +1263,6 @@ footer {
   .content {
     padding: 8px 8px 88px;
   }
-}
-
-
-/* ============================================================
-   HEADER NAV ACTIVE
-============================================================ */
-
-/* Header nav — active পেইজের link */
-.nav-list li a.nav-active {
-  color: var(--accent) !important;
-  font-weight: 700;
-  position: relative;
-}
-.nav-list li a.nav-active {
-  color: var(--accent) !important;
-  font-weight: 700;
-  position: relative;
-}
-
-/* নিচে সরু সবুজ আন্ডারলাইন */
-.nav-list li a.nav-active::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--accent);
-  border-radius: 2px;
-}
-
-/* Mobile drawer — active link */
-.nav-drawer ul li a.nav-active {
-  background: var(--accent) !important;
-  color: #fff !important;
 }
 
 /* ============================================================
@@ -946,173 +1300,4 @@ footer {
     white-space: pre-wrap;
     font-size: 9pt;
   }
-}
-
-/* ============================================================
-   NEW TOPIC SECTIONS — VCS, NPM, Tailwind, Terminal, Projects
-============================================================ */
-.vcs-section      { background-color: #F05033 !important; padding: 50px 0; } /* Git orange-red */
-.npm-section      { background-color: #CB3837 !important; padding: 50px 0; } /* NPM red */
-.tailwind-section { background-color: #0EA5E9 !important; padding: 50px 0; } /* Tailwind sky */
-.terminal-section { background-color: #1A1A2E !important; padding: 50px 0; } /* Dark navy */
-.projects-section { background-color: #E8621A !important; padding: 50px 0; } /* Brand orange */
-
-.terminal-section .topic-title,
-.terminal-section .topic-desc { color: #fff !important; }
-.terminal-section .topic-text .tut-button.btn-light { color: #1A1A2E; }
-
-/* ============================================================
-   FOOTER — SOCIAL MEDIA
-============================================================ */
-.footer-social {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 24px 20px 8px;
-  border-top: 1px solid #1E2E40;
-}
-
-.footer-social-title {
-  color: #8A9BB0;
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.social-links {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.social-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 8px 18px;
-  border-radius: 25px;
-  font-size: 14px;
-  font-weight: 600;
-  transition: opacity .2s, transform .15s;
-  text-decoration: none;
-}
-
-.social-btn:hover {
-  opacity: .85;
-  transform: translateY(-2px);
-}
-
-.social-btn svg {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-}
-
-.social-btn.facebook { background: #1877F2; color: #fff; }
-.social-btn.youtube  { background: #FF0000; color: #fff; }
-.social-btn.github   { background: #24292F; color: #fff; }
-.social-btn.email    { background: #E8621A; color: #fff; }
-
-/* ============================================================
-   FOOTER — NEWSLETTER SUBSCRIBE
-============================================================ */
-.footer-subscribe {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 24px 20px;
-  border-top: 1px solid #1E2E40;
-}
-
-.subscribe-title {
-  color: #fff;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.subscribe-desc {
-  color: #8A9BB0;
-  font-size: 14px;
-  margin-bottom: 16px;
-}
-
-.subscribe-row {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  max-width: 520px;
-}
-
-.subscribe-input {
-  flex: 1;
-  min-width: 220px;
-  padding: 11px 18px;
-  border-radius: 25px;
-  border: 2px solid #1E2E40;
-  background: #0D1520;
-  color: #fff;
-  font-size: 15px;
-  font-family: 'Hind Siliguri', sans-serif;
-  outline: none;
-  transition: border-color .2s;
-}
-
-.subscribe-input::placeholder { color: #4A5568; }
-.subscribe-input:focus { border-color: #E8621A; }
-
-.subscribe-btn {
-  padding: 11px 26px;
-  border-radius: 25px;
-  background: #E8621A;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 700;
-  font-family: 'Hind Siliguri', sans-serif;
-  border: none;
-  cursor: pointer;
-  transition: opacity .2s, transform .15s;
-  white-space: nowrap;
-}
-
-.subscribe-btn:hover {
-  opacity: .88;
-  transform: translateY(-1px);
-}
-
-/* ============================================================
-   RESPONSIVE — Footer social & subscribe
-============================================================ */
-@media (max-width: 600px) {
-  .social-links { gap: 8px; }
-  .social-btn { padding: 7px 14px; font-size: 13px; }
-  .subscribe-row { flex-direction: column; }
-  .subscribe-input, .subscribe-btn { width: 100%; }
-}
-
-/* Brevo iframe wrap */
-.brevo-form-wrap {
-  max-width: 540px;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #0D1520;
-  border: 1px solid #1E2E40;
-}
-
-.brevo-form-wrap iframe {
-  border-radius: 12px;
-}
-
-/* Subscribe section compact */
-.footer-subscribe {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 8px 20px 0;
-  border-top: 1px solid #1E2E40;
-}
-
-.brevo-form-wrap {
-  border-radius: 0;
-  background: transparent;
-  border: none;
 }

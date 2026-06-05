@@ -130,3 +130,48 @@ document.addEventListener("DOMContentLoaded", function () {
   show(window.location.hash.replace("#", ""));
 
 });
+/* ===== Brevo Subscribe ===== */
+function sibSubmit() {
+  const email = document.getElementById('sib-email').value.trim();
+  const msg   = document.getElementById('sib-msg');
+
+  if (!email) {
+    msg.style.color = '#ff6b6b';
+    msg.textContent = 'ইমেইল লিখুন।';
+    return;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    msg.style.color = '#ff6b6b';
+    msg.textContent = 'সঠিক ইমেইল দিন।';
+    return;
+  }
+
+  const btn = document.querySelector('.subscribe-btn');
+  btn.textContent = 'অপেক্ষা করুন...';
+  btn.disabled = true;
+
+  const formData = new FormData();
+  formData.append('EMAIL', email);
+  formData.append('OPT_IN', 'true');
+
+  fetch('https://975c7de4.sibforms.com/serve/MUIFAD5rCKWi61hFY_-oiY9m5dUxQfK-cZ-c9Q-eeMrUBFw4vOVtemyGFMo2Cmevdhm-j4woyFEbWc338RJh_A87Z0iUatpRVdW7k0vg3oKBbfPXiJdfSpyJpmcRh13jpgHvcdxx_u9rguQRfDMcDn0Uea2eQA58zYASxWpZedsskvh6idZZwv9bxCSXIrQbrLiR8jxzCoo-llxpOQ==', {
+    method: 'POST',
+    body: formData,
+    mode: 'no-cors'
+  })
+  .then(() => {
+    msg.style.color = '#4ade80';
+    msg.textContent = 'আলহামদুলিল্লাহ! সফলভাবে সাবস্ক্রাইব হয়েছে।';
+    document.getElementById('sib-email').value = '';
+    btn.textContent = 'সাবস্ক্রাইব করুন';
+    btn.disabled = false;
+  })
+  .catch(() => {
+    msg.style.color = '#ff6b6b';
+    msg.textContent = 'কোনো সমস্যা হয়েছে, আবার চেষ্টা করুন।';
+    btn.textContent = 'সাবস্ক্রাইব করুন';
+    btn.disabled = false;
+  });
+}
