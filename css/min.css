@@ -1102,3 +1102,17 @@ footer {
 .brevo-form-wrap iframe {
   border-radius: 12px;
 }
+
+/* Subscribe section compact */
+.footer-subscribe {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 8px 20px 0;
+  border-top: 1px solid #1E2E40;
+}
+
+.brevo-form-wrap {
+  border-radius: 0;
+  background: transparent;
+  border: none;
+}
