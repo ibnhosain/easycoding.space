@@ -947,3 +947,158 @@ footer {
     font-size: 9pt;
   }
 }
+
+/* ============================================================
+   NEW TOPIC SECTIONS — VCS, NPM, Tailwind, Terminal, Projects
+============================================================ */
+.vcs-section      { background-color: #F05033 !important; padding: 50px 0; } /* Git orange-red */
+.npm-section      { background-color: #CB3837 !important; padding: 50px 0; } /* NPM red */
+.tailwind-section { background-color: #0EA5E9 !important; padding: 50px 0; } /* Tailwind sky */
+.terminal-section { background-color: #1A1A2E !important; padding: 50px 0; } /* Dark navy */
+.projects-section { background-color: #E8621A !important; padding: 50px 0; } /* Brand orange */
+
+.terminal-section .topic-title,
+.terminal-section .topic-desc { color: #fff !important; }
+.terminal-section .topic-text .tut-button.btn-light { color: #1A1A2E; }
+
+/* ============================================================
+   FOOTER — SOCIAL MEDIA
+============================================================ */
+.footer-social {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 20px 8px;
+  border-top: 1px solid #1E2E40;
+}
+
+.footer-social-title {
+  color: #8A9BB0;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: opacity .2s, transform .15s;
+  text-decoration: none;
+}
+
+.social-btn:hover {
+  opacity: .85;
+  transform: translateY(-2px);
+}
+
+.social-btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.social-btn.facebook { background: #1877F2; color: #fff; }
+.social-btn.youtube  { background: #FF0000; color: #fff; }
+.social-btn.github   { background: #24292F; color: #fff; }
+.social-btn.email    { background: #E8621A; color: #fff; }
+
+/* ============================================================
+   FOOTER — NEWSLETTER SUBSCRIBE
+============================================================ */
+.footer-subscribe {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 20px;
+  border-top: 1px solid #1E2E40;
+}
+
+.subscribe-title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.subscribe-desc {
+  color: #8A9BB0;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.subscribe-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 520px;
+}
+
+.subscribe-input {
+  flex: 1;
+  min-width: 220px;
+  padding: 11px 18px;
+  border-radius: 25px;
+  border: 2px solid #1E2E40;
+  background: #0D1520;
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Hind Siliguri', sans-serif;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.subscribe-input::placeholder { color: #4A5568; }
+.subscribe-input:focus { border-color: #E8621A; }
+
+.subscribe-btn {
+  padding: 11px 26px;
+  border-radius: 25px;
+  background: #E8621A;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Hind Siliguri', sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: opacity .2s, transform .15s;
+  white-space: nowrap;
+}
+
+.subscribe-btn:hover {
+  opacity: .88;
+  transform: translateY(-1px);
+}
+
+/* ============================================================
+   RESPONSIVE — Footer social & subscribe
+============================================================ */
+@media (max-width: 600px) {
+  .social-links { gap: 8px; }
+  .social-btn { padding: 7px 14px; font-size: 13px; }
+  .subscribe-row { flex-direction: column; }
+  .subscribe-input, .subscribe-btn { width: 100%; }
+}
+
+/* Brevo iframe wrap */
+.brevo-form-wrap {
+  max-width: 540px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0D1520;
+  border: 1px solid #1E2E40;
+}
+
+.brevo-form-wrap iframe {
+  border-radius: 12px;
+}

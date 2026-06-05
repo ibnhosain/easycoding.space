@@ -2,7 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- হোমপেজ -->
   <url>
     <loc>https://easycoding.space/</loc>
     <lastmod>2026-06-05</lastmod>
@@ -11,7 +10,6 @@
     <xhtml:link rel="alternate" hreflang="bn" href="https://easycoding.space/" />
   </url>
 
-  <!-- HTML Tutorial -->
   <url>
     <loc>https://easycoding.space/html.html</loc>
     <lastmod>2026-06-05</lastmod>
@@ -20,7 +18,6 @@
     <xhtml:link rel="alternate" hreflang="bn" href="https://easycoding.space/html.html" />
   </url>
 
-  <!-- CSS Tutorial -->
   <url>
     <loc>https://easycoding.space/css.html</loc>
     <lastmod>2026-06-05</lastmod>
@@ -29,7 +26,6 @@
     <xhtml:link rel="alternate" hreflang="bn" href="https://easycoding.space/css.html" />
   </url>
 
-  <!-- JavaScript Tutorial -->
   <url>
     <loc>https://easycoding.space/js.html</loc>
     <lastmod>2026-06-05</lastmod>
@@ -38,7 +34,6 @@
     <xhtml:link rel="alternate" hreflang="bn" href="https://easycoding.space/js.html" />
   </url>
 
-  <!-- VCS/Git -->
   <url>
     <loc>https://easycoding.space/VCS.html</loc>
     <lastmod>2026-06-05</lastmod>
@@ -47,7 +42,6 @@
     <xhtml:link rel="alternate" hreflang="bn" href="https://easycoding.space/VCS.html" />
   </url>
 
-  <!-- NPM -->
   <url>
     <loc>https://easycoding.space/npm.html</loc>
     <lastmod>2026-06-05</lastmod>
@@ -56,7 +50,6 @@
     <xhtml:link rel="alternate" hreflang="bn" href="https://easycoding.space/npm.html" />
   </url>
 
-  <!-- Tailwind -->
   <url>
     <loc>https://easycoding.space/tailwind.html</loc>
     <lastmod>2026-06-05</lastmod>
@@ -65,7 +58,6 @@
     <xhtml:link rel="alternate" hreflang="bn" href="https://easycoding.space/tailwind.html" />
   </url>
 
-  <!-- Terminal -->
   <url>
     <loc>https://easycoding.space/terminal.html</loc>
     <lastmod>2026-06-05</lastmod>
@@ -74,13 +66,28 @@
     <xhtml:link rel="alternate" hreflang="bn" href="https://easycoding.space/terminal.html" />
   </url>
 
-  <!-- Projects -->
   <url>
     <loc>https://easycoding.space/projects.html</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="bn" href="https://easycoding.space/projects.html" />
+  </url>
+
+  <url>
+    <loc>https://easycoding.space/about.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://easycoding.space/about.html" />
+  </url>
+
+  <url>
+    <loc>https://easycoding.space/privacy-policy.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="bn" href="https://easycoding.space/privacy-policy.html" />
   </url>
 
 </urlset>
