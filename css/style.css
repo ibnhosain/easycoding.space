@@ -171,7 +171,7 @@ kbd {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: #555 #2c2e35;
-  touch-action: pan-x;
+  touch-action: auto;
 }
 
 .code-box::-webkit-scrollbar {
