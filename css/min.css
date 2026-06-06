@@ -457,12 +457,21 @@ aside a.active {
   overflow-y: visible;
   max-width: 100%;
   -webkit-overflow-scrolling: touch;
-  touch-action: auto;
-  overscroll-behavior: auto;
   scrollbar-width: thin;
   scrollbar-color: #555 #1E1E1E;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, .04);
-  cursor: grab;
+}
+
+/* Mobile: code wrap করো যাতে horizontal scroll না লাগে */
+@media (max-width: 768px) {
+  .code-block {
+    overflow-x: hidden;
+  }
+
+  .code-block pre {
+    white-space: pre-wrap !important;
+    word-break: break-all;
+  }
 }
 
 .code-block::-webkit-scrollbar {
