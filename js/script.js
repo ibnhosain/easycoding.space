@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* ---- ২. HAMBURGER ---- */
   var hamburger = document.querySelector(".hamburger");
-  var navDrawer  = document.querySelector(".nav-drawer");
+  var navDrawer = document.querySelector(".nav-drawer");
 
   if (hamburger && navDrawer) {
     hamburger.addEventListener("click", function () {
@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   /* ---- ৩. SIDEBAR DRAWER (mobile) ---- */
-  var aside   = document.querySelector("aside");
-  var togBtn  = document.querySelector(".sidebar-toggle");
+  var aside = document.querySelector("aside");
+  var togBtn = document.querySelector(".sidebar-toggle");
   var overlay = document.querySelector(".sidebar-overlay");
 
   function openSidebar() {
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* ---- ৪. SECTION SHOW / HIDE ---- */
   var sections = Array.from(document.querySelectorAll("section.ec-section"));
-  var links    = Array.from(document.querySelectorAll("aside a[href^='#']"));
+  var links = Array.from(document.querySelectorAll("aside a[href^='#']"));
 
   /* index.html এ section.ec-section নেই — এখানেই থামো */
   if (!sections.length) return;
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /* ===== Brevo Subscribe ===== */
 function sibSubmit() {
   const email = document.getElementById('sib-email').value.trim();
-  const msg   = document.getElementById('sib-msg');
+  const msg = document.getElementById('sib-msg');
 
   if (!email) {
     msg.style.color = '#ff6b6b';
@@ -159,17 +159,43 @@ function sibSubmit() {
     body: formData,
     mode: 'no-cors'
   })
-  .then(() => {
-    msg.style.color = '#4ade80';
-    msg.textContent = 'আলহামদুলিল্লাহ! সফলভাবে সাবস্ক্রাইব হয়েছে।';
-    document.getElementById('sib-email').value = '';
-    btn.textContent = 'সাবস্ক্রাইব করুন';
-    btn.disabled = false;
-  })
-  .catch(() => {
-    msg.style.color = '#ff6b6b';
-    msg.textContent = 'কোনো সমস্যা হয়েছে, আবার চেষ্টা করুন।';
-    btn.textContent = 'সাবস্ক্রাইব করুন';
-    btn.disabled = false;
-  });
+    .then(() => {
+      msg.style.color = '#4ade80';
+      msg.textContent = 'আলহামদুলিল্লাহ! সফলভাবে সাবস্ক্রাইব হয়েছে।';
+      document.getElementById('sib-email').value = '';
+      btn.textContent = 'সাবস্ক্রাইব করুন';
+      btn.disabled = false;
+    })
+    .catch(() => {
+      msg.style.color = '#ff6b6b';
+      msg.textContent = 'কোনো সমস্যা হয়েছে, আবার চেষ্টা করুন।';
+      btn.textContent = 'সাবস্ক্রাইব করুন';
+      btn.disabled = false;
+    });
 }
+
+/* ===== Code-box Touch Scroll Fix ===== */
+(function () {
+  var codeBlocks = document.querySelectorAll('.code-block');
+  codeBlocks.forEach(function (el) {
+    var startX, startY, startScrollLeft;
+
+    el.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      startScrollLeft = el.scrollLeft;
+    }, { passive: true });
+
+    el.addEventListener('touchmove', function (e) {
+      var dx = Math.abs(e.touches[0].clientX - startX);
+      var dy = Math.abs(e.touches[0].clientY - startY);
+
+      /* horizontal scroll বেশি হলে code scroll করো */
+      if (dx > dy && dx > 8) {
+        el.scrollLeft = startScrollLeft - (e.touches[0].clientX - startX);
+        e.stopPropagation();
+      }
+      /* vertical scroll বেশি হলে page scroll হতে দাও */
+    }, { passive: true });
+  });
+})();
