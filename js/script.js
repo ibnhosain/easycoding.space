@@ -49,21 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!aside) return;
     aside.classList.add("sidebar-open");
     if (overlay) overlay.classList.add("active");
-    /* body scroll lock — position fixed দিয়ে করি যাতে aside scroll কাজ করে */
-    var scrollY = window.scrollY;
-    document.body.style.position = "fixed";
-    document.body.style.top = "-" + scrollY + "px";
-    document.body.style.width = "100%";
   }
   function closeSidebar() {
     if (!aside) return;
     aside.classList.remove("sidebar-open");
     if (overlay) overlay.classList.remove("active");
-    var scrollY = document.body.style.top;
-    document.body.style.position = "";
-    document.body.style.top = "";
-    document.body.style.width = "";
-    if (scrollY) window.scrollTo(0, -parseInt(scrollY || "0"));
   }
 
   if (togBtn) togBtn.addEventListener("click", function () {
