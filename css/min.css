@@ -1346,3 +1346,129 @@ img {
 .topic-section {
   contain: layout;
 }
+/* ============================================================
+   QUIZ
+============================================================ */
+.eq-wrap{background:#0D2137;border:2px solid #1E3A5C;border-radius:14px;padding:22px 26px;margin:28px 0 18px}
+.eq-title{color:#89b4fa;font-size:1.05rem;font-weight:700;margin-bottom:18px;font-family:'Hind Siliguri',sans-serif}
+.eq-item{margin-bottom:20px}
+.eq-q{color:#CDD6F4;font-size:.97rem;font-weight:600;margin-bottom:10px;font-family:'Hind Siliguri',sans-serif;line-height:1.7}
+.eq-opts{display:flex;flex-direction:column;gap:7px}
+.eq-opt{background:#1A2D40;color:#CBD5E1;border:1px solid #1E3A5C;border-radius:8px;padding:9px 14px;font-size:.92rem;font-family:'Hind Siliguri',sans-serif;text-align:left;cursor:pointer;transition:background .2s,border-color .2s}
+.eq-opt:hover{background:#1E3A5C;border-color:#89b4fa}
+.eq-opt.correct{background:#0F3D2A;border-color:#a6e3a1;color:#a6e3a1}
+.eq-opt.wrong{background:#3D1010;border-color:#f38ba8;color:#f38ba8}
+.eq-opt:disabled{cursor:default}
+.eq-fb{margin-top:7px;font-size:.88rem;font-weight:600;font-family:'Hind Siliguri',sans-serif;min-height:18px}
+
+/* ============================================================
+   TASK
+============================================================ */
+.et-wrap{background:#1A2D1A;border-left:5px solid #a6e3a1;border-radius:0 10px 10px 0;padding:18px 22px;margin:18px 0}
+.et-title{color:#a6e3a1;font-size:1rem;font-weight:700;margin-bottom:8px;font-family:'Hind Siliguri',sans-serif}
+.et-body{color:#CBD5E1;font-size:.95rem;line-height:1.8;font-family:'Hind Siliguri',sans-serif}
+
+/* ============================================================
+   PROJECT LIVE EDITOR
+============================================================ */
+.ep-wrap{background:#1A1A0D;border:2px solid #E8621A;border-radius:14px;overflow:hidden;margin:18px 0}
+.ep-head{background:#2A1A0A;padding:11px 20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #E8621A}
+.ep-badge{background:#E8621A;color:#fff;font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;white-space:nowrap;font-family:'Hind Siliguri',sans-serif}
+.ep-title{color:#fab387;font-size:.97rem;font-weight:700;font-family:'Hind Siliguri',sans-serif}
+.ep-body{padding:0}
+.ep-desc{color:#CBD5E1;font-size:.95rem;line-height:1.8;font-family:'Hind Siliguri',sans-serif;padding:16px 20px;border-bottom:1px solid #2A2A1A}
+.ep-editor{display:flex;min-height:220px}
+.ep-left,.ep-right{flex:1;display:flex;flex-direction:column;min-width:0}
+.ep-label{background:#11111b;color:#6c7086;font-size:11px;padding:5px 12px;border-bottom:1px solid #2A2A1A;font-family:monospace}
+.ep-divider{width:1px;background:#2A2A1A}
+.ep-textarea{flex:1;background:#1e1e2e;color:#cdd6f4;border:none;outline:none;padding:12px 14px;font-family:Consolas,'Courier New',monospace;font-size:12px;line-height:1.8;resize:none;width:100%;tab-size:2;min-height:180px}
+.ep-frame{flex:1;width:100%;border:none;background:#fff;min-height:180px}
+.ep-footer{background:#2A1A0A;border-top:1px solid #E8621A;padding:8px 16px;display:flex;align-items:center;gap:10px}
+.ep-run{background:#a6e3a1;color:#1e1e2e;border:none;border-radius:20px;padding:5px 16px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Hind Siliguri',sans-serif;transition:opacity .2s}
+.ep-run:hover{opacity:.85}
+.ep-tip{font-size:11px;color:#6c7086;font-family:'Hind Siliguri',sans-serif}
+/* ===== Multi-Pane Editor ===== */
+.ep-pane{flex:1;display:flex;flex-direction:column;min-width:0;min-width:180px}
+.ep-editor-css,.ep-editor-js{min-height:240px}
+.ep-pane-html .ep-label{background:#11111b;color:#89b4fa}
+.ep-pane-css .ep-label{background:#11111b;color:#a6e3a1}
+.ep-pane-js .ep-label{background:#11111b;color:#f9e2af}
+.ep-pane-preview .ep-label{background:#11111b;color:#cba6f7}
+@media(max-width:900px){.ep-editor-css,.ep-editor-js{flex-direction:column}.ep-editor-css .ep-divider,.ep-editor-js .ep-divider{width:100%;height:1px}}
+
+
+/* ============================================================
+   ASSIGNMENT
+============================================================ */
+.ea-wrap{background:#1A0D2A;border-left:5px solid #cba6f7;border-radius:0 10px 10px 0;padding:18px 22px;margin:18px 0 30px}
+.ea-title{color:#cba6f7;font-size:1rem;font-weight:700;margin-bottom:8px;font-family:'Hind Siliguri',sans-serif}
+.ea-body{color:#CBD5E1;font-size:.95rem;line-height:1.9;font-family:'Hind Siliguri',sans-serif}
+
+/* Mobile */
+@media(max-width:768px){
+  .eq-wrap,.ep-wrap{padding:14px}
+  .eq-opt{font-size:.85rem;padding:8px 11px}
+  .ep-editor{flex-direction:column}
+  .ep-divider{width:100%;height:1px}
+  .ep-textarea{min-height:130px;font-size:11px}
+  .ep-frame{min-height:150px}
+}
+
+/* Quiz */
+.eq-wrap{background:#0D2137;border:2px solid #1E3A5C;border-radius:14px;padding:22px 26px;margin:28px 0 18px}
+.eq-title{color:#89b4fa;font-size:1.05rem;font-weight:700;margin-bottom:18px;font-family:'Hind Siliguri',sans-serif}
+.eq-item{margin-bottom:20px}
+.eq-q{color:#CDD6F4;font-size:.97rem;font-weight:600;margin-bottom:10px;font-family:'Hind Siliguri',sans-serif;line-height:1.7}
+.eq-opts{display:flex;flex-direction:column;gap:7px}
+.eq-opt{background:#1A2D40;color:#CBD5E1;border:1px solid #1E3A5C;border-radius:8px;padding:9px 14px;font-size:.92rem;font-family:'Hind Siliguri',sans-serif;text-align:left;cursor:pointer;transition:background .2s,border-color .2s}
+.eq-opt:hover{background:#1E3A5C;border-color:#89b4fa}
+.eq-opt.correct{background:#0F3D2A;border-color:#a6e3a1;color:#a6e3a1}
+.eq-opt.wrong{background:#3D1010;border-color:#f38ba8;color:#f38ba8}
+.eq-opt:disabled{cursor:default}
+.eq-fb{margin-top:7px;font-size:.88rem;font-weight:600;font-family:'Hind Siliguri',sans-serif;min-height:18px}
+/* Task */
+.et-wrap{background:#1A2D1A;border-left:5px solid #a6e3a1;border-radius:0 10px 10px 0;padding:18px 22px;margin:18px 0}
+.et-title{color:#a6e3a1;font-size:1rem;font-weight:700;margin-bottom:8px;font-family:'Hind Siliguri',sans-serif}
+.et-body{color:#CBD5E1;font-size:.95rem;line-height:1.8;font-family:'Hind Siliguri',sans-serif}
+/* Project Editor */
+.ep-wrap{background:#1A1A0D;border:2px solid #E8621A;border-radius:14px;overflow:hidden;margin:18px 0}
+.ep-head{background:#2A1A0A;padding:11px 20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #E8621A}
+.ep-badge{background:#E8621A;color:#fff;font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;white-space:nowrap;font-family:'Hind Siliguri',sans-serif}
+.ep-title{color:#fab387;font-size:.97rem;font-weight:700;font-family:'Hind Siliguri',sans-serif}
+.ep-desc{color:#CBD5E1;font-size:.95rem;line-height:1.8;font-family:'Hind Siliguri',sans-serif;padding:16px 20px;border-bottom:1px solid #2A2A1A}
+.ep-editor{display:flex;min-height:220px}
+.ep-left,.ep-right{flex:1;display:flex;flex-direction:column;min-width:0}
+.ep-label{background:#11111b;color:#6c7086;font-size:11px;padding:5px 12px;border-bottom:1px solid #2A2A1A;font-family:monospace}
+.ep-divider{width:1px;background:#2A2A1A}
+.ep-textarea{flex:1;background:#1e1e2e;color:#cdd6f4;border:none;outline:none;padding:12px 14px;font-family:Consolas,'Courier New',monospace;font-size:12px;line-height:1.8;resize:none;width:100%;tab-size:2;min-height:180px}
+.ep-frame{flex:1;width:100%;border:none;background:#fff;min-height:180px}
+.ep-footer{background:#2A1A0A;border-top:1px solid #E8621A;padding:8px 16px;display:flex;align-items:center;gap:10px}
+.ep-run{background:#a6e3a1;color:#1e1e2e;border:none;border-radius:20px;padding:5px 16px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Hind Siliguri',sans-serif;transition:opacity .2s}
+.ep-run:hover{opacity:.85}
+.ep-tip{font-size:11px;color:#6c7086;font-family:'Hind Siliguri',sans-serif}
+/* Assignment */
+.ea-wrap{background:#1A0D2A;border-left:5px solid #cba6f7;border-radius:0 10px 10px 0;padding:18px 22px;margin:18px 0 30px}
+.ea-title{color:#cba6f7;font-size:1rem;font-weight:700;margin-bottom:8px;font-family:'Hind Siliguri',sans-serif}
+.ea-body{color:#CBD5E1;font-size:.95rem;line-height:1.9;font-family:'Hind Siliguri',sans-serif}
+/* Mobile */
+@media(max-width:768px){.eq-wrap,.ep-wrap{padding:14px}.eq-opt{font-size:.85rem;padding:8px 11px}.ep-editor{flex-direction:column}.ep-divider{width:100%;height:1px}.ep-textarea{min-height:130px;font-size:11px}.ep-frame{min-height:150px}}
+
+/* ============================================================
+   SECTION DONE MESSAGE
+============================================================ */
+.section-done-msg {
+  margin: 28px 0 12px;
+  padding: 18px 24px;
+  background: linear-gradient(135deg, #0D2137 0%, #1A3A5C 100%);
+  border-left: 5px solid #E8621A;
+  border-radius: 10px;
+  color: #CBD5E1;
+  font-size: 1rem;
+  line-height: 1.9;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  font-family: 'Hind Siliguri', 'Tiro Bangla', sans-serif;
+}
+
+.section-done-msg strong {
+  color: #FBBF24;
+}

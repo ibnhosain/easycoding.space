@@ -199,3 +199,136 @@ function sibSubmit() {
     }, { passive: true });
   });
 })();
+
+/* ===== Quiz ===== */
+document.querySelectorAll('.eq-item').forEach(function(item) {
+  var correct = parseInt(item.dataset.correct);
+  var opts = item.querySelectorAll('.eq-opt');
+  var fb = item.querySelector('.eq-fb');
+  var done = false;
+  opts.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      if (done) return;
+      done = true;
+      opts.forEach(function(b) { b.disabled = true; });
+      if (parseInt(btn.dataset.idx) === correct) {
+        btn.classList.add('correct');
+        fb.style.color = '#a6e3a1';
+        fb.textContent = '✅ সঠিক! চমৎকার!';
+      } else {
+        btn.classList.add('wrong');
+        opts[correct].classList.add('correct');
+        fb.style.color = '#f38ba8';
+        fb.textContent = '❌ ভুল — সঠিক উত্তর সবুজে দেখানো হয়েছে।';
+      }
+    });
+  });
+});
+
+/* ===== Project Live Editor — Real-time ===== */
+(function () {
+
+  function decode(s) {
+    return s
+      .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+      .replace(/&amp;/g, '&').replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'");
+  }
+
+  function tabSupport(ta) {
+    ta.addEventListener('keydown', function (e) {
+      if (e.key === 'Tab') {
+        e.preventDefault();
+        var s = this.selectionStart;
+        this.value = this.value.substring(0, s) + '  ' + this.value.substring(this.selectionEnd);
+        this.selectionStart = this.selectionEnd = s + 2;
+      }
+    });
+  }
+
+  document.querySelectorAll('.ep-wrap').forEach(function (wrap) {
+    var btn   = wrap.querySelector('.ep-run');
+    var frame = wrap.querySelector('.ep-frame');
+    if (!btn || !frame) return;
+
+    var editor = wrap.querySelector('.ep-editor');
+
+    /* ────────────────────────────────────────
+       CSS editor: ep-editor-css
+       দুটো textarea: .ep-html-code + .ep-css-code
+    ──────────────────────────────────────── */
+    if (editor && editor.classList.contains('ep-editor-css')) {
+      var taHtml = wrap.querySelector('.ep-html-code');
+      var taCss  = wrap.querySelector('.ep-css-code');
+      if (!taHtml || !taCss) return;
+
+      function runCss() {
+        var html = decode(taHtml.value);
+        var css  = decode(taCss.value);
+        html = html.replace(/<link[^>]+stylesheet[^>]*>/gi, '');
+        html = html.replace('</head>', '<style>' + css + '</style></head>');
+        frame.srcdoc = html;
+      }
+
+      /* Real-time: CSS textarea-তে input হলে সাথে সাথে update */
+      taCss.addEventListener('input', runCss);
+      taHtml.addEventListener('input', runCss);
+      btn.addEventListener('click', runCss);
+      tabSupport(taHtml);
+      tabSupport(taCss);
+      runCss();
+      return;
+    }
+
+    /* ────────────────────────────────────────
+       JS editor: ep-editor-js
+       দুটো textarea: .ep-html-code + .ep-js-code
+    ──────────────────────────────────────── */
+    if (editor && editor.classList.contains('ep-editor-js')) {
+      var taHtmlJs = wrap.querySelector('.ep-html-code');
+      var taJs     = wrap.querySelector('.ep-js-code');
+      if (!taHtmlJs || !taJs) return;
+
+      function runJs() {
+        var html = decode(taHtmlJs.value);
+        var code = decode(taJs.value);
+        html = html.replace('</body>', '<script>' + code + '<\/script></body>');
+        frame.srcdoc = html;
+      }
+
+      /* JS-এ শুধু ▶ বাটনে run — real-time JS চালানো unsafe */
+      btn.addEventListener('click', runJs);
+      taHtmlJs.addEventListener('input', function() {
+        /* HTML পরিবর্তনে auto-update */
+        runJs();
+      });
+      tabSupport(taHtmlJs);
+      tabSupport(taJs);
+      runJs();
+      return;
+    }
+
+    /* ────────────────────────────────────────
+       HTML editor: single textarea
+    ──────────────────────────────────────── */
+    var ta = wrap.querySelector('.ep-textarea');
+    if (!ta) return;
+
+    function runHtml() {
+      var code = decode(ta.value);
+      if (/<!DOCTYPE/i.test(code) || /<html/i.test(code)) {
+        frame.srcdoc = code;
+      } else {
+        frame.srcdoc = '<!DOCTYPE html><html><head><meta charset="UTF-8">'
+          + '<style>body{font-family:sans-serif;padding:14px;font-size:15px;line-height:1.7}</style>'
+          + '</head><body>' + code + '</body></html>';
+      }
+    }
+
+    ta.addEventListener('input', runHtml);
+    btn.addEventListener('click', runHtml);
+    tabSupport(ta);
+    runHtml();
+  });
+
+})();
